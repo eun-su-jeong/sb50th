@@ -193,7 +193,8 @@ main{}
 .ui-history .swiper-pagination-bullet.swiper-pagination-bullet-active .icn:after {transform:scaleX(1)}
 .ui-history .swiper-pagination-bullet.swiper-pagination-bullet-active .icn:before {left: -80px;background: linear-gradient(to left, rgba(1, 122, 95, 1), rgba(1, 122, 95, 0));}
 .ui-history .swiper-pagination-bullet.swiper-pagination-bullet-active .icn:after {left: 16px;background: linear-gradient(to right, rgba(1, 122, 95, 1), rgba(1, 122, 95, 0));}
-
+.ui-history .swiper-pagination-bullet:first-of-type.swiper-pagination-bullet-active .icn:before,
+.ui-history .swiper-pagination-bullet:last-of-type.swiper-pagination-bullet-active .icn:after {transform:scaleX(0);}
 
 
 .ui-history .history-conts{width: 394px;margin-left: 138px;}
