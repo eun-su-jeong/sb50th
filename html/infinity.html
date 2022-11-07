@@ -26,68 +26,21 @@
 <style>
 .ui-infinity{position:relative;outline:1px solid #0ff;}
 .ui-infinity .base{position:relative;opacity:1;}
-.ui-infinity .overlay{position:absolute;top:75px;left:-214px;transform:rotate(150.5deg);}
+.ui-infinity .overlay{position:absolute;top:-20px;left:-56px;width:1106px;height:406px;transform:scale(0.9);opacity:.5;}
 
-/*
-	width = height = 70px
-	border-width = 10px
-	time = 1s
-*/
-.infinity-loader {
-	width: calc(197px * 2 - 2px); /* 2 x width - border-width */
-	height: 197px; /* width */
-	transform: translate(-50%, -50%);
+.ui-infinity svg{
+	fill: none;
+	stroke-width: 34;
+	stroke: url(#fill);
+	stroke: #fff;
+	filter: url(#inset-shadow);
+	stroke-dasharray: 230 1000;
+	stroke-linecap: round;
+	animation: track 4s linear infinite;
 }
-.infinity-loader .bg div,
-.infinity-loader > .fg > div > div {
-	position: absolute;
-	width: 197px; /* width */
-	height: 197px; /* width */
-	/* border: 2px solid rgba(36, 164, 80, 1); */
-	border: 2px solid rgba(0, 0, 0, 0); /* border-width solid #aaa */
-	border-radius: 50%; /* to make the div round*/
-}
-.infinity-loader .right-bg {
-	left: -2px; /* -border-width */
-	transform: translate(100%, 0);
-}
-.infinity-loader > .fg > div > div {
-	position: static; /*add this otherwise transformation in its parent won't work as expect*/
-	border-color: rgba(255, 255, 255, 0) rgba(36, 164, 80, 1) transparent transparent;
-	transform: rotate(135deg);
-	animation: spin 8s linear infinite; /* spin time linear infinite */
-}
-.infinity-loader > .fg > div {
-	position: absolute; /* required for using clip: rect() */
-	clip: rect(0, 196px, 98px, 0); /* 0, width, width/2, 0*/
-}
-.infinity-loader > .fg > .bottom-right-rect {
-	left: -2px; /* -border-width */
-	transform: translateX(100%) scale(1, -1);
-}
-.infinity-loader > .fg > .bottom-right-rect > div {
-	animation-delay: 2s; /* time/4 */
-}
-.infinity-loader > .fg > .top-right-rect {
-	left: -2px; /* -border-width */
-	transform: translateX(100%) scale(-1, 1);
-}
-.infinity-loader > .fg > .top-right-rect > div {
-	animation-delay: 4s; /* (2 x time)/4 */
-}
-.infinity-loader > .fg > .bottom-left-rect {
-	transform: scale(-1);
-}
-.infinity-loader > .fg > .bottom-left-rect > div {
-	animation-delay: 6s; /* (3 x time)/4 */
-}
-.infinity-loader > .fg {
-	/* filter: drop-shadow(0 0 4px #24A450); */
-	/* filter: drop-shadow(0 0 8px #000); */
-	box-shadow: 0 0 8px #000;
-}
-@keyframes spin {
-	50%, 100% {transform: rotate(495deg);} /* (360 + 135)deg*/
+@keyframes track {
+	0%	{stroke-dashoffset: 0;}
+	100%{stroke-dashoffset: 1228;}
 }
 
 </style>
@@ -123,6 +76,83 @@
 						</div>
 					</div>
 				</div>
+			</article>
+		</section>
+		<section>
+			<article>
+				<!-- <div class="infinity">
+					<svg width="300px" height="200px" viewBox="0 0 187.3 93.7" >
+						<defs>
+							<linearGradient id="col">
+								<stop offset="0%" stop-color="#91C042"/>
+								<stop offset="100%" stop-color="#007760"/>
+							</linearGradient>
+						</defs>
+						<path d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
+					</svg>
+				</div> -->
+				<!-- <div class="infinity">
+					<svg width="402px" height="327px" viewBox="0 0 402 327">
+						<defs>
+							<linearGradient id="col">
+								<stop offset="0%" stop-color="#d23052"/>
+								<stop offset="25%" stop-color="#ff5e00"/>
+								<stop offset="50%" stop-color="#ffeb00"/>
+								<stop offset="75%" stop-color="#1cff00"/>
+								<stop offset="100%" stop-color="#00b9ff"/>
+							</linearGradient>
+						</defs>
+						<path d="M208 115C208 71.3695 243.37 36 287 36C330.63 36 366 71.3695 366 115C366 158.63 330.63 194 287 194C243.37 194 208 158.63 208 115ZM229.965 214.882C228.435 277.063 177.549 327 115 327C51.4873 327 0 275.513 0 212C0 148.487 51.4873 97 115 97C135.755 97 155.226 102.498 172.035 112.118C173.565 49.9368 224.451 0 287 0C350.513 0 402 51.4873 402 115C402 178.513 350.513 230 287 230C266.245 230 246.774 224.502 229.965 214.882ZM36 212C36 168.37 71.3695 133 115 133C158.63 133 194 168.37 194 212C194 255.63 158.63 291 115 291C71.3695 291 36 255.63 36 212Z"/>
+						<path d="M208 115C208 71.3695 243.37 36 287 36C330.63 36 366 71.3695 366 115C366 158.63 330.63 194 287 194C243.37 194 208 158.63 208 115ZM229.965 214.882C228.435 277.063 177.549 327 115 327C51.4873 327 0 275.513 0 212C0 148.487 51.4873 97 115 97C135.755 97 155.226 102.498 172.035 112.118C173.565 49.9368 224.451 0 287 0C350.513 0 402 51.4873 402 115C402 178.513 350.513 230 287 230C266.245 230 246.774 224.502 229.965 214.882ZM36 212C36 168.37 71.3695 133 115 133C158.63 133 194 168.37 194 212C194 255.63 158.63 291 115 291C71.3695 291 36 255.63 36 212Z"/>
+					</svg>
+				</div> -->
+				
+				<!-- 중간 성공 버전 -->
+				<div class="ui-infinity">
+					<div class="base"><img src="/assets/images/50.svg" alt="50th"></div>
+					<div class="overlay">
+						<svg viewBox="0 0 1000 800" xmlns="http://www.w3.org/2000/svg">
+							<defs>
+								<filter id="inset-shadow">
+									<feOffset dx="10" dy="10"/>                                                         <!-- Shadow Offset -->
+									<feGaussianBlur stdDeviation="10"  result="offset-blur"/>                           <!-- Shadow Blur -->
+									<feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse"/> <!-- Invert the drop shadow to create an inner shadow -->
+									<feFlood flood-color="black" flood-opacity="1" result="color"/>                     <!-- Color & Opacity -->
+									<feComposite operator="in" in="color" in2="inverse" result="shadow"/>               <!-- Clip color inside shadow -->
+									<feComponentTransfer in="shadow" result="shadow">                                   <!-- Shadow Opacity -->
+										<feFuncA type="linear" slope=".75"/>
+									</feComponentTransfer>
+									<!--<feComposite operator="over" in="shadow" in2="SourceGraphic"/>-->                       <!-- Put shadow over original object -->
+								</filter>
+								<linearGradient id="fill">
+									<stop offset="0%" stop-color="#007760" />
+									<stop offset="100%" stop-color="#91C042" />
+								</linearGradient>
+							</defs>
+							<path class="cls-1" d="M205.11,164.93c9.03,19.02,9.25,34.68,7.71,54.15-3.43,43.27-41.44,90.38-96.37,90.38S18,266.92,18,212,59.07,113.6,114,113.6c36.4,0,69.47,21.47,91.11,51.33h0c16.97,26.34,48.08,45.63,83.66,45.63,53.73,0,97.28-41.55,97.28-95.28s-43.55-97.28-97.28-97.28-97.28,43.55-97.28,97.28c0,16.59,2.5,26.38,13.61,49.65h0Z"/>
+						</svg>
+					</div>
+				</div>
+
+				<!-- <div class="infinity">
+					<svg viewBox="0 0 368.61 294.7" xmlns="http://www.w3.org/2000/svg">
+						<defs>
+							<linearGradient id="col">
+								<stop offset="0%" stop-color="#d23052"/>
+								<stop offset="25%" stop-color="#ff5e00"/>
+								<stop offset="50%" stop-color="#ffeb00"/>
+								<stop offset="75%" stop-color="#1cff00"/>
+								<stop offset="100%" stop-color="#00b9ff"/>
+							</linearGradient>
+						</defs>
+						<path d="M51.76,107.33s73.32-33.87,127.12,29.86c4.49,5.32,33.63,58.66,92.08,58.66,47.64,0,74.1-25.06,86.66-50.09,15.41-30.72,14.25-67.11-1.18-97.82C347.23,29.59,320.23,0,276.54,0c-80.39,0-121.59,85.16-97.66,138.19,44.97,99.69-19.93,151.88-77.43,156.21C31.2,299.7,2.84,233.39,.38,201.47c-2.75-35.64,9.12-70.67,51.39-94.14Z"/>
+					</svg>
+				</div> -->
+
+
+
+
+
 			</article>
 		</section>
 	</main>
