@@ -51,12 +51,20 @@
 				io2.observe(items[i]);
 			}
 
+			$(window).scroll(function () {
+				$(".hideme").each(function (i) {
+				var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+				var bottom_of_window = $(window).scrollTop() + $(window).height();
+				if (bottom_of_window > bottom_of_object / 2) {
+					$(this).animate({ opacity: "1" }, 500);
+				}
+				});
+			});
+
 		})
 	</script>
 </head>
-
 <body>
-<<<<<<< HEAD
     <header>
         <div class="nav_conts">
             <a><img src="/assets/images/logo.svg" alt="저축은행중앙회 50주년 로고"></a>
@@ -92,21 +100,6 @@
                 <div class="circle3"></div>
             </div>
         </section>
-        <section id="history"></section>
-        <section id="speech"></section>
-        <section id="emblem"></section>
-    </main>
-    <footer></footer>
-=======
-	<header>
-		<!-- <div class="nav_conts">
-			<h1><img src="/assets/images/logo.svg" alt="저축은행중앙회 50주년 로고"></h1>
-		</div> -->
-	</header>
-	<main>
-		<section id="intro">
-			<article></article>
-		</section>
 		<section class="ui-history">
 			<article>
 				<div>
@@ -216,7 +209,6 @@
 		</section>
 	</main>
 	<footer></footer>
->>>>>>> c4bccdaf9c59aa019e30bd811e0ed87894b71269
 </body>
 
 </html>

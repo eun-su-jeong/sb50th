@@ -170,7 +170,6 @@ article{position:relative;width:1240px;margin:0 auto;}
 .title-wrap p:first-child{margin-bottom: 12px;}
 
 /* header */
-/* header */
 
 header { width: 100%; height: 100px; position: relative; top: 0; left:0;}
 header .nav_conts{display: flex; justify-content: space-between; align-items: center; padding: 15px 80px;}
@@ -269,7 +268,7 @@ header .nav_conts{display: flex; justify-content: space-between; align-items: ce
 			animation: circle2 30s linear infinite;
     -webkit-animation-delay: 2s;
             animation-delay: 2s;
-    z-index: 9;T
+    z-index: 9;
 }
 
 .circle2:after{
@@ -438,8 +437,14 @@ main{}
 			transition-delay: 0.5s;
 }
 
+
+
+
+
+
+
+
 /* z-index */
-.btn-skip{z-index:50;}
 header{z-index:40;}
 main{z-index:20;}
 footer{z-index:10;}
