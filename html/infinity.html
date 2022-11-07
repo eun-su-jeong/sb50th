@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="Default">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index, follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>저축은행중앙회 50주년 e역사관</title>
+<link type="text/css" rel="stylesheet" href="/assets/css/reset.css">
+<link type="text/css" rel="stylesheet" href="/assets/css/font.css">
+<link type="text/css" rel="stylesheet" href="/assets/css/common.css">
+<script type="text/javascript" src="/assets/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/assets/lib/jquery-ui-1.12.1.min.js"></script>
+<script type="text/javascript" src="/assets/lib/jquery.nanoscroller-0.8.7.min.js"></script>
+<script type="text/javascript" src="/assets/js/common.js"></script>
+<style>
+.ui-infinity{position:relative;outline:1px solid #0ff;}
+.ui-infinity .base{position:relative;opacity:1;}
+.ui-infinity .overlay{position:absolute;top:75px;left:-214px;transform:rotate(150.5deg);}
+
+/*
+	width = height = 70px
+	border-width = 10px
+	time = 1s
+*/
+.infinity-loader {
+	width: calc(197px * 2 - 2px); /* 2 x width - border-width */
+	height: 197px; /* width */
+	transform: translate(-50%, -50%);
+}
+.infinity-loader .bg div,
+.infinity-loader > .fg > div > div {
+	position: absolute;
+	width: 197px; /* width */
+	height: 197px; /* width */
+	/* border: 2px solid rgba(36, 164, 80, 1); */
+	border: 2px solid rgba(0, 0, 0, 0); /* border-width solid #aaa */
+	border-radius: 50%; /* to make the div round*/
+}
+.infinity-loader .right-bg {
+	left: -2px; /* -border-width */
+	transform: translate(100%, 0);
+}
+.infinity-loader > .fg > div > div {
+	position: static; /*add this otherwise transformation in its parent won't work as expect*/
+	border-color: rgba(255, 255, 255, 0) rgba(36, 164, 80, 1) transparent transparent;
+	transform: rotate(135deg);
+	animation: spin 8s linear infinite; /* spin time linear infinite */
+}
+.infinity-loader > .fg > div {
+	position: absolute; /* required for using clip: rect() */
+	clip: rect(0, 196px, 98px, 0); /* 0, width, width/2, 0*/
+}
+.infinity-loader > .fg > .bottom-right-rect {
+	left: -2px; /* -border-width */
+	transform: translateX(100%) scale(1, -1);
+}
+.infinity-loader > .fg > .bottom-right-rect > div {
+	animation-delay: 2s; /* time/4 */
+}
+.infinity-loader > .fg > .top-right-rect {
+	left: -2px; /* -border-width */
+	transform: translateX(100%) scale(-1, 1);
+}
+.infinity-loader > .fg > .top-right-rect > div {
+	animation-delay: 4s; /* (2 x time)/4 */
+}
+.infinity-loader > .fg > .bottom-left-rect {
+	transform: scale(-1);
+}
+.infinity-loader > .fg > .bottom-left-rect > div {
+	animation-delay: 6s; /* (3 x time)/4 */
+}
+.infinity-loader > .fg {
+	/* filter: drop-shadow(0 0 4px #24A450); */
+	/* filter: drop-shadow(0 0 8px #000); */
+	box-shadow: 0 0 8px #000;
+}
+@keyframes spin {
+	50%, 100% {transform: rotate(495deg);} /* (360 + 135)deg*/
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+	<header></header>
+	<main>
+		<section>
+			<article>
+				<div class="ui-infinity">
+					<div class="base"><img src="/assets/images/50.svg" alt="50th"></div>
+					<div class="overlay">
+						<div class="infinity-loader">
+							<div class="bg">
+								<div class="left-bg"></div>
+								<div class="right-bg"></div>
+							</div>
+							<div class="fg">
+								<div class="top-left-rect">
+									<div></div>
+								</div>
+								<div class="bottom-right-rect">
+									<div></div>
+								</div>
+								<div class="top-right-rect">
+									<div></div>
+								</div>
+								<div class="bottom-left-rect">
+									<div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</section>
+	</main>
+	<footer></footer>
+</div>
+</body>
+</html>
