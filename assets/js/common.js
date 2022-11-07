@@ -108,14 +108,6 @@ var publish = function () {
 						$header.toggleClass("scrolled", state);
 					}
 				});
-				var domain = "한국투자저축은행",
-					$h3 = $("main .main .title-bar h3"),
-					delimiter = " - ",
-					title = domain;
-				if ($h3.length > 0) {
-					title += delimiter + $h3.text();
-				}
-				document.title = title;
 			});
 		},
 		footer: function () {
