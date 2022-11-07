@@ -2,16 +2,61 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>저축은행중앙회</title>
-    <link rel="stylesheet" href="/assets/css/reset.css">
-    <link rel="stylesheet" href="/assets/css/font.css">
-    <link rel="stylesheet" href="/assets/css/common.css">
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>저축은행중앙회</title>
+	<link rel="stylesheet" href="/assets/lib/swiper-5.4.2.min.css">
+	<link rel="stylesheet" href="/assets/css/reset.css">
+	<link rel="stylesheet" href="/assets/css/font.css">
+	<link rel="stylesheet" href="/assets/css/common.css">
+	<script type="text/javascript" src="/assets/lib/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="/assets/lib/jquery-ui-1.12.1.min.js"></script>
+	<script type="text/javascript" src="/assets/lib/swiper-5.4.2.min.js"></script>
+	<script>
+		$(function () {
+
+			let lbls = [];
+			$(".ui-history .swiper-slide h5").each(function () {
+				lbls.push($(this).text());
+			});
+			console.log("lbls", lbls)
+			var swiper = new Swiper(".mySwiper", {
+				slidesPerView: 1,
+				spaceBetween: 0,
+				effect: "fade",
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+					renderBullet: function (index, className) {
+						return `<span class="${className}"><span class="icn"></span><span class="lbl">${lbls[index]}</span></span>`;
+					}
+				}
+			});
+
+
+			const items = document.querySelectorAll('.appear');
+
+			const active = function(entries){
+				entries.forEach(entry => {
+					if(entry.isIntersecting){
+					entry.target.classList.add('inview'); 
+					}else{
+						entry.target.classList.remove('inview'); 
+					}
+				});
+			}
+			const io2 = new IntersectionObserver(active);
+			for(let i=0; i < items.length; i++){
+				io2.observe(items[i]);
+			}
+
+		})
+	</script>
 </head>
 
 <body>
+<<<<<<< HEAD
     <header>
         <div class="nav_conts">
             <a><img src="/assets/images/logo.svg" alt="저축은행중앙회 50주년 로고"></a>
@@ -52,6 +97,126 @@
         <section id="emblem"></section>
     </main>
     <footer></footer>
+=======
+	<header>
+		<!-- <div class="nav_conts">
+			<h1><img src="/assets/images/logo.svg" alt="저축은행중앙회 50주년 로고"></h1>
+		</div> -->
+	</header>
+	<main>
+		<section id="intro">
+			<article></article>
+		</section>
+		<section class="ui-history">
+			<article>
+				<div>
+					<div class="swiper mySwiper">
+						<div class="title-wrap">
+							<p>고객한 함께한 50년</p>
+							<p class="bold">저축은행의 50년 발자취를 돌아봅니다.</p>
+						</div>
+						<div class="swiper-pagination"></div>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<h5>1970년</h5>
+								<img src="/assets/images/history.png" alt="">
+								<div class="history-conts">
+									<h3>설립이야기</h3>
+									<p>저축은행법 제 25조에 의거 저축은행의 건전한 발전을 도모하고 거래자보호를 위하여 설립된 비영리 특별법인입니다.</p>
+									<button class="btn">연혁보기</button>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<h5>1980년</h5>
+								<img src="/assets/images/history.png" alt="">
+								<div class="history-conts">
+									<h3>1980 이야기</h3>
+									<p>저축은행법 제 25조에 의거 저축은행의 건전한 발전을 도모하고 거래자보호를 위하여 설립된 비영리 특별법인입니다.</p>
+									<button class="btn">연혁보기</button>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<h5>1990년</h5>
+								<img src="/assets/images/history.png" alt="">
+								<div class="history-conts">
+									<h3>1990 이야기</h3>
+									<p>저축은행법 제 25조에 의거 저축은행의 건전한 발전을 도모하고 거래자보호를 위하여 설립된 비영리 특별법인입니다.</p>
+									<button class="btn">연혁보기</button>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<h5>2000년</h5>
+								<img src="/assets/images/history.png" alt="">
+								<div class="history-conts">
+									<h3>2000 이야기</h3>
+									<p>저축은행법 제 25조에 의거 저축은행의 건전한 발전을 도모하고 거래자보호를 위하여 설립된 비영리 특별법인입니다.</p>
+									<button class="btn">연혁보기</button>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<h5>2010년</h5>
+								<img src="/assets/images/history.png" alt="">
+								<div class="history-conts">
+									<h3>2010 이야기</h3>
+									<p>저축은행법 제 25조에 의거 저축은행의 건전한 발전을 도모하고 거래자보호를 위하여 설립된 비영리 특별법인입니다.</p>
+									<button class="btn">연혁보기</button>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<h5>2020년</h5>
+								<img src="/assets/images/history.png" alt="">
+								<div class="history-conts">
+									<h3>2020 이야기</h3>
+									<p>저축은행법 제 25조에 의거 저축은행의 건전한 발전을 도모하고 거래자보호를 위하여 설립된 비영리 특별법인입니다.</p>
+									<button class="btn">연혁보기</button>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<h5>2021년</h5>
+								<img src="/assets/images/history.png" alt="">
+								<div class="history-conts">
+									<h3>2021 이야기</h3>
+									<p>저축은행법 제 25조에 의거 저축은행의 건전한 발전을 도모하고 거래자보호를 위하여 설립된 비영리 특별법인입니다.</p>
+									<button class="btn">연혁보기</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</section>
+		<section class="ui-speech">
+			<article>
+				<div class="circle"></div>
+				<div class="speech-wrap">
+					<div class="appear title-wrap">
+						<p>동반 성장해온 50년</p>
+						<p class="bold">미래 50년도 고객과 함께 나가겠습니다.</p>
+					</div>
+					<div class="flex">
+						<div class="speech-conts appear">
+							<h4>함께한 50년, 나아갈 100년의 약속</h4>
+							<div class="txt appear">
+								<p>1970년대 초, 사금융이 만연하고 금융사고가 빈발할 때 사금융양성화 3법 제정 이후 1972년 상호신용금고로 저축은행이 출범하여 창립 50주년을 맞이하였습니다.</p>
+								<p>앞으로 저축은행은 창립 50주년을 넘어 시장과 고객의 신뢰를 잃지 않도록 하기 위해 서민을 위한 중금리대출, 서민지원 프로그램 확대, ESG경영 등 사회책임 경영 확대에 꾸준히 정진해 나갈 것을 약속드립니다.</p>
+								<p>50년의 역사를 바탕으로 “100년 서민금융” 저축은행으로 거듭날 수 있도록 앞으로 많은 관심과 격려 부탁드립니다.</p>
+							</div>
+							<button class="btn appear">인사말</button>
+						</div>
+						<div class="ceo appear">
+							<img src="/assets/images/ceo.png" alt="사장님">
+						</div>
+					</div>
+				</div>
+			</article>
+		</section>
+		<section class="ui-emblem">
+			<article>
+			</article>
+		</section>
+	</main>
+	<footer></footer>
+>>>>>>> c4bccdaf9c59aa019e30bd811e0ed87894b71269
 </body>
 
 </html>
