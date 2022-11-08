@@ -33,7 +33,7 @@
 				}
 			});
 
-			const items = document.querySelectorAll('.intersect');
+			const intersects = document.querySelectorAll('.intersect');
 			const active = function (entries) {
 				entries.forEach(entry => {
 					if (entry.isIntersecting) {
@@ -42,46 +42,57 @@
 				});
 			}
 			const inter1 = new IntersectionObserver(active);
-			for (let i = 0; i < items.length; i++) {
-				inter1.observe(items[i]);
+			for (let i = 0; i < intersects.length; i++) {
+				inter1.observe(intersects[i]);
 			}
 
 
 
-			const $text = document.querySelector(".typing");
-
+			const typings = document.querySelectorAll(".typing");
 			// 글자 모음 - 개행문자(\n)로 줄바꿈
-			const letters = ["고객과 함께한 50년\n 저축은행의 50년 발자취를 돌아봅니다."];
-
+			let letter = [];
+			let letters = [];
 			// 글자 입력 속도
-			const speed = 30;
-			let i = 0;
+			let speed = 30;
+			let inters = [];
+			let title = [];
 
-			// 줄바꿈을 위한 <br> 치환
-			const changeLineBreak = (letter) => {
-				return letter.map(text => text === "\n" ? "<br>" : text);
-			}
 
-			// 타이핑 효과
-			const typing = async () => {
-				// 기존코드에서 개행치환코드 추가
-				const letter = changeLineBreak(letters[i].split(""));
-				while (letter.length) {
-					await wait(speed);
-					$text.innerHTML += letter.shift();
+			for (let i = 0; i < typings.length; i++) {
+
+console.log("for[i]", i)
+				letter[i] = typings[i].innerHTML;
+
+				// 줄바꿈을 위한 <br> 치환
+				const changeLineBreak = (letter) => {
+					return letter.map(text => text === "\n" ? "<br>" : text);
 				}
-			}
 
-			const title = function (entries) {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						typing();
+				// 타이핑 효과
+				const typing = async (i) => {
+					// 기존코드에서 개행치환코드 추가
+					letter[i] = changeLineBreak(letter[i].split(""));
+					typings[i].innerHTML = "(new)";
+					while (letter[i].length) {
+						await wait(speed);
+						typings[i].innerHTML += letter[i].shift();
 					}
-				});
+					console.log(i + "done")
+				}
+
+				title[i] = function (entries) {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							typing(i);
+						}
+					});
+				}
+				inters[i] = new IntersectionObserver(title[i]);
+				inters[i].observe(typings[i]);
+			
 			}
-			const inter2 = new IntersectionObserver(title);
-			for (let i = 0; i < items.length; i++) {
-				inter2.observe(items[i]);
+			function wait(ms) {
+				return new Promise(res => setTimeout(res, ms))
 			}
 		})
 	</script>
@@ -133,7 +144,8 @@
 					<div class="swiper mySwiper">
 						<div class="title-wrap">
 							<div>
-								<h3 class="typing"></h3>
+								<h3 class="typing">고객과 함께한 50년</h3>
+								<h4 class="typing">저축은행의 50년 발자취를 돌아봅니다.</h4>
 							</div>
 						</div>
 						<div class="swiper-pagination"></div>

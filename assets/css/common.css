@@ -414,12 +414,12 @@ main{}
 	font-size: 40px;
 }
 
-.ui-history h3::after {
+/* .ui-history h3::after {
 	content: '';
 	margin-left: .4rem;
 	border-right: 2px solid #777;
 	animation: cursor .9s infinite steps(2);
-}
+} */
 
 @keyframes cursor {
 	from { border-right: 2px solid #222; }
