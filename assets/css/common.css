@@ -237,8 +237,8 @@ header .nav_conts{display: flex; justify-content: space-between; align-items: ce
 .circle1:after{
 	content: "";
 	position: absolute;
-	top: 35%;
-	left: 0;
+	top: 66%;
+    left: 95%;
 	width: 28px;
 	height: 28px;
 	border-radius: 100%;
@@ -273,8 +273,8 @@ header .nav_conts{display: flex; justify-content: space-between; align-items: ce
     transform-origin: 50% 50%;
     -webkit-animation: circle2 30s linear infinite;
     animation: circle2 30s linear infinite;
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
+    -webkit-animation-delay: 250ms;
+    animation-delay: 250ms;
     -webkit-animation-direction: reverse;
     animation-direction: reverse;
     z-index: 9;
@@ -283,8 +283,8 @@ header .nav_conts{display: flex; justify-content: space-between; align-items: ce
 .circle2:after{
 	content: "";
 	position: absolute;
-	top: 37%;
-	left: 0;
+	top: 57%;
+    left: 98%;
 	width: 38px;
 	height: 38px;
 	border-radius: 100%;
@@ -328,8 +328,8 @@ header .nav_conts{display: flex; justify-content: space-between; align-items: ce
 .circle3:after{
 	content: "";
 	position: absolute;
-	top: 42%;
-	left: 0;
+	top: 95%;
+    left: 70%;
 	width: 22px;
 	height: 22px;
 	border-radius: 100%;
