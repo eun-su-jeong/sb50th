@@ -350,21 +350,24 @@ header .nav_conts{display: flex; justify-content: space-between; align-items: ce
 .scroll{
 	display: flex; flex-direction: column; justify-content: center; align-items: center; 
 	position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%);
-	-webkit-animation: alternate scroll .35s linear infinite;
-			animation: alternate scroll .35s linear infinite;
+	-webkit-animation: scroll 1.5s ease-in alternate infinite;
+			animation: scroll 1.5s ease-in alternate infinite;
 }
 
 @-webkit-keyframes scroll{
-	0%{transform:translateY(0px);}
-    100%{transform:translateY(-10px);}
+	0%{transform:translate(0);}
+	20%{transform:translateY(15px);}
+    100%{transform:translate(0);}
 }
 
 @keyframes scroll{
-	0%{transform:translateY(0px);}
-    100%{transform:translateY(-10px);}
+	0%{transform:translate(0);}
+	20%{transform:translateY(15px);}
+    100%{transform:translate(0);}
 }
 .scroll span{text-transform: uppercase;}
 .scroll img{width: 50%;}
+
 
 
 /* history */
