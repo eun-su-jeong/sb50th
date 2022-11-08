@@ -168,6 +168,7 @@ article{position:relative;width:1240px;margin:0 auto;}
 .title-wrap{font-size: 40px; color: #333;}
 .title-wrap .bold{color: #111; font-weight: 700;}
 .title-wrap p:first-child{margin-bottom: 12px;}
+.txt{font-size: 18px; color: #666; word-break: keep-all; margin-bottom: 40px;}
 
 /* header */
 
@@ -406,12 +407,11 @@ main{}
 .ui-speech .speech-wrap{position: relative;}
 .ui-speech .speech-conts{width: 636px; padding: 100px 0;}
 .ui-speech .speech-conts h4{margin-bottom: 17px;}
-.ui-speech .speech-conts .txt{font-size: 18px; color: #666; word-break: keep-all; margin-bottom: 40px;}
-.ui-speech .speech-conts p:nth-child(2){padding: 28px 0;}
-.ui-speech .flex{display: flex; justify-content: space-between;}
+.ui-speech .speech-conts .txt{margin-bottom: 40px;}
+.ui-speech .speech-conts .txt p:nth-child(2){padding: 28px 0;}
+.flex{display: flex; justify-content: space-between;}
 
-.ui-speech .ceo{transform-origin: 80% 15%; margin-right: 30px;}
-.ui-speech .ceo:hover{transform: scale(4);}
+.ui-speech .ceo{margin-right: 30px;}
 .ui-speech .circle {display:block; position:absolute;
 	top: -25%; right: -30%; 
 	width: 700px; height: 700px; border-radius: 50%;
@@ -458,10 +458,13 @@ main{}
 }
 
 
-
-
-
-
+/* emblem */
+.ui-emblem{position:relative; background-color: #F7FBF6;height: 100vh;}
+.ui-emblem article{padding: 160px 0;}
+.ui-emblem .txt{width: 603px;}
+.ui-emblem .txt p{word-break: keep-all}
+.ui-emblem .txt p:first-child{margin: 32px 0 20px 0;}
+.ui-emblem .emblem-conts .overlay{overflow: hidden;}
 
 
 /* z-index */
