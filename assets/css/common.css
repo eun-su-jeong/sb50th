@@ -354,7 +354,7 @@ main{}
 .ui-history .swiper-pagination {display:flex;justify-content:space-between;align-items:flex-start;position: relative;padding:12px 0;}
 .ui-history .swiper-pagination:before {	display: block;position: absolute;left: 0; top: 20px;width:100%; height: 2px;background-color: rgba(0, 0, 0, .04);content: '';}
 .ui-history .swiper-pagination-bullet {display:inline-flex;flex-direction:column;align-items:center;width: auto;height: auto;border-radius: 0;background: none;opacity: 1;}
-.ui-history .swiper-pagination-bullet .lbl {color: #888;}
+.ui-history .swiper-pagination-bullet .lbl {color: #888;font-weight: 700;}
 .ui-history .swiper-pagination-bullet .icn{position: relative;width: 16px;height: 16px;text-align: center;border-radius:50%;opacity: 1;background: #D9D9D9;}
 .ui-history .swiper-pagination-bullet .icn + .lbl{margin-top:19px;}
 .ui-history .swiper-pagination-bullet .icn:before,
@@ -368,7 +368,7 @@ main{}
 
 
 .ui-history .swiper-pagination-bullet-active .icn{background: #017A5F;}
-.ui-history .swiper-pagination-bullet-active .lbl{color: #111; font-weight: 700;}
+.ui-history .swiper-pagination-bullet-active .lbl{color: #111;}
 .ui-history .swiper-pagination-bullet.swiper-pagination-bullet-active .icn:before,
 .ui-history .swiper-pagination-bullet.swiper-pagination-bullet-active .icn:after {transform:scaleX(1)}
 .ui-history .swiper-pagination-bullet.swiper-pagination-bullet-active .icn:before {left: -80px;background: linear-gradient(to left, rgba(1, 122, 95, 1), rgba(1, 122, 95, 0));}
@@ -398,43 +398,19 @@ main{}
 	border: 2px solid rgba(0, 0, 0, .04);
 }
 
-.appear {
-	-webkit-transition: all 0.8s;
-	transition: all 0.8s;
+.intersect {
+	transition: all 1.5s;
 	opacity: 0;
-	-webkit-transform: translateY(100px);
-			transform: translateY(200px);
 }
-
-.appear.inview {
+.intersect.appear.on{
 	opacity: 1;
-	-webkit-transform: none;
-			transform: none;
 }
-
-.appear.inview:nth-child(1) {
-	-webkit-transition-delay: 0.1s;
-			transition-delay: 0.1s;
+.intersect.enlarge{
+	transform-origin: 0 0;
+	transform: scale(0.2);
 }
-
-.appear.inview:nth-child(2) {
-	-webkit-transition-delay: 0.2s;
-			transition-delay: 0.2s;
-}
-
-.appear.inview:nth-child(3) {
-	-webkit-transition-delay: 0.3s;
-			transition-delay: 0.3s;
-}
-
-.appear.inview:nth-child(4) {
-	-webkit-transition-delay: 0.4s;
-			transition-delay: 0.4s;
-}
-
-.appear.inview:nth-child(5) {
-	-webkit-transition-delay: 0.5s;
-			transition-delay: 0.5s;
+.intersect.enlarge.on {
+	transform: scale(1);
 }
 
 
