@@ -177,7 +177,7 @@ header .nav_conts{display: flex; justify-content: space-between; align-items: ce
 
 /* intro */
 
-#intro{position: relative; height: 100vh;}
+#intro{position: relative; height: 100vh; overflow: hidden;}
 .container{width: 80%; position: relative; top: 210px; left: 50%; z-index: 999; transform: translateX(-50%);}
 .title{position: relative; left: 260px;}
 .title .sub_t01{font-size: 44px; font-weight: 700; color:#92C043;}
