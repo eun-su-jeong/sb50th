@@ -466,6 +466,32 @@ main{}
 .ui-emblem .emblem-conts .overlay{overflow: hidden;}
 
 
+/* infinity */
+.ui-infinity{position:relative;}
+.ui-infinity .base{position:relative;opacity:1;}
+.ui-infinity .overlay{position:absolute;top:-20px;left:-56px;width:1106px;height:406px;transform:scale(0.9);opacity: .2;}
+.ui-infinity svg{
+	fill: none;
+	stroke-width: 34;
+	stroke: url(#fill);
+	filter: url(#inset-shadow);
+	stroke-dasharray: 230 1000;
+	/* stroke-linecap: round; */
+	animation: track 4s linear infinite;
+}
+@keyframes track {
+	0%	{stroke-dashoffset: 0;}
+	100%{stroke-dashoffset: 1228;}
+}
+
+
+
+
+
+
+
+
+
 /* z-index */
 header{z-index:40;}
 main{z-index:20;}
