@@ -242,7 +242,8 @@ header .nav_conts{display: flex; justify-content: space-between; align-items: ce
 	height: 28px;
 	border-radius: 100%;
 	background-color: #019955;
-	box-shadow: -1px 1px 0px 1px rgb(3 92 52 / 20%);
+	/* box-shadow: -1px 1px 0px 1px rgb(3 92 52 / 20%); */
+	box-shadow: 0 0 16px 0 rgba(3, 92, 52, .4);
 }
 
 @-webkit-keyframes circle1{
