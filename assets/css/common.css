@@ -178,7 +178,7 @@ header .nav_conts{display: flex; justify-content: space-between; align-items: ce
 
 /* intro */
 
-#intro{position: relative;}
+#intro{position: relative; height: 100vh;}
 .container{width: 80%; position: relative; top: 210px; left: 50%; z-index: 999; transform: translateX(-50%);}
 .title{position: relative; left: 260px;}
 .title .sub_t01{font-size: 44px; font-weight: 700; color:#92C043;}
@@ -190,7 +190,7 @@ header .nav_conts{display: flex; justify-content: space-between; align-items: ce
 .title .sub_box02 .sub_t03 > span{ background: linear-gradient(to right, #91C042, #017C5F); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
 .title .sub_box02 p{font-size: 18px; color:#666; padding-top: 12px;}
 
-.container nav{position: absolute; top: 60px; left: 989px;}
+.container nav{position: absolute; top: 60px; left: 951px;}
 .container nav ul li{display: flex; align-items: center; padding-bottom: 36px;}
 .container nav ul li:first-child{margin-left: -18px;}
 .container nav ul li:last-child{margin-left: 8px;}
@@ -211,7 +211,7 @@ header .nav_conts{display: flex; justify-content: space-between; align-items: ce
 .circle1{
 	position: relative;
 	top: 0;
-	left: 42%;
+	left: 40%;
 	width: 867px;
 	height: 867px;
 	border: 1px solid transparent;
@@ -297,7 +297,7 @@ header .nav_conts{display: flex; justify-content: space-between; align-items: ce
 .circle3{
 	position: absolute;
 	top: -58%;
-    left: 9%;
+    left: 12%;
     width: 1986px;
     height: 1986px;
 	border: 1px solid transparent;
