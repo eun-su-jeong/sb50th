@@ -186,7 +186,6 @@ header .nav_conts{display: flex; justify-content: space-between; align-items: ce
 .title{position: relative;}
 .title .sub_t01{font-size: 44px; font-weight: 700; color:#92C043;}
 .title .sub_box01{position: absolute; top: 25px; left: 360px;}
-.title .sub_box01 img{position: absolute; left: 23px;}
 .title .sub_box01 .sub_t02{font-size: 50px; font-weight: 700; color:#017562;}
 .title .sub_box02{position: absolute; top:340px; left: 210px;}
 .title .sub_box02 .sub_t03{display: block; font-size: 44px; font-weight: 700; color:#017562;}
