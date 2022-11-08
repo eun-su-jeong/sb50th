@@ -47,49 +47,39 @@
 				inter1.observe(intersects[i]);
 			}
 
-
-
 			const typings = document.querySelectorAll(".typing");
-			// 글자 모음 - 개행문자(\n)로 줄바꿈
-			let letter = [];
-			let letters = [];
-			// 글자 입력 속도
-			let speed = 30;
-			let inters = [];
-			let title = [];
-			let delay = 0;
+			
+			let letter = [], // 글자 모음 - 개행문자(\n)로 줄바꿈
+				letters = [],
+				speed = 30, // 타이핑 속도
+				inters = [],
+				title = [],
+				delay = 0;
 
 			for (let i = 0; i < typings.length; i++) {
 				letter[i] = typings[i].innerHTML;
-				typings[i].innerHTML = "";
-			}
-
-
-			for (let i = 0; i < typings.length; i++) {
-
-				delay = i * 2000;
-				console.log("delay", delay)
+				delay = i * 400;
 				// 줄바꿈을 위한 <br> 치환
 				const changeLineBreak = (letter) => {
 					return letter.map(text => text === "\n" ? "<br>" : text);
 				}
-
 				// 타이핑 효과
 				const typing = async () => {
+					if ($(typings[i]).hasClass("done")) return false;
+					typings[i].innerHTML = "";
 					// 기존코드에서 개행치환코드 추가
 					letter[i] = changeLineBreak(letter[i].split(""));
+					if (i > 0) await wait(delay);
 					while (letter[i].length) {
 						await wait(speed);
 						typings[i].innerHTML += letter[i].shift();
 					}
+					typings[i].classList.add("done");
 				}
-
 				title[i] = function (entries) {
 					entries.forEach(entry => {
 						if (entry.isIntersecting) {
-
 							typing();
-
 						}
 					});
 				}
