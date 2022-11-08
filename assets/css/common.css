@@ -268,6 +268,8 @@ header .nav_conts{display: flex; justify-content: space-between; align-items: ce
 			animation: circle2 30s linear infinite;
     -webkit-animation-delay: 2s;
             animation-delay: 2s;
+	-webkit-animation-direction: reverse;
+			animation-direction: reverse;
     z-index: 9;
 }
 
@@ -336,6 +338,24 @@ header .nav_conts{display: flex; justify-content: space-between; align-items: ce
     100%{transform:rotate(360deg);}
 }
 
+.scroll{
+	display: flex; flex-direction: column; justify-content: center; align-items: center; 
+	position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%);
+	-webkit-animation: alternate scroll .35s linear infinite;
+			animation: alternate scroll .35s linear infinite;
+}
+
+@-webkit-keyframes scroll{
+	0%{transform:translateY(0px);}
+    100%{transform:translateY(-10px);}
+}
+
+@keyframes scroll{
+	0%{transform:translateY(0px);}
+    100%{transform:translateY(-10px);}
+}
+.scroll span{text-transform: uppercase;}
+.scroll img{width: 50%;}
 
 
 /* history */
