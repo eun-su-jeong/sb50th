@@ -48,7 +48,7 @@
 			}
 
 			const typings = document.querySelectorAll(".typing");
-			
+
 			let letter = [], // 글자 모음 - 개행문자(\n)로 줄바꿈
 				letters = [],
 				speed = 30, // 타이핑 속도
@@ -242,15 +242,24 @@
 		</section>
 		<section class="ui-emblem">
 			<article>
+				<div class="bg-right">
+					<div class="cir right"></div>
+					<div class="mini-cir right"></div>
+				</div>
+				<div class="bg-left">
+					<div class="cir left"></div>
+					<div class="mini-cir left"></div>
+				</div>
 				<div class="emblem-conts flex">
 					<div class="ui-infinity">
-						<div class="base"><img src="/assets/images/50.svg" alt="50th"></div>
+						<div class="base"><img src="/assets/images/emblem50.svg" alt="50th"></div>
 						<div class="overlay">
 							<svg viewBox="0 0 1000 800" xmlns="http://www.w3.org/2000/svg">
 								<defs>
 									<filter id="inset-shadow">
 										<feOffset dx="10" dy="10" /> <!-- Shadow Offset -->
-										<feGaussianBlur stdDeviation="10" result="offset-blur" /> <!-- Shadow Blur -->
+										<feGaussianBlur stdDeviation="10" result="offset-blur" />
+										<!-- Shadow Blur -->
 										<feComposite operator="out" in="SourceGraphic" in2="offset-blur"
 											result="inverse" />
 										<!-- Invert the drop shadow to create an inner shadow -->
@@ -292,7 +301,32 @@
 			</article>
 		</section>
 	</main>
-	<footer></footer>
+	<footer>
+		<article>
+			<div class="policy">
+				<a href="#"><span class="lbl">개인정보처리방침</span></a>
+				<a href="#"><span class="lbl">신용정보활용체제</span></a>
+				<a href="#"><span class="lbl">영상정보처리기기 운영방침</span></a>
+			</div>
+			<div class="address">
+				<div class="first">
+					<span class="tit">지번주소</span>
+					<span class="cont">서울특별시 마포구 공덕동 168 11~13층</span>
+				</div>
+				<div class="second">
+					<span class="tit">도로명주소</span>
+					<span class="cont">서울특별시 마포구 마포대로 163 11~13층</span>
+				</div>
+				<div class="third">
+					<span class="tit">우편번호</span>
+					<span class="cont">04130</span>
+				</div>
+			</div>
+			<div class="copyright">
+				<span>ⓒ 2022 by KOREA FEDERATION OF SAVING BANKS. ALL LIGHTS RESERVED. </span>
+			</div>
+		</article>
+	</footer>
 </body>
 
 </html>
