@@ -70,13 +70,20 @@ var publish = function () {
 		// 메인페이지 연혁 영역 설정 (이은영)
 		setHistory: function() {
 			let lbls = [];
+			let effect = ["fade","slide"];
+			
 			$(".ui-history .swiper-slide h5").each(function () {
 				lbls.push($(this).text());
 			});
+			
+			if (_device.isMobile) {
+				effect = effect[1]
+			};
+
 			var swiper = new Swiper(".mySwiper", {
 				slidesPerView: 1,
 				spaceBetween: 0,
-				effect: "fade",
+				effect: effect[0],
 				pagination: {
 					el: ".swiper-pagination",
 					clickable: true,
@@ -85,6 +92,9 @@ var publish = function () {
 					}
 				}
 			});
+
+			
+
 			const intersects = document.querySelectorAll('.intersect');
 			const active = function (entries) {
 				entries.forEach(entry => {
