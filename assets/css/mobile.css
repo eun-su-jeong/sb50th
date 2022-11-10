@@ -28,3 +28,9 @@ article{width:auto;}
 .ui-history .swiper-pagination-bullet.swiper-pagination-bullet-active .icn:after{display: none;}
 .ui-history .swiper-pagination-bullet.swiper-pagination-bullet-active .icn:before{display: none;}
 .ui-history .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) .lbl{display: none;}
+
+/*  */
+.ui-speech article{padding: 50px 24px;}
+.ui-speech .speech-conts
+.ui-speech .ceo{margin: 0;}
+.ui-speech .ceo img{width: 240px; height: 240px;}
