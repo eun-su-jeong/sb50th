@@ -10,6 +10,11 @@ article{width:auto;}
     font-size: 16px;
 }
 .btn:hover{box-shadow: none;}
+.txt{font-size: 15px;}
+.mb{display: block;}
+.hide{display: none;}
+.mini-cir {display:block; position:absolute; width: 22px; height: 22px; border-radius: 50%; background-color:#91D1A7;}
+
 /* history */
 .ui-history article{padding: 50px 24px;}
 .ui-history .typing{font-size: 24px;}
@@ -28,9 +33,29 @@ article{width:auto;}
 .ui-history .swiper-pagination-bullet.swiper-pagination-bullet-active .icn:after{display: none;}
 .ui-history .swiper-pagination-bullet.swiper-pagination-bullet-active .icn:before{display: none;}
 .ui-history .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) .lbl{display: none;}
+.ui-history .btn{position: relative;right: 0%; bottom: 0%;}
 
-/*  */
+/* speech */
 .ui-speech article{padding: 50px 24px;}
-.ui-speech .speech-conts
+.ui-speech .flex{flex-wrap: wrap-reverse; justify-content: flex-end;}
+.ui-speech .speech-conts{padding:30px 0 10px 0;}
+.ui-speech .speech-conts h4{font-size: 16px;margin-bottom:20px}
 .ui-speech .ceo{margin: 0;}
 .ui-speech .ceo img{width: 240px; height: 240px;}
+.ui-speech .speech-conts .txt p:nth-child(2){padding: 20px 0;}
+.ui-speech .circle{top: -2%; left: -17%; width: 370px; height: 370px;}
+/* .ui-speech .mini-cir {left: 12%; top:34%; transform: translateY(12px);width: 16px; height: 16px;} */
+
+
+/* emblem */
+.ui-emblem{background-color:#FBFBFB;}
+.ui-emblem article{padding: 50px 24px;}
+.ui-emblem .emblem-conts.flex{flex-wrap: wrap; justify-content:center;}
+.ui-emblem .overlay{display: none;}
+.base img {width: 100%;}
+.ui-emblem .txt-cont{margin-top:55px}
+.ui-infinity .base{width: 215px; height: 160px;}
+/* footer */
+footer article{padding:28px 44px;}
+footer .copyright {text-align: center;}
+footer .copyright span{color: #fff; font-size:12px;}
