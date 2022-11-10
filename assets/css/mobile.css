@@ -3,7 +3,7 @@
 .container{min-width:0;}
 article{width:auto;}
 
-.title-wrap{font-size: 24px;width: 261px;}
+.title-wrap{font-size: 24px;width: 261px;height: 5em;}
 .btn {
     height: 40px;
     width: 100%;
@@ -34,6 +34,7 @@ article{width:auto;}
 .ui-history .swiper-pagination-bullet.swiper-pagination-bullet-active .icn:before{display: none;}
 .ui-history .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) .lbl{display: none;}
 .ui-history .btn{position: relative;right: 0%; bottom: 0%;}
+.ui-history .title-wrap{height: 5em;}
 
 /* speech */ 
 .ui-speech article{padding: 50px 24px;}

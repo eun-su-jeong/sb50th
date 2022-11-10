@@ -166,7 +166,7 @@ article{position:relative;width:1240px;margin:0 auto;}
     font-size: 18px;
 	transition: all 1.5s;
 }
-.title-wrap{font-size: 40px; color: #333;}
+.title-wrap{font-size: 40px; color: #333;height: 3em;}
 .title-wrap .bold{color: #111; font-weight: 700;}
 .txt{font-size: 18px; color: #666; word-break: keep-all; margin-bottom: 40px;}
 .btn:hover{box-shadow: 300px 0 0 0  rgba(255, 255, 255, 0.25) inset, -300px 0 0 0  rgba(255, 255, 255, 0.25) inset;}
@@ -494,6 +494,8 @@ main{}
 .ui-emblem{position:relative; background-color: #F7FBF6;}
 .ui-emblem article{padding: 160px 0;overflow: hidden;}
 .ui-emblem .txt-cont{width: 600px;margin-top: 240px;}
+.ui-emblem .txt-cont .title-wrap{height: auto;}
+.ui-emblem .txt-cont .txt{margin-bottom: 10px;}
 .ui-emblem .txt-cont .txt p{word-break: keep-all}
 .ui-emblem .txt-cont .txt p:first-child{margin: 32px 0 20px 0;}
 .ui-emblem .emblem-conts .overlay{overflow: hidden;}
@@ -505,8 +507,8 @@ main{}
 .ui-emblem .bg-left .cir.left {bottom: -53%; left: -24%;}
 .mini-cir {display:block; position:absolute;
 	width: 22px; height: 22px; border-radius: 50%; background-color:#91D1A7;}
-.bg-right .mini-cir.right {right: 27%; top: 34%; transform: translateX(-2px);}
-.bg-left .mini-cir.left {left: 26%; bottom: 11%; transform: translateX(-3px);width: 28px; height: 28px; background-color:#019955;}
+.bg-right .mini-cir.right {right: 26%; top: 34%; transform: translateX(-2px);}
+.bg-left .mini-cir.left {left: 23%; bottom: 11%; transform: translateX(-3px);width: 28px; height: 28px; background-color:#019955;}
 
 
 /* infinity */
