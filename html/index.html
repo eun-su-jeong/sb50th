@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,85 +12,8 @@
 	<script type="text/javascript" src="/assets/lib/jquery-1.12.4.min.js"></script>
 	<script type="text/javascript" src="/assets/lib/jquery-ui-1.12.1.min.js"></script>
 	<script type="text/javascript" src="/assets/lib/swiper-5.4.2.min.js"></script>
-	<script>
-		$(function () {
-
-			let lbls = [];
-			$(".ui-history .swiper-slide h5").each(function () {
-				lbls.push($(this).text());
-			});
-			console.log("lbls", lbls)
-			var swiper = new Swiper(".mySwiper", {
-				slidesPerView: 1,
-				spaceBetween: 0,
-				effect: "fade",
-				pagination: {
-					el: ".swiper-pagination",
-					clickable: true,
-					renderBullet: (index, className) => {
-						return `<span class="${className}"><span class="icn"></span><span class="lbl">${lbls[index]}</span></span>`;
-					}
-				}
-			});
-
-			const intersects = document.querySelectorAll('.intersect');
-			const active = function (entries) {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						$(entry.target).addClass("on");
-					}
-				});
-			}
-			const inter1 = new IntersectionObserver(active);
-			for (let i = 0; i < intersects.length; i++) {
-				inter1.observe(intersects[i]);
-			}
-
-			const typings = document.querySelectorAll(".typing");
-
-			let letter = [], // 글자 모음 - 개행문자(\n)로 줄바꿈
-				letters = [],
-				speed = 30, // 타이핑 속도
-				inters = [],
-				title = [],
-				delay = 0;
-
-			for (let i = 0; i < typings.length; i++) {
-				letter[i] = typings[i].innerHTML;
-				delay = i * 400;
-				// 줄바꿈을 위한 <br> 치환
-				const changeLineBreak = (letter) => {
-					return letter.map(text => text === "\n" ? "<br>" : text);
-				}
-				// 타이핑 효과
-				const typing = async () => {
-					if ($(typings[i]).hasClass("done")) return false;
-					typings[i].innerHTML = "";
-					// 기존코드에서 개행치환코드 추가
-					letter[i] = changeLineBreak(letter[i].split(""));
-					if (i > 0) await wait(delay);
-					while (letter[i].length) {
-						await wait(speed);
-						typings[i].innerHTML += letter[i].shift();
-					}
-					typings[i].classList.add("done");
-				}
-				title[i] = function (entries) {
-					entries.forEach(entry => {
-						if (entry.isIntersecting) {
-							typing();
-						}
-					});
-				}
-				inters[i] = new IntersectionObserver(title[i]);
-				inters[i].observe(typings[i]);
-
-			}
-			function wait(ms) {
-				return new Promise(res => setTimeout(res, ms))
-			}
-		})
-	</script>
+	<script type="text/javascript" src="/assets/lib/jquery.nanoscroller-0.8.7.min.js"></script>
+	<script type="text/javascript" src="/assets/js/common.js"></script>
 </head>
 
 <body>
@@ -328,5 +250,4 @@
 		</article>
 	</footer>
 </body>
-
 </html>
