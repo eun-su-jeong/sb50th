@@ -442,9 +442,9 @@ main{}
 .ui-history .swiper-pagination-bullet:first-of-type.swiper-pagination-bullet-active .icn:before,
 .ui-history .swiper-pagination-bullet:last-of-type.swiper-pagination-bullet-active .icn:after {transform:scaleX(0);}
 
-
 .ui-history .history-conts{width: 400px;margin-left: 138px;}
 .ui-history .history-conts p{word-break: keep-all; font-size: 18px;margin-top: 16px; margin-bottom: 32px; color: #666;}
+.ui-history .btn{position: absolute;right: 28%; bottom: 28%;z-index: 30;}
 
 
 
@@ -503,10 +503,10 @@ main{}
 }
 .ui-emblem .bg-right .cir.right {top: -19%; right: -27%;}
 .ui-emblem .bg-left .cir.left {bottom: -53%; left: -24%;}
-.ui-emblem .mini-cir {display:block; position:absolute;
+.mini-cir {display:block; position:absolute;
 	width: 22px; height: 22px; border-radius: 50%; background-color:#91D1A7;}
-.ui-emblem .bg-right .mini-cir.right {right: 27%; top: 34%; transform: translateX(-2px);}
-.ui-emblem .bg-left .mini-cir.left {left: 26%; bottom: 11%; transform: translateX(-3px);width: 28px; height: 28px; background-color:#019955;}
+.bg-right .mini-cir.right {right: 27%; top: 34%; transform: translateX(-2px);}
+.bg-left .mini-cir.left {left: 26%; bottom: 11%; transform: translateX(-3px);width: 28px; height: 28px; background-color:#019955;}
 
 
 /* infinity */
