@@ -62,10 +62,13 @@ var publish = function () {
 		init: function () {
 			console.log("publish initiated.");
 			common.setHistory();
+			common.hambergerMenu();
 		},
 		// 인트로 설정 (은수정)
-		setIntro: function() {
-			// do something
+		hambergerMenu: function() {
+			$(".hamburger").click(function(){
+				$(this).toggleClass("is-active");
+			  });
 		},
 		// 메인페이지 연혁 영역 설정 (이은영)
 		setHistory: function() {
