@@ -35,7 +35,7 @@ article{width:auto;}
 .ui-history .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) .lbl{display: none;}
 .ui-history .btn{position: relative;right: 0%; bottom: 0%;}
 
-/* speech */
+/* speech */ 
 .ui-speech article{padding: 50px 24px;}
 .ui-speech .flex{flex-wrap: wrap-reverse; justify-content: flex-end;}
 .ui-speech .speech-conts{padding:30px 0 10px 0;}
