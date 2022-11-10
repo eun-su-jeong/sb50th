@@ -71,7 +71,7 @@ var publish = function () {
 			  });
 		},
 		// 메인페이지 연혁 영역 설정 (이은영)
-		setHistory: function () {
+		setHistory: function() {
 			let lbls = [];
 			let effect = (_device.isMobile) ? "slide" : "fade";
 			$(".ui-history .swiper-slide h5").each(function () {
@@ -176,7 +176,7 @@ $(function () {
 
 	$.fn.grandparent = function (recursion) {
 		if (recursion == undefined) recursion = 2;
-		if (typeof (recursion) == "number") {
+		if (typeof(recursion) == "number") {
 			recursion = parseInt(recursion);
 			if (recursion > 0) {
 				grandsome = $(this);
