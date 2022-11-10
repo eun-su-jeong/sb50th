@@ -2,3 +2,35 @@
 
 .container{min-width:0;}
 article{width:auto;}
+
+.title-wrap{font-size: 24px;width: 261px;}
+.btn {
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+}
+.btn:hover{box-shadow: none;}
+/* history */
+.ui-history article{padding: 50px 24px;}
+.ui-history .typing{font-size: 24px;}
+.ui-history .history-conts{margin: 0; margin-top: 36px;}
+.ui-history .history-conts h3{font-size: 20px;}
+.ui-history .history-conts p{margin-top: 12px; font-size: 15px;}
+.ui-history .swiper-slide{flex-wrap: wrap;}
+.ui-history .swiper-pagination{padding: 0;}
+.ui-history .swiper-slide img{width: 100%;}
+.ui-history .swiper-pagination:before{display: none;}
+.ui-history .swiper-pagination-bullet{flex-direction: row; align-self: center;}
+.ui-history .swiper-pagination-bullet .icn{width: 9px; height: 9px;}
+.ui-history .swiper-pagination-bullet .icn + .lbl{margin: 0; margin-left: 8px;}
+.ui-history .swiper-pagination-bullet-active .icn{width: 17px; height: 17px;}
+.ui-history .swiper-container-horizontal>.swiper-pagination-bullets{margin: 34px 0; padding: 0 2px 0 0;}
+.ui-history .swiper-pagination-bullet.swiper-pagination-bullet-active .icn:after{display: none;}
+.ui-history .swiper-pagination-bullet.swiper-pagination-bullet-active .icn:before{display: none;}
+.ui-history .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) .lbl{display: none;}
+
+/*  */
+.ui-speech article{padding: 50px 24px;}
+.ui-speech .speech-conts
+.ui-speech .ceo{margin: 0;}
+.ui-speech .ceo img{width: 240px; height: 240px;}
