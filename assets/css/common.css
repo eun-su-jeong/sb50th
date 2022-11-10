@@ -176,35 +176,31 @@ article{position:relative;width:1240px;margin:0 auto;}
 
 header { width: 100%; height: 100px; position: fixed; top: 0; left:0;}
 header .nav_conts{display: flex; justify-content: space-between; align-items: center; padding: 15px 80px;}
+header .nav_conts a{display:block;}
 
-.hamburger{ display: flex; flex-direction: column; justify-content: center; width: 56px; height: 56px; border-radius: 50%; border: 1px solid #eee; box-shadow: 2px 5px 10px -4px rgba(0,0,0,.4);}
+.hamburger{ display: flex; flex-direction: column; justify-content: center; align-items: center; width: 56px; height: 56px; border-radius: 50%; border: 1px solid #eee; box-shadow: 2px 5px 10px -4px rgba(0,0,0,.4);}
 .hamburger .line{ 
-	width: 22px; height: 3px; display: block; background-color: #000; margin: 3px auto;
+	display: block; width: 22px; height: 3px; border-radius: 20px; background-color: #000; margin: 3px 0;
 	-webkit-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
-  }
-  .hamburger .line:nth-child(2){width:18px; margin-left: 20px;}
-  
-  .hamburger:hover{ cursor: pointer;}
-  
-  #hamMenu.is-active .line:nth-child(2){
-	opacity: 0;
-  }
-  
-  #hamMenu.is-active .line:nth-child(1){
+}
+.hamburger .line:nth-child(2){width:18px; margin-left: 3px;}
+.hamburger:hover{ cursor: pointer;}
+#hamMenu.is-active .line:nth-child(2){opacity: 0;}
+#hamMenu.is-active .line:nth-child(1){
 	-webkit-transform: translateY(9px) rotate(45deg);
 	-ms-transform: translateY(9px) rotate(45deg);
 	-o-transform: translateY(9px) rotate(45deg);
 	transform: translateY(9px) rotate(45deg);
-  }
-  
-  #hamMenu.is-active .line:nth-child(3){
-	-webkit-transform: translateY(-10px) rotate(-45deg);
-	-ms-transform: translateY(-10px) rotate(-45deg);
-	-o-transform: translateY(-10px) rotate(-45deg);
-	transform: translateY(-10px) rotate(-45deg);
-  }
+}
+#hamMenu.is-active .line:nth-child(3){
+	-webkit-transform: translateY(-9px) rotate(-45deg);
+	-ms-transform: translateY(-9px) rotate(-45deg);
+	-o-transform: translateY(-9px) rotate(-45deg);
+	transform: translateY(-9px) rotate(-45deg);
+}
+
 /* intro */
 #intro{position: relative; height: 100vh;}
 .container{  
