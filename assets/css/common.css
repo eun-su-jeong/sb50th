@@ -156,7 +156,7 @@ header,
 main,
 footer{position:relative;}
 section{position:relative;}
-article{position:relative;width:1240px;margin:0 auto;}
+article{position:relative;width:1240px; margin:0 auto;}
 .btn{
 	height: 46px;
     width: 150px;
@@ -204,10 +204,11 @@ header .nav_conts a{display:block;}
 
 /* intro */
 #intro{position: relative; height: 100vh;}
+#intro>article{height: 100vh;}
 .container{  
     position: relative;
     top: 190px;
-    left: 343px;
+    left: 80px;
     z-index: 999;
 }
 .title{position: relative;}
@@ -219,7 +220,7 @@ header .nav_conts a{display:block;}
 .title .sub_box02 .sub_t03 > span{ background: linear-gradient(to right, #91C042, #017C5F); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
 .title .sub_box02 p{font-size: 18px; color:#666; padding-top: 12px;}
 
-.container nav{position: absolute; top: 60px; left: 748px;}
+.container nav{position: absolute; top: 60px; left: 778px;}
 .container nav ul li{display: flex; align-items: center; padding-bottom: 36px;}
 .container nav ul li:first-child{margin-left: -15px;}
 .container nav ul li:last-child{margin-left: 6px;}
@@ -387,7 +388,7 @@ header .nav_conts a{display:block;}
 
 .scroll{
 	display: flex; flex-direction: column; justify-content: center; align-items: center; 
-	position: absolute; bottom: 140px; left: 50%; transform: translateX(-50%);
+	position: absolute; bottom: 100px; left: 50%; transform: translateX(-50%);
 	-webkit-animation: scroll 1s linear alternate infinite;
 			animation: scroll 1s linear alternate infinite;
 }
