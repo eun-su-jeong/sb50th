@@ -40,9 +40,8 @@ header .nav_conts .logo img{width: 96px; height: 24px;}
 }
 
 /* intro */
-#intro{position: relative; height: initial;}
+#intro{position: relative; height: 580px;}
 .scroll{display: none;}
-
 .container{left: 0; top: 140px;}
 .container nav{display: none;}
 .title{position: relative; left: 50%; transform: translateX(-50%); width: 300px;}
@@ -64,7 +63,6 @@ header .nav_conts .logo img{width: 96px; height: 24px;}
 .circle3::after{width: 16px; height: 16px; left: 64%;}
 
 /* history */
-.ui-history{top: -175px;}
 .ui-history article{padding: 50px 24px;}
 .ui-history .typing{font-size: 24px;}
 .ui-history .history-conts{margin: 0; margin-top: 36px;}
