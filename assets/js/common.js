@@ -58,7 +58,6 @@ var _device = {};
 
 var publish = function () {
 	var common = {
-		name: "eylee",
 		init: function () {
 			console.log("publish initiated.");
 			common.setHistory();
@@ -89,6 +88,7 @@ var publish = function () {
 					}
 				}
 			});
+			
 			const intersects = document.querySelectorAll('.intersect');
 			const active = function (entries) {
 				entries.forEach(entry => {
