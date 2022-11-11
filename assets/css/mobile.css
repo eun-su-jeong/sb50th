@@ -16,6 +16,7 @@ article{width:auto;}
 .mini-cir {display:block; position:absolute; width: 22px; height: 22px; border-radius: 50%; background-color:#91D1A7;}
 
 /*header*/
+header{height: 60px; background-color: aqua;}
 header .nav_conts{padding: 14px 24px;}
 header .nav_conts a{display:block;}
 header .nav_conts .logo img{width: 96px; height: 24px;}
@@ -38,10 +39,31 @@ header .nav_conts .logo img{width: 96px; height: 24px;}
 }
 
 /* intro */
-
+#intro{position: relative; height: initial;}
 .scroll{display: none;}
 
+.container{left: 0; top: 140px;}
+.container nav{display: none;}
+.title{position: relative; left: 50%; transform: translateX(-50%); width: 300px;}
+.title .sub_t01{position: absolute; left: 30px; font-size: 28px;}
+.title h1{position: relative; top: 35px; text-align: center;}
+.title h1>img{width: 192px;}
+.title .sub_box01{top: 16px; left: initial; right: 32px;}
+.title .sub_box01 .sub_t02{font-size: 32px;}
+.title .sub_box02{left: 50%; transform: translateX(-50%); top: 208px; white-space: nowrap;}
+.title .sub_box02 .sub_t03{font-size: 28px;}
+.title .sub_box02 .sub_t03 > span{background: linear-gradient(to right, #4BAF4B, #006454); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+.title .sub_box02 p{font-size:14px;}
+
+.box{top: 175px; transform: translateX(-50%);}
+.circle1{width: 516px; height: 516px; transform: rotate(180deg);}
+.circle1::after{width:12px; height:12px; left: 96%;}
+.circle2{display: none;}
+.circle3{width: 372px; height: 372px; z-index: 11;}
+.circle3::after{width: 16px; height: 16px; left: 64%;}
+
 /* history */
+.ui-history{top: -175px;}
 .ui-history article{padding: 50px 24px;}
 .ui-history .typing{font-size: 24px;}
 .ui-history .history-conts{margin: 0; margin-top: 36px;}
