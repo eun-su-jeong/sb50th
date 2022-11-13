@@ -17,7 +17,7 @@ article{width:auto;}
 .mini-cir {display:block; position:absolute; width: 22px; height: 22px; border-radius: 50%; background-color:#91D1A7;}
 
 /*header*/
-header{height: 60px;}
+header{height: auto;}
 header .nav_conts{padding: 14px 24px;}
 header .nav_conts a{display:block;}
 header .nav_conts .logo img{width: 96px; height: 24px;}
@@ -41,6 +41,7 @@ header .nav_conts .logo img{width: 96px; height: 24px;}
 
 /* intro */
 #intro{position: relative; height: 580px;}
+#intro article{height: 580px;}
 .scroll{display: none;}
 .container{left: 0; top: 140px;}
 .container nav{display: none;}
