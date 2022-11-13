@@ -177,10 +177,13 @@ article{position:relative;width:1240px; margin:0 auto;}
 
 header { width: 100%; height: 100px; position: fixed; top: 0; left:0;}
 header.bg{background-color: #fff; transition: all .5s ease;}
-header .nav_conts{display: flex; justify-content: space-between; align-items: center; padding: 15px 80px;}
-header .nav_conts a{display:block;}
+header .nav_conts{display: flex; justify-content: space-between; align-items: center; padding: 23px 80px 21px;}
+/* header .nav_conts a{display:block;} */
 
-.hamburger{ display: flex; flex-direction: column; justify-content: center; align-items: center; width: 56px; height: 56px; border-radius: 50%; border: 1px solid #eee; box-shadow: 2px 5px 10px -4px rgba(0,0,0,.4);}
+.hamburger{ 
+	display: flex; flex-direction: column; justify-content: center; align-items: center; 
+	position: absolute; right: 80px;
+	width: 56px; height: 56px; border-radius: 50%; border: 1px solid #eee; box-shadow: 2px 5px 10px -4px rgba(0,0,0,.4);}
 .hamburger .line{ 
 	display: block; width: 22px; height: 3px; border-radius: 20px; background-color: #000; margin: 3px 0;
 	-webkit-transition: all 0.3s ease-in-out;
@@ -202,6 +205,20 @@ header .nav_conts a{display:block;}
 	-o-transform: translateY(-9px) rotate(-45deg);
 	transform: translateY(-9px) rotate(-45deg);
 }
+
+.overlay{
+	display: flex; justify-content:center; align-items: center;
+	position: absolute; z-index: 90;
+	width:100%; height: 100vh; background-color: rgba(255,255,255,.8); }
+.overlay nav{width:80%; text-align: center;}
+.overlay nav .nav01,
+.overlay nav .nav02{padding: 42px 0;}
+.overlay nav .nav01{border-bottom: 1px solid #e6e6e6;}
+.overlay nav ul li{padding-bottom: 28px;}
+.overlay nav ul li a {display: block; font-size: 35px; color: #666;}
+.overlay nav ul li a:hover,
+.overlay nav ul li a:focus{font-weight: 700; color: #357261;}
+
 
 /* intro */
 #intro{position: relative; height: 100vh;}
