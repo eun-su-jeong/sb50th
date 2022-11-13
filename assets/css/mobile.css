@@ -22,7 +22,7 @@ header .nav_conts{padding: 14px 24px;}
 header .nav_conts a{display:block;}
 header .nav_conts .logo img{width: 96px; height: 24px;}
 
-.hamburger{width: 28px; height: 28px; border-radius: initial; border: none; box-shadow: none;}
+.hamburger{width: 28px; height: 28px; border-radius: initial; border: none; box-shadow: none; right: 24px;}
 .hamburger .line{width: 19px; height: 2px; margin: 2px 0;}
 .hamburger .line:nth-child(2){width:15px; margin-left: 4px;}
 
