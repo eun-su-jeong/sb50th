@@ -174,9 +174,8 @@ article{position:relative;width:1240px; margin:0 auto;}
 .mo-hide{display: block;}
 
 /* header */
-
-header { width: 100%; height: 100px; position: fixed; top: 0; left:0;}
-header.bg{background-color: #fff; transition: all .5s ease;}
+header { width: 100%; height: 100px; position: fixed; top: 0; left:0; transition: all .5s ease;}
+header.bg{background-color: #fff;}
 header .nav_conts{display: flex; justify-content: space-between; align-items: center; padding: 23px 80px 21px;}
 /* header .nav_conts a{display:block;} */
 

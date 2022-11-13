@@ -84,8 +84,11 @@ var publish = function () {
 					
 					$window.scroll(function(){ //스크롤시
 						var scrolled = $window.scrollTop() >= pageOffsetTop; //스크롤된 상태; true or false
-						console.log(scrolled);
-					  $header.toggleClass('bg', scrolled); //클래스 토글
+					  	$header.toggleClass('bg', scrolled); //클래스 토글
+						//모바일 영역
+						if(_device.isMobile){
+							$header.toggleClass('bg', $window.scrollTop() > 560);
+						}
 					});
 				},
 				// 메인페이지 연혁 영역 설정 (이은영)
