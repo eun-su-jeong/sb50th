@@ -177,7 +177,9 @@ article{position:relative;width:1240px; margin:0 auto;}
 /* header */
 header { width: 100%; height: auto; position: fixed; top: 0; left:0; transition: all .5s ease;}
 header.bg{background-color: #fff;}
+header.none{background-color: transparent;}
 header .nav_conts{display: flex; justify-content: space-between; align-items: center; padding: 23px 80px 21px;}
+header .nav_conts a{display: block;}
 header .nav_conts a.logo.none{opacity:0;}
 
 .hamburger{ 

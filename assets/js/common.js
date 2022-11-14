@@ -68,14 +68,22 @@ var publish = function () {
 				},
 				// 인트로 설정 (은수정)
 				hambergerMenu: function () {
+					var $logo = $('.logo');
+					var $body = $('body');
+					var $header = $('header');					
 					$(".hamburger").click(function () {
-						$(this).toggleClass("is-active");
-						$('.overlay-menu').toggleClass('opend');
-						
-						var $logo = $('.logo');
-						var $body = $('body');
-						$logo.toggleClass('none');
-						$body.toggleClass('body-hidden');
+						$(this).toggleClass("is-active");	
+						if($(this).hasClass("is-active")){
+							$('.overlay-menu').addClass('opend');
+							$logo.addClass('none');
+							$body.addClass('body-hidden');
+							$header.addClass('none');
+						}else{
+							$('.overlay-menu').removeClass('opend');
+							$logo.removeClass('none');
+							$body.removeClass('body-hidden');
+							$header.removeClass('none');
+						}
 					});
 				},
 				header: function () {
