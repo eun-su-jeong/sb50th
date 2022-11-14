@@ -181,6 +181,8 @@ header.none{background-color: transparent;}
 header .nav_conts{display: flex; justify-content: space-between; align-items: center; padding: 23px 80px 21px;}
 header .nav_conts a{display: block;}
 header .nav_conts a.logo.none{opacity:0;}
+header .nav_conts .menu-txt{position: absolute;right: 160px;color: #000;font-size: 18px;}
+.menu-txt.hidden{display: none;}
 
 .hamburger{ 
 	display: flex; flex-direction: column; justify-content: center; align-items: center; 
