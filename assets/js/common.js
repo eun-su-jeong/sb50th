@@ -70,6 +70,10 @@ var publish = function () {
 				hambergerMenu: function () {
 					$(".hamburger").click(function () {
 						$(this).toggleClass("is-active");
+						$('.overlay').toggleClass('opend');
+						
+						var $logo = $('.logo');
+						$logo.toggleClass('none');
 					});
 				},
 				header: function () {
