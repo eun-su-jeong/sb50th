@@ -38,8 +38,8 @@ header .nav_conts .logo img{width: 96px; height: 24px;}
 	-o-transform: translateY(-6px) rotate(-45deg);
 	transform: translateY(-6px) rotate(-45deg);
 }
-.overlay nav{padding-top: 52px; text-align: initial;}
-.overlay nav ul li a{font-size: 20px;}
+.overlay-menu nav{padding-top: 52px; text-align: initial;}
+.overlay-menu nav ul li a{font-size: 20px;}
 
 /* intro */
 #intro{position: relative; height: 580px;}

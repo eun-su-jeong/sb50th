@@ -206,21 +206,21 @@ header .nav_conts a.logo.none{opacity:0;}
 	transform: translateY(-9px) rotate(-45deg);
 }
 
-.overlay{
+.overlay-menu{
 	display: flex; justify-content:center; align-items: center;
 	visibility: hidden; opacity: 0;
 	position: fixed; top: 0; left: 0; z-index: 30;
 	transform: scale(1.5); transition: 250ms ease;
 	width:100%; height: 100vh; background-color: rgba(255,255,255,.8); backdrop-filter: blur(25px);}
-.overlay.opend{visibility: visible;opacity: 1;transform: scale(1); transition: 250ms ease;}
-.overlay nav{width:80%; text-align: center;}
-.overlay nav .nav01,
-.overlay nav .nav02{padding: 42px 0;}
-.overlay nav .nav01{border-bottom: 1px solid #e6e6e6;}
-.overlay nav ul li{padding-bottom: 28px;}
-.overlay nav ul li a {display: block; font-size: 35px; color: #666;}
-.overlay nav ul li a:hover,
-.overlay nav ul li a:focus{font-weight: 700; color: #357261;}
+.overlay-menu.opend{visibility: visible;opacity: 1;transform: scale(1); transition: 250ms ease;}
+.overlay-menu nav{width:80%; text-align: center;}
+.overlay-menu nav .nav01,
+.overlay-menu nav .nav02{padding: 42px 0;}
+.overlay-menu nav .nav01{border-bottom: 1px solid #e6e6e6;}
+.overlay-menu nav ul li{padding-bottom: 28px;}
+.overlay-menu nav ul li a {display: block; font-size: 35px; color: #666;}
+.overlay-menu nav ul li a:hover,
+.overlay-menu nav ul li a:focus{font-weight: 700; color: #357261;}
 
 
 /* intro */

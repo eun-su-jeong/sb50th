@@ -70,7 +70,7 @@ var publish = function () {
 				hambergerMenu: function () {
 					$(".hamburger").click(function () {
 						$(this).toggleClass("is-active");
-						$('.overlay').toggleClass('opend');
+						$('.overlay-menu').toggleClass('opend');
 						
 						var $logo = $('.logo');
 						var $body = $('body');
