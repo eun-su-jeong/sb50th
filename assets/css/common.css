@@ -211,7 +211,7 @@ header .nav_conts a.logo.none{opacity:0;}
 	visibility: hidden; opacity: 0;
 	position: fixed; top: 0; left: 0; z-index: 30;
 	transform: scale(1.5); transition: 250ms ease;
-	width:100%; height: 100vh; background-color: rgba(255,255,255,.8); backdrop-filter: blur(25px);}
+	width:100%; height: 100vh; background-color: rgba(255,255,255,.8); -webkit-backdrop-filter: blur(25px); backdrop-filter: blur(25px);}
 .overlay-menu.opend{visibility: visible;opacity: 1;transform: scale(1); transition: 250ms ease;}
 .overlay-menu nav{width:80%; text-align: center;}
 .overlay-menu nav .nav01,
@@ -238,7 +238,7 @@ header .nav_conts a.logo.none{opacity:0;}
 .title .sub_box01 .sub_t02{font-size: 50px; font-weight: 700; color:#017562;}
 .title .sub_box02{position: absolute; top:340px; left: 210px;}
 .title .sub_box02 .sub_t03{display: block; font-size: 44px; font-weight: 700; color:#017562;}
-.title .sub_box02 .sub_t03 > span{ background: linear-gradient(to right, #91C042, #017C5F); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+.title .sub_box02 .sub_t03 > span{ background: linear-gradient(to right, #91C042, #017C5F); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;}
 .title .sub_box02 p{font-size: 18px; color:#666; padding-top: 12px;}
 
 .container nav{position: absolute; top: 60px; left: 778px;}
