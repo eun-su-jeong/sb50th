@@ -223,8 +223,8 @@ header .nav_conts a.logo.none{opacity:0;}
 
 
 /* intro */
-#intro{position: relative; height: 100vh;}
-#intro>article{height: 100vh; overflow: hidden;}
+#intro{position: relative; height: 100vh; overflow: hidden;}
+#intro>article{height: 100vh;}
 .container{  
     position: relative;
     top: 190px;
