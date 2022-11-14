@@ -209,9 +209,9 @@ header .nav_conts a.logo.none{opacity:0;}
 	display: flex; justify-content:center; align-items: center;
 	visibility: hidden; opacity: 0;
 	position: fixed; top: 0; left: 0; z-index: 30;
-	transform: scale(1.5); transition: 350ms ease;
+	transform: scale(1.5); transition: 250ms ease;
 	width:100%; height: 100vh; background-color: rgba(255,255,255,.8); backdrop-filter: blur(25px);}
-.overlay.opend{visibility: visible;opacity: 1;transform: scale(1); transition: 350ms ease;}
+.overlay.opend{visibility: visible;opacity: 1;transform: scale(1); transition: 250ms ease;}
 .overlay nav{width:80%; text-align: center;}
 .overlay nav .nav01,
 .overlay nav .nav02{padding: 42px 0;}
