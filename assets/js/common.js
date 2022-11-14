@@ -71,6 +71,7 @@ var publish = function () {
 					var $logo = $('.logo');
 					var $body = $('body');
 					var $header = $('header');					
+					var $text = $('.menu-txt');					
 					$(".hamburger").click(function () {
 						$(this).toggleClass("is-active");	
 						if($(this).hasClass("is-active")){
@@ -78,11 +79,13 @@ var publish = function () {
 							$logo.addClass('none');
 							$body.addClass('body-hidden');
 							$header.addClass('none');
+							$text.addClass('hidden');
 						}else{
 							$('.overlay-menu').removeClass('opend');
 							$logo.removeClass('none');
 							$body.removeClass('body-hidden');
 							$header.removeClass('none');
+							$text.removeClass('hidden');
 						}
 					});
 				},
