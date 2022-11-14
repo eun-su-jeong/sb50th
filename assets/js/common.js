@@ -48,11 +48,11 @@ var _device = {};
 	});
 
 	if (_device.isMobile) {
-		// <link rel="stylesheet" href="/assets/css/common.css">
+		// <link rel="stylesheet" href="../assets/css/common.css">
 		var link = document.createElement("link");
 		link.rel = "stylesheet";
 		link.type = "text/css";
-		link.href = "/assets/css/mobile.css";
+		link.href = "../assets/css/mobile.css";
 		document.head.appendChild(link);
 	}
 
