@@ -73,7 +73,9 @@ var publish = function () {
 						$('.overlay').toggleClass('opend');
 						
 						var $logo = $('.logo');
+						var $body = $('body');
 						$logo.toggleClass('none');
+						$body.toggleClass('body-hidden');
 					});
 				},
 				header: function () {
