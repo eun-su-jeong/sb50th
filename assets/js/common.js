@@ -93,7 +93,7 @@ var publish = function () {
 					  	$header.toggleClass('bg', scrolled); //클래스 토글
 						//모바일 영역
 						if(_device.isMobile){
-							$header.toggleClass('bg', $window.scrollTop() > 560);
+							$header.toggleClass('bg', $window.scrollTop() > 50);
 						}
 					});
 				},
