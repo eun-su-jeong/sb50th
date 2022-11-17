@@ -30,7 +30,7 @@ h6{font-size:18px;}
 
 a{text-decoration:none;}
 
-p{line-height:1.5;}
+p{line-height:1.5;word-break: keep-all;}
 
 .lh15{line-height:1.5;}
 .lh18{line-height:1.8;}
@@ -167,8 +167,11 @@ article{position:relative;width:1240px; margin:0 auto;}
     font-size: 18px;
 	transition: all 1.5s;
 }
+.btn span::after{content: ''; width: 8px; height: 13px;margin-left:12px; background: url(../images/arrow.svg) center no-repeat; display: inline-block;}
+
+
 .title-wrap{font-size: 40px; color: #333;height: 3em;}
-.title-wrap .bold{color: #111; font-weight: 700;}
+.bold{color: #111; font-weight: 700;}
 .txt{font-size: 18px; color: #666; word-break: keep-all; margin-bottom: 40px;}
 .btn:hover{box-shadow: 300px 0 0 0  rgba(255, 255, 255, 0.25) inset, -300px 0 0 0  rgba(255, 255, 255, 0.25) inset;}
 .pc-hide{display: none;}
@@ -439,19 +442,19 @@ header .nav_conts .menu-txt{position: absolute;right: 160px;color: #000;font-siz
 
 /* history */
 main{}
-
-.ui-history{background-color: #F7FBF6;}
+.ui-history{}
 .ui-history article{padding: 160px 0;}
 .ui-history{position:relative;}
 .ui-history .swiper {width: 100%;height: 100%;overflow: hidden;}
-.ui-history .swiper-slide {display: flex;background-color: #F7FBF6;}
+.ui-history .swiper-slide {display: flex;background-color: #fff;}
 .ui-history .swiper-slide h5{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;border:0;clip:rect(0, 0, 0, 0);}
 .ui-history .swiper-slide img {display: block;}
 .ui-history .swiper-container-horizontal>.swiper-pagination-bullets {top: 35%;height: auto;margin: 80px 0 120px 0;}
 
 .ui-history .swiper-pagination {display:flex;justify-content:space-between;align-items:flex-start;position: relative;padding:12px 0;}
-.ui-history .swiper-pagination:before {	display: block;position: absolute;left: 0; top: 20px;width:100%; height: 2px;background-color: rgba(0, 0, 0, .04);content: '';}
+.ui-history .swiper-pagination:before {	display: block;position: absolute;left: 55px; top: 20px;width:90%; height: 2px;background-color: rgba(0, 0, 0, .04);content: '';}
 .ui-history .swiper-pagination-bullet {display:inline-flex;flex-direction:column;align-items:center;width: auto;height: auto;border-radius: 0;background: none;opacity: 1;}
+
 .ui-history .swiper-pagination-bullet .lbl {color: #888;font-weight: 700;}
 .ui-history .swiper-pagination-bullet .icn{position: relative;width: 16px;height: 16px;text-align: center;border-radius:50%;opacity: 1;background: #D9D9D9;}
 .ui-history .swiper-pagination-bullet .icn + .lbl{margin-top:19px;}
@@ -474,11 +477,9 @@ main{}
 .ui-history .swiper-pagination-bullet:first-of-type.swiper-pagination-bullet-active .icn:before,
 .ui-history .swiper-pagination-bullet:last-of-type.swiper-pagination-bullet-active .icn:after {transform:scaleX(0);}
 
-.ui-history .history-conts{width: 400px;margin-left: 138px;}
-.ui-history .history-conts p{word-break: keep-all; font-size: 18px;margin-top: 16px; margin-bottom: 32px; color: #666;}
-.ui-history .btn{position: absolute;right: 28%; bottom: 28%;z-index: 30;}
-
-
+.ui-history .history-conts{width: 480px;margin-left: 138px;}
+.ui-history .history-conts h3{font-size: 24px;}
+.ui-history .history-conts p{word-break: keep-all; font-size: 18px;margin-top: 20px; margin-bottom: 40px; color: #666;}
 
 .ui-history .typing{font-size: 40px;}
 .ui-history .typing:first-child{font-weight: 400;}
@@ -491,7 +492,7 @@ main{}
 
 /* speech */
 .ui-speech article{padding: 160px 0; overflow: hidden;}
-.ui-speech{position:relative;}
+.ui-speech{position:relative;background-color: #F4FDF2;}
 .ui-speech .speech-wrap{position: relative;}
 .ui-speech .speech-conts{width: 640px; padding: 100px 0;}
 .ui-speech .speech-conts h4{margin-bottom: 17px;}
@@ -583,6 +584,16 @@ footer .address .tit {color:rgba(255, 255, 255, 0.6);margin-right: 10px;}
 footer .address .cont {color:rgba(255, 255, 255, 1);}
 footer .copyright {color:rgba(255, 255, 255, 0.6);}
 
+
+/* CmmrtSpech.html */
+.ui-speech.subpage{background-color:#fff}
+.ui-speech.subpage .title-wrap {height: 2em;}
+.ui-speech.subpage .title-wrap h1{font-size: 60px;line-height: 84px;height:2em}
+.ui-speech.subpage .speech-conts{width: 710px;}
+.ui-speech.subpage .speech-conts h4{margin-bottom: 20px;}
+.ui-speech.subpage .speech-conts .txt p{padding: 0; margin-bottom: 28px;}
+.ui-speech.subpage .speech-conts .txt .bold{font-size: 20px;}
+.ui-speech.subpage .ceo{margin-right: 0; margin-top: 138px;}
 
 /* z-index */
 header{z-index:40;}
