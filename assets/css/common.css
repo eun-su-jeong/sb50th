@@ -187,11 +187,11 @@ header .nav_conts .menu-txt{position: absolute; right: 125px; color: #000; font-
 
 header .header-nav{margin-left: -84px;}
 header .header-nav ul{display: flex; justify-content: space-between; align-items: center;}
-header .header-nav ul li{display: flex; justify-content: center; padding: 0 40px; transition: all 3s ease;}
-header .header-nav ul li:hover .sub-nav{opacity: 1;} 
+header .header-nav ul li{display: flex; justify-content: center; padding: 0 40px;}
+header .header-nav ul li:hover .sub-nav{visibility:visible; opacity:1;} 
 header .header-nav ul li a{display: block; font-size: 20px; color: #111;}
 
-header .header-nav .sub-nav{opacity: 0; position: absolute; top: 70px; padding: 32px 0; border-radius: 20px; background: #fff; box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1); transition:all 0.3s ease;}
+header .header-nav .sub-nav{visibility:hidden; opacity:0; position: absolute; top: 70px; padding: 32px 0; border-radius: 20px; background: #fff; box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);  transition: all .3s;}
 header .header-nav .sub-nav ul{flex-direction: column;}
 header .header-nav .sub-nav ul li{padding-bottom: 20px;}
 header .header-nav .sub-nav ul li:last-child{padding-bottom: 0;}
