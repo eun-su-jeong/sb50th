@@ -136,14 +136,14 @@ var publish = function () {
 					const typings = document.querySelectorAll(".typing");
 					let letter = [], // 글자 모음 - 개행문자(\n)로 줄바꿈
 						letters = [],
-						speed = 30, // 타이핑 속도
+						speed = 20, // 타이핑 속도
 						inters = [],
 						title = [],
 						delay = 0;
 
 					for (let i = 0; i < typings.length; i++) {
 						letter[i] = typings[i].innerHTML;
-						delay = i * 400;
+						delay = i * 100;
 						// 줄바꿈을 위한 <br> 치환
 						const changeLineBreak = (letter) => {
 							return letter.map(text => text === "\n" ? "<br>" : text);
