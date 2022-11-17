@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>저축은행중앙회</title>
+	<link rel="stylesheet" href="../assets/lib/swiper-5.4.2.min.css">
+	<link rel="stylesheet" href="../assets/css/reset.css">
+	<link rel="stylesheet" href="../assets/css/font.css">
+	<link rel="stylesheet" href="../assets/css/common.css">
+	<script type="text/javascript" src="../assets/lib/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../assets/lib/jquery-ui-1.12.1.min.js"></script>
+	<script type="text/javascript" src="../assets/lib/swiper-5.4.2.min.js"></script>
+	<script type="text/javascript" src="../assets/lib/jquery.nanoscroller-0.8.7.min.js"></script>
+	<script type="text/javascript" src="../assets/js/common.js"></script>
+</head>
+
+<body>
+	<header>
+		<div class="nav_conts">
+			<a class="logo"><img src="../assets/images/logo.svg" alt="저축은행중앙회 50주년 로고"></a>
+			<nav class="header-nav">
+				<ul>
+					<li><a href="#">저축은행 50년</a>
+						<div class="sub-nav">
+							<ul>
+								<li><a href="#">중앙회장 기념사</a></li>
+								<li><a href="#">50주년 엠블럼</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="#">50년의 이야기</a>
+						<div class="sub-nav">
+							<ul>
+								<li><a href="#">연혁</a></li>
+								<li><a href="#">50년의 이야기</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="#">저축은행의 현재</a>
+						<div class="sub-nav">
+							<ul>
+								<li><a href="#">숫자로 보는 저축은행</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+			<span class="menu-txt">전체메뉴</span>
+			<div class="hamburger" id="hamMenu">
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+			</div>
+		</div>
+	</header>
+	<div class="overlay-menu">
+		<nav>
+			<div class="nav-wrap">
+				<div class="nav01">
+					<ul>
+						<p class="menu-tit">저축은행 50년</p>
+						<li><a href="#">중앙회장 기념사</a></li>
+						<li><a href="#">50주년 엠블럼</a></li>
+					</ul>
+					<ul>
+						<p class="menu-tit">50년의 이야기</p>
+						<li><a href="#">연혁</a></li>
+						<li><a href="#">50년 이야기</a></li>
+					</ul>
+					<ul>
+						<p class="menu-tit">저축은행의 현재</p>
+						<li><a href="#">숫자로 보는 저축은행</a></li>
+					</ul>
+				</div>
+				<div class="nav02">
+					<ul>
+						<li>
+							<a href="#">기념영상</a>
+							<img src="../assets/images/play_btn.svg" alt="기념영상">
+						</li>
+						<li>
+							<a href="#">축하영상</a>
+							<img src="../assets/images/play_btn.svg" alt="축하영상">
+						</li>
+						<li>
+							<a href="../assets/images/50.svg" download>50년 발간자료</a>
+							<img src="../assets/images/download.svg" alt="발간자료다운로드">
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<main>		
+		<section class="ui-emblem">
+			<article>	
+				<div class="intersect appear title-wrap">
+					<h1>50주년 엠블럼</h1>
+				</div>			
+				<div class="emblem-conts flex intersect appear">
+					<div class="ui-infinity">
+						<div class="base"><img src="../assets/images/emblem50.svg" alt="50th"></div>
+						<div class="overlay">
+							<svg viewBox="0 0 1000 800" xmlns="http://www.w3.org/2000/svg">
+								<defs>
+									<filter id="inset-shadow">
+										<feOffset dx="10" dy="10" /> <!-- Shadow Offset -->
+										<feGaussianBlur stdDeviation="10" result="offset-blur" />
+										<!-- Shadow Blur -->
+										<feComposite operator="out" in="SourceGraphic" in2="offset-blur"
+											result="inverse" />
+										<!-- Invert the drop shadow to create an inner shadow -->
+										<feFlood flood-color="black" flood-opacity="1" result="color" />
+										<!-- Color & Opacity -->
+										<feComposite operator="in" in="color" in2="inverse" result="shadow" />
+										<!-- Clip color inside shadow -->
+										<feComponentTransfer in="shadow" result="shadow">
+											<!-- Shadow Opacity -->
+											<feFuncA type="linear" slope=".75" />
+										</feComponentTransfer>
+										<!--<feComposite operator="over" in="shadow" in2="SourceGraphic"/>-->
+										<!-- Put shadow over original object -->
+									</filter>
+									<linearGradient id="fill">
+										<!-- <stop offset="0%" stop-color="#007760" />
+										<stop offset="100%" stop-color="#91C042" /> -->
+										<stop offset="0%" stop-color="rgba(0, 119, 96, 0)" />
+										<stop offset="50%" stop-color="rgba(0, 119, 96, .5)" />
+										<stop offset="100%" stop-color="rgba(0, 119, 96, 0)" />
+									</linearGradient>
+								</defs>
+								<path class="cls-1"
+									d="M205.11,164.93c9.03,19.02,9.25,34.68,7.71,54.15-3.43,43.27-41.44,90.38-96.37,90.38S18,266.92,18,212,59.07,113.6,114,113.6c36.4,0,69.47,21.47,91.11,51.33h0c16.97,26.34,48.08,45.63,83.66,45.63,53.73,0,97.28-41.55,97.28-95.28s-43.55-97.28-97.28-97.28-97.28,43.55-97.28,97.28c0,16.59,2.5,26.38,13.61,49.65h0Z" />
+							</svg>
+						</div>
+					</div>
+					<div class="txt-cont">
+						<div class="title-wrap intersect appear">
+							<p class="bold">함께한 50년, <span class="mb">나아갈 100년의 약속</span></p>
+						</div>
+						<div class="txt intersect appear">
+							<p>저축은행 탄생 50주년을 맞이하여 서민금융의 중심에서 50년을 함께한 역사를 바탕으로 나아갈 100년의 약속을 함께하겠다는 의지를 담았습니다. </p>
+							<p>고객의 가능성에 먼저 손 내미는 금융, 누군가의 세상을 좀 더 나은 곳으로 변화시키는 서민금융의 역할을 표현하기 위해 무한대와 뫼비우스의 띠 형태로 형상화								하였습니다. </p>
+						</div>
+					</div>
+				</div>
+				<img src="../assets/images/emblem_cir_1.svg" alt="" class="pc-hide mo-cir1">
+				<img src="../assets/images/emblem_cir_2.svg" alt="" class="pc-hide mo-cir2">
+			</article>
+		</section>
+	</main>
+	<footer>
+		<article>
+			<div class="policy mo-hide">
+				<a href="#"><span class="lbl">개인정보처리방침</span></a>
+				<a href="#"><span class="lbl">신용정보활용체제</span></a>
+				<a href="#"><span class="lbl">영상정보처리기기 운영방침</span></a>
+			</div>
+			<div class="address mo-hide">
+				<div class="first">
+					<span class="tit">지번주소</span>
+					<span class="cont">서울특별시 마포구 공덕동 168 11~13층</span>
+				</div>
+				<div class="second">
+					<span class="tit">도로명주소</span>
+					<span class="cont">서울특별시 마포구 마포대로 163 11~13층</span>
+				</div>
+				<div class="third">
+					<span class="tit">우편번호</span>
+					<span class="cont">04130</span>
+				</div>
+			</div>
+			<div class="copyright">
+				<span>ⓒ 2022 by KOREA FEDERATION OF SAVING BANKS. ALL LIGHTS RESERVED. </span>
+			</div>
+		</article>
+	</footer>
+</body>
+
+</html>
