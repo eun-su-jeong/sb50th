@@ -169,7 +169,7 @@ article{position:relative;width:1240px; margin:0 auto;}
 }
 
 .btn span::after{content: ''; width: 8px; height: 13px;margin-left:12px; background: url(../images/arrow.svg) center no-repeat; display: inline-block;}
-.title-wrap{font-size: 40px; color: #333;height: 3em;}
+.title-wrap{font-size: 40px; color: #333;}
 .bold{color: #111; font-weight: 700;}
 .txt{font-size: 18px; color: #666; word-break: keep-all; margin-bottom: 40px;}
 .btn:hover{box-shadow: 300px 0 0 0  rgba(255, 255, 255, 0.25) inset, -300px 0 0 0  rgba(255, 255, 255, 0.25) inset;}
@@ -454,12 +454,12 @@ main{}
 .ui-history{}
 .ui-history article{padding: 160px 0;}
 .ui-history{position:relative;}
+.ui-history .title-wrap{height: 3em;}
 .ui-history .swiper {width: 100%;height: 100%;overflow: hidden;}
 .ui-history .swiper-slide {display: flex;background-color: #fff;}
 .ui-history .swiper-slide h5{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;border:0;clip:rect(0, 0, 0, 0);}
 .ui-history .swiper-slide img {display: block;}
 .ui-history .swiper-container-horizontal>.swiper-pagination-bullets {top: 35%;height: auto;margin: 80px 0 120px 0;}
-
 .ui-history .swiper-pagination {display:flex;justify-content:space-between;align-items:flex-start;position: relative;padding:12px 0;}
 .ui-history .swiper-pagination:before {	display: block;position: absolute;left: 55px; top: 20px;width:90%; height: 2px;background-color: rgba(0, 0, 0, .04);content: '';}
 .ui-history .swiper-pagination-bullet {display:inline-flex;flex-direction:column;align-items:center;width: auto;height: auto;border-radius: 0;background: none;opacity: 1;}
@@ -537,13 +537,17 @@ main{}
 
 
 /* emblem */
-.ui-emblem{position:relative; background-color: #F7FBF6;}
+.ui-emblem .title-wrap h1{font-size: 60px;line-height: 84px;margin-bottom: 100px;}
+
+
+.ui-emblem{position:relative; background-color: #fff;}
 .ui-emblem article{padding: 160px 0;overflow: hidden;}
-.ui-emblem .txt-cont{width: 600px;margin-top: 240px;}
+.ui-emblem .txt-cont{width: 710px;margin-top: 240px;}
 .ui-emblem .txt-cont .title-wrap{height: auto;}
+.ui-emblem .txt-cont .title-wrap .bold{font-size: 24px;}
 .ui-emblem .txt-cont .txt{margin-bottom: 10px;}
 .ui-emblem .txt-cont .txt p{word-break: keep-all}
-.ui-emblem .txt-cont .txt p:first-child{margin: 32px 0 20px 0;}
+.ui-emblem .txt-cont .txt p:first-child{margin: 20px 0 28px 0;}
 .ui-emblem .emblem-conts .overlay{overflow: hidden;}
 .ui-emblem .cir {display:block; position:absolute;
 	width: 700px; height: 700px; border-radius: 50%;
