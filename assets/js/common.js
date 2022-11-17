@@ -68,40 +68,33 @@ var publish = function () {
 				},
 				// 인트로 설정 (은수정)
 				hambergerMenu: function () {
-					var $logo = $('.logo');
 					var $body = $('body');
-					var $header = $('header');					
-					var $text = $('.menu-txt');					
+					var $header = $('header');									
 					$(".hamburger").click(function () {
 						$(this).toggleClass("is-active");	
 						if($(this).hasClass("is-active")){
 							$('.overlay-menu').addClass('opend');
-							$logo.addClass('none');
 							$body.addClass('body-hidden');
 							$header.addClass('none');
-							$text.addClass('hidden');
 						}else{
 							$('.overlay-menu').removeClass('opend');
-							$logo.removeClass('none');
 							$body.removeClass('body-hidden');
 							$header.removeClass('none');
-							$text.removeClass('hidden');
 						}
 					});
 				},
 				header: function () {
 					var $header = $('header');
-					var $page = $('.ui-history');
+					// var $page = $('.ui-history');
 					var $window = $(window);
-					var pageOffsetTop = $page.offset().top;//색상 변할 부분의 top값 구하기
+					// var pageOffsetTop = $page.offset().top;//색상 변할 부분의 top값 구하기
 					
-					$window.resize(function(){ //반응형을 대비하여 리사이즈시 top값을 다시 계산
-						pageOffsetTop = $page.offset().top;
-					});
+					// $window.resize(function(){ //반응형을 대비하여 리사이즈시 top값을 다시 계산
+					// 	pageOffsetTop = $page.offset().top;
+					// });
 					
 					$window.scroll(function(){ //스크롤시
-						var scrolled = $window.scrollTop() >= pageOffsetTop; //스크롤된 상태; true or false
-					  	$header.toggleClass('bg', scrolled); //클래스 토글
+					  	$header.toggleClass('bg', $window.scrollTop() > 50); //클래스 토글
 						//모바일 영역
 						if(_device.isMobile){
 							$header.toggleClass('bg', $window.scrollTop() > 50);
