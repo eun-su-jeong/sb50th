@@ -459,7 +459,7 @@ main{}
 .ui-history .swiper-slide {display: flex;background-color: #fff;}
 .ui-history .swiper-slide h5{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;border:0;clip:rect(0, 0, 0, 0);}
 .ui-history .swiper-slide img {display: block;}
-.ui-history .swiper-container-horizontal>.swiper-pagination-bullets {top: 35%;height: auto;margin: 80px 0 120px 0;}
+.ui-history .swiper-container-horizontal>.swiper-pagination-bullets {top: 35%;height: auto;margin: 88px 0 100px 0;}
 .ui-history .swiper-pagination {display:flex;justify-content:space-between;align-items:flex-start;position: relative;padding:12px 0;}
 .ui-history .swiper-pagination:before {	display: block;position: absolute;left: 55px; top: 20px;width:90%; height: 2px;background-color: rgba(0, 0, 0, .04);content: '';}
 .ui-history .swiper-pagination-bullet {display:inline-flex;flex-direction:column;align-items:center;width: auto;height: auto;border-radius: 0;background: none;opacity: 1;}
