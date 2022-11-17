@@ -64,7 +64,7 @@ var publish = function () {
 					console.log("publish initiated.");
 					common.setHistory();
 					common.hambergerMenu();
-					common.header();
+					// common.header();
 				},
 				// 인트로 설정 (은수정)
 				hambergerMenu: function () {
@@ -83,24 +83,24 @@ var publish = function () {
 						}
 					});
 				},
-				header: function () {
-					var $header = $('header');
-					// var $page = $('.ui-history');
-					var $window = $(window);
-					// var pageOffsetTop = $page.offset().top;//색상 변할 부분의 top값 구하기
+				// header: function () {
+				// 	var $header = $('header');
+				// 	// var $page = $('.ui-history');
+				// 	var $window = $(window);
+				// 	// var pageOffsetTop = $page.offset().top;//색상 변할 부분의 top값 구하기
 					
-					// $window.resize(function(){ //반응형을 대비하여 리사이즈시 top값을 다시 계산
-					// 	pageOffsetTop = $page.offset().top;
-					// });
+				// 	// $window.resize(function(){ //반응형을 대비하여 리사이즈시 top값을 다시 계산
+				// 	// 	pageOffsetTop = $page.offset().top;
+				// 	// });
 					
-					$window.scroll(function(){ //스크롤시
-					  	$header.toggleClass('bg', $window.scrollTop() > 50); //클래스 토글
-						//모바일 영역
-						if(_device.isMobile){
-							$header.toggleClass('bg', $window.scrollTop() > 50);
-						}
-					});
-				},
+				// 	$window.scroll(function(){ //스크롤시
+				// 	  	$header.toggleClass('bg', $window.scrollTop() > 50); //클래스 토글
+				// 		//모바일 영역
+				// 		if(_device.isMobile){
+				// 			$header.toggleClass('bg', $window.scrollTop() > 50);
+				// 		}
+				// 	});
+				// },
 				// 메인페이지 연혁 영역 설정 (이은영)
 				setHistory: function () {
 					let lbls = [];
