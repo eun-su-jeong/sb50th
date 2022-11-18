@@ -613,9 +613,17 @@ footer .copyright {color:rgba(255, 255, 255, 0.6);}
 .ui-speech.subpage .speech-conts .txt .bold{font-size: 20px;}
 .ui-speech.subpage .ceo{margin-right: 0; margin-top: 138px;}
 
+
+/* modal */
+.modal{max-width: 814px; max-height: 542px;padding:40px}
+.modal .modal-title{font-size: 20px;font-weight: 700;margin-bottom: 20px;color: #000;}
+.modal iframe{border-radius: 15px;width: 734px; height: 413px;}
+.modal a.close-modal{background-image:url(../images/close.svg);top: 40px; right: 40px;width: 28px; height: 28px;}
+
 /* z-index */
 header{z-index:40;}
-main{z-index:20;}
+main{z-index:1;}
 footer{z-index:10;}
+.modal{z-index:100;}
 .ui-speech .speech-wrap{z-index: 1;}
 .ui-speech .circle{z-index: 0;}

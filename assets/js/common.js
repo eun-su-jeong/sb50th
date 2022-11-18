@@ -64,6 +64,7 @@ var publish = function () {
 					console.log("publish initiated.");
 					common.setHistory();
 					common.hambergerMenu();
+					common.toggleModal();
 					// common.header();
 				},
 				// 인트로 설정 (은수정)
@@ -101,6 +102,16 @@ var publish = function () {
 				// 		}
 				// 	});
 				// },
+				toggleModal: function(){
+					$('a[href="#video-modal"]').click(function(event) {
+						event.preventDefault();
+					
+						$(this).modal({
+							fadeDuration: 250
+						});
+					});
+				},
+				
 				// 메인페이지 연혁 영역 설정 (이은영)
 				setHistory: function () {
 					let lbls = [];
