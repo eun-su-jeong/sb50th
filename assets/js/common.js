@@ -84,6 +84,18 @@ var publish = function () {
 						}
 					});
 				},
+				// 50년의 이야기 설정
+				set50Story: function () {
+					let lbls = [];
+					$(".st50-years .swiper-slide h5").each(function () {
+						lbls.push($(this).text());
+					});
+					var swiper = new Swiper(".mySwiper", {
+						slidesPerView: 1,
+						spaceBetween: 0,
+						effect: "slide",
+					});
+				},
 				// header: function () {
 				// 	var $header = $('header');
 				// 	// var $page = $('.ui-history');
@@ -120,8 +132,9 @@ var publish = function () {
 						lbls.push($(this).text());
 					});
 					var swiper = new Swiper(".mySwiper", {
-						slidesPerView: 1,
-						spaceBetween: 0,
+						slidesPerView: 3,
+						spaceBetween: 20,
+						slidesPerGroup: 3,
 						effect: effect,
 						pagination: {
 							el: ".swiper-pagination",
