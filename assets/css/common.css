@@ -625,5 +625,5 @@ header{z-index:40;}
 main{z-index:1;}
 footer{z-index:10;}
 .modal{z-index:100;}
-.ui-speech .speech-wrap{z-index: 1;}
+.ui-speech .speech-wrap{z-index: 10;}
 .ui-speech .circle{z-index: 0;}
