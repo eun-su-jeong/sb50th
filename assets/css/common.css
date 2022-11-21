@@ -565,7 +565,7 @@ main{}
 .st50-years .title-wrap h1{font-size: 60px; line-height: 84px; margin-top: 60px;}
 .st50-years .story-wrap{display: flex; float: right; margin: initial; padding: 0; width:1571px; background-color: antiquewhite;}
 
-.st50-years .story-wrap .history-nav{width:20%; background-color: yellowgreen;}
+.st50-years .story-wrap .history-nav{width:210px; background-color: yellowgreen;}
 .st50-years .story-wrap .history-nav ul li{padding-bottom: 62px;}
 .st50-years .story-wrap .history-nav ul li:hover a{color: #017A5F;}
 .st50-years .story-wrap .history-nav ul li:hover span:first-child::after{display : inline-block;}
@@ -706,3 +706,16 @@ footer{z-index:10;}
 .modal{z-index:100;}
 .ui-speech .speech-wrap{z-index: 10;}
 .ui-speech .circle{z-index: 0;}
+
+
+
+
+
+
+
+
+/* history */
+.side-nav{width: 214px; height: 720px;position: absolute; left: 0;}
+.side-nav span{font-size: 40px; font-weight: 700; line-height: 48px;display: block; color: #017A5F;}
+.side-nav a:focus > span:first-of-type::after{content: '~'; display: block; color: #017C5F;}
+.side-nav a:focus > span:last-of-type::after{content: ''; display: block; background-color: #017C5F; width: 210px; height: 2px;}
