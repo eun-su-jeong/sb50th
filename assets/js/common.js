@@ -65,6 +65,7 @@ var publish = function () {
 					common.setHistory();
 					common.hambergerMenu();
 					common.toggleModal();
+					common.set50Story();
 					// common.header();
 				},
 				// 인트로 설정 (은수정)
@@ -84,16 +85,11 @@ var publish = function () {
 						}
 					});
 				},
-				// 50년의 이야기 설정
 				set50Story: function () {
-					let lbls = [];
-					$(".st50-years .swiper-slide h5").each(function () {
-						lbls.push($(this).text());
-					});
-					var swiper = new Swiper(".mySwiper", {
-						slidesPerView: 1,
-						spaceBetween: 0,
-						effect: "slide",
+					var storySwiper = new Swiper(".storySwiper", {
+						slidePerView: 1,
+						spaceBetween: 20,
+						centeredSlides: true,
 					});
 				},
 				// header: function () {
@@ -132,9 +128,8 @@ var publish = function () {
 						lbls.push($(this).text());
 					});
 					var swiper = new Swiper(".mySwiper", {
-						slidesPerView: 3,
-						spaceBetween: 20,
-						slidesPerGroup: 3,
+						slidesPerView: 1,
+						spaceBetween: 0,
 						effect: effect,
 						pagination: {
 							el: ".swiper-pagination",
