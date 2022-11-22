@@ -66,7 +66,6 @@ var publish = function () {
 					common.hambergerMenu();
 					common.toggleModal();
 					common.set50Story();
-					common.Historyhtml();
 					// common.header();
 				},
 				// 인트로 설정 (은수정)
@@ -87,10 +86,11 @@ var publish = function () {
 					});
 				},
 				set50Story: function () {
-					var storySwiper = new Swiper(".storySwiper", {
-						slidePerView: 4,
+					var storySwiper = new Swiper(".st50-story", {
+						slidesPerView: 3,
 						spaceBetween: 20,
-						centeredSlides: true,
+						// centeredSlides: true,
+						effect: "slide",
 					});
 				},
 				// header: function () {
@@ -120,16 +120,6 @@ var publish = function () {
 						});
 					});
 				},
-				
-				// 메인페이지 연혁 영역 설정 (이은영)
-				Historyhtml:function(){
-					var swiper = new Swiper(".HisSwiper", {
-						slidesPerView:3,
-						spaceBetween: 20,
-						effect: "slide",
-					});
-				},
-
 				setHistory: function () {
 					let lbls = [];
 					let effect = (_device.isMobile) ? "slide" : "fade";
