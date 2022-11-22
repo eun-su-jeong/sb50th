@@ -85,7 +85,7 @@ sub{top:0.5em;} */
 	text-decoration:none;
 	white-space:nowrap;
 	margin:0;
-	padding:0 12px;
+	padding:9px 41px;
 	transition:all .2s ease;
 }
 .btn[disabled] {cursor:default;background:rgba(204, 204, 204, 1) !important;}
@@ -159,8 +159,7 @@ footer{position:relative;}
 section{position:relative;}
 article{position:relative;width:1240px; margin:0 auto;}
 .btn{
-	height: 46px;
-    width: 150px;
+	height: 45px;
     border-radius: 6px;
     background: #000000;
     color: #fff;
@@ -175,6 +174,7 @@ article{position:relative;width:1240px; margin:0 auto;}
 .btn:hover{box-shadow: 300px 0 0 0  rgba(255, 255, 255, 0.25) inset, -300px 0 0 0  rgba(255, 255, 255, 0.25) inset;}
 .pc-hide{display: none;}
 .mo-hide{display: block;}
+.pc-block{display: block;}
 
 /* header */
 header { width: 100%; height: auto; position: fixed; top: 0; left:0; transition: all .5s ease; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(5px);}
@@ -661,6 +661,52 @@ footer .copyright {color:rgba(255, 255, 255, 0.6);}
 .ui-speech.subpage .ceo{margin-right: 0; margin-top: 138px;}
 
 
+
+/* ui-history-cont */
+.ui-history-cont{position:relative; background-color: #fff; overflow: hidden;}
+.ui-history-cont article{padding: 160px 0;}
+.ui-history-cont .title-wrap h1{font-size: 60px;font-weight: 700;line-height: 84px;line-height:56px}
+.ui-history-cont .tit-btn-wrap{display: flex;justify-content:space-between;align-items:center;}
+.ui-history-cont .tit-btn-wrap .title-wrap{margin-bottom: 60px;}
+.ui-history-cont .history-cont-wrap{padding-left: 305px;padding-top: 160px;}
+.ui-history-cont .history-cont-wrap .years-cont::before {
+    content: '';
+    width: 1px;
+    height: -webkit-fill-available;
+    background-color: #D9D9D9;
+    position: absolute;
+    left: 128px;
+    top: 10px;
+    bottom: 13px;
+}
+.ui-history-cont .history-cont-wrap .years-wrap {position: relative;}
+.ui-history-cont .history-cont-wrap .years-wrap .years-cont {display: flex;margin-bottom: 65px;}
+.ui-history-cont .history-cont-wrap .years-wrap .years-cont:last-of-type {margin-bottom: 0;}
+.ui-history-cont .history-cont-wrap .years-wrap .years-cont .year {display:flex;position: relative;font-size: 24px;font-weight: 700; color: #111111; margin-right: 50px;}
+.ui-history-cont .history-cont-wrap .years-wrap .years-cont ul{margin-left:50px;padding-top:5px;}
+.ui-history-cont .history-cont-wrap .years-wrap .years-cont li{margin-bottom: 20px;line-height:20px}
+.ui-history-cont .history-cont-wrap .years-wrap .years-cont .year::after{
+    display: block;
+    position: absolute;
+    right: -56px;
+    content: '';
+    z-index: 1;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #017A5F;
+    top: 10px;    
+}
+.ui-history-cont .history-cont-wrap .years-wrap .years-cont li:last-of-type{margin-bottom: 0px;}
+.ui-history-cont .history-cont-wrap .years-wrap .years-cont li span:nth-of-type(2){color: #666;}
+.ui-history-cont .history-cont-wrap .years-wrap .years-cont li > .bold{margin-right: 40px;font-weight: 500;}
+
+.ui-history-cont .box{position: absolute; top:-7%; left: initial; right: 0;}
+.ui-history-cont .circle1{width: 685px; height: 685px;}
+.ui-history-cont .circle1:after{ top: 66%; left: 95%; width: 22px; height: 22px;}
+.ui-history-cont .circle3{width: 1108px; height: 1108px;}
+.ui-history-cont .circle3:after{top: 98%; left: 60%; width: 18px; height: 18px;}
+
 /* modal */
 .modal{max-width: 814px; max-height: 542px;padding:40px}
 .modal .modal-title{font-size: 20px;font-weight: 700;margin-bottom: 20px;color: #000;}
@@ -674,16 +720,3 @@ main{z-index:1;}
 .modal{z-index:100;}
 .ui-speech .speech-wrap{z-index: 10;}
 .ui-speech .circle{z-index: 0;}
-
-
-
-
-
-
-
-
-/* history */
-.side-nav{width: 214px; height: 720px;position: absolute; left: 0;}
-.side-nav span{font-size: 40px; font-weight: 700; line-height: 48px;display: block; color: #017A5F;}
-.side-nav a:focus > span:first-of-type::after{content: '~'; display: block; color: #017C5F;}
-.side-nav a:focus > span:last-of-type::after{content: ''; display: block; background-color: #017C5F; width: 210px; height: 2px;}
