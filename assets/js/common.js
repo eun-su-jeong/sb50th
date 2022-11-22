@@ -66,6 +66,7 @@ var publish = function () {
 					common.hambergerMenu();
 					common.toggleModal();
 					common.set50Story();
+					common.historyNav();
 					// common.header();
 				},
 				// 인트로 설정 (은수정)
@@ -87,12 +88,27 @@ var publish = function () {
 				},
 				set50Story: function () {
 					var storySwiper = new Swiper(".st50-story", {
-						slidesPerView: 3,
+						slidesPerView: 2,
+						slidesPerGruop: 2,
 						spaceBetween: 20,
 						// centeredSlides: true,
 						effect: "slide",
+
+						navigation: {
+							nextEl: '.swiper-button-next',
+							prevEl: '.swiper-button-prev',
+						  },
+					});
+					
+				},
+				historyNav: function (){
+					var currentPosition = parseInt($(".history-nav").css("top"));
+					$(window).scroll(function() {
+					  var position = $(window).scrollTop(); 
+					  $(".history-nav").stop().animate({"top":position+currentPosition+"px"},100);
 					});
 				},
+				
 				// header: function () {
 				// 	var $header = $('header');
 				// 	// var $page = $('.ui-history');
