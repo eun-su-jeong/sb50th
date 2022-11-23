@@ -160,6 +160,44 @@ header .nav_conts .header-nav{display: none;}
 .ui-emblem .circle3:after{top: 98%; left: 58%; width: 10px; height: 10px;}
 
 
+/* ui-story50Yrs */
+
+.st50-years article{padding: 100px 24px 60px 24px;}
+.st50-years .title-wrap {height:auto}
+.st50-years .title-wrap h1{font-size: 32px;line-height: 45px; margin:0;}
+.st50-years .tit-btn-wrap {margin: 60px 0 40px 0;}
+.st50-years .tit-btn-wrap .title-wrap{margin-bottom: 0px;}
+.st50-years .tit-btn-wrap .title-wrap p{font-size: 24px; line-height: normal; padding:0;}
+.st50-years .tit-btn-wrap .btn{font-size: 13px; width: 96px;height: 30px;padding:0 10px;line-height:2;}
+.st50-years .tit-btn-wrap .btn span::after{margin-left:8px;background: url(../images/arrow_mobile.svg) center no-repeat; width: 5px; height: 9px;}
+
+.st50-years .story-wrap{padding: 0;}
+.st50-years .story-wrap .st50-story{overflow:visible; margin: 0;}
+.st50-story .swiper-slide{flex-shrink: 1;}
+.st50-story .swiper-slide img{width: 280px; height: 180px;}
+
+.st50-story .storys{margin-top: 100px;}
+.st50-story .storys h3{font-size: 18px; letter-spacing: -0.1px}
+.st50-story .storys p{font-size: 15px;}
+
+
+.st50-years .mo-nav{width: 100%; margin-top: 40px;}
+.st50-years .mo-nav ul{display: flex;}
+.st50-years .mo-nav ul li{width: 100%;margin-right: 15px;}
+.st50-years .mo-nav ul li:last-of-type{margin-right: 0;}
+.st50-years .mo-nav ul li a{font-size: 20px;line-height: 24px;color: #CCCCCC;}
+
+
+.st50-years .mo-nav ul li a.focus{font-weight: 700;color: #017A5F;}
+.st50-years .mo-nav ul li a.focus span:first-of-type::after{display: inline-block;content: '~';color: #017A5F;}
+.st50-years .mo-nav ul li a.focus::after{display: block;content: '';width: 60px; height: 1px; background-color: #017A5F;}
+
+.st50-years .box{position: absolute; top:-20px; left: initial; right: 0;}
+.st50-years .circle1{width: 235px; height: 235px;z-index:100;}
+.st50-years .circle1:after{ top: 31%; left: 95%; width: 14px; height:14px;}
+.st50-years .circle3{width: 380px; height: 380px;}
+.st50-years .circle3:after{top: 98%; left: 58%; width: 10px; height: 10px;}
+
 /* ui-history-cont */
 .ui-history-cont article{padding: 100px 24px 60px 24px;}
 .ui-history-cont .title-wrap {height:auto}
