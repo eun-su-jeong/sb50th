@@ -470,7 +470,7 @@ main{}
 .ui-history .swiper-pagination:before {	display: block;position: absolute;left: 55px; top: 20px;width:90%; height: 2px;background-color: rgba(0, 0, 0, .04);content: '';}
 .ui-history .swiper-pagination-bullet {display:inline-flex;flex-direction:column;align-items:center;width: auto;height: auto;border-radius: 0;background: none;opacity: 1;}
 
-.ui-history .swiper-pagination-bullet .lbl {color: #888;font-weight: 700;}
+.ui-history .swiper-pagination-bullet .lbl {color: #888;font-weight: 700;font-size: 24px;}
 .ui-history .swiper-pagination-bullet .icn{position: relative;width: 16px;height: 16px;text-align: center;border-radius:50%;opacity: 1;background: #D9D9D9;}
 .ui-history .swiper-pagination-bullet .icn + .lbl{margin-top:19px;}
 .ui-history .swiper-pagination-bullet .icn:before,
@@ -484,7 +484,7 @@ main{}
 
 
 .ui-history .swiper-pagination-bullet-active .icn{background: #017A5F;}
-.ui-history .swiper-pagination-bullet-active .lbl{color: #111;}
+.ui-history .swiper-pagination-bullet-active .lbl{color: #111;font-size: 24px;}
 .ui-history .swiper-pagination-bullet.swiper-pagination-bullet-active .icn:before,
 .ui-history .swiper-pagination-bullet.swiper-pagination-bullet-active .icn:after {transform:scaleX(1)}
 .ui-history .swiper-pagination-bullet.swiper-pagination-bullet-active .icn:before {left: -80px;background: linear-gradient(to left, rgba(1, 122, 95, 1), rgba(1, 122, 95, 0));}
@@ -660,8 +660,6 @@ footer .copyright {color:rgba(255, 255, 255, 0.6);}
 .ui-speech.subpage .speech-conts .txt .bold{font-size: 20px;}
 .ui-speech.subpage .ceo{margin-right: 0; margin-top: 138px;}
 
-
-
 /* ui-history-cont */
 .ui-history-cont{position:relative; background-color: #fff; overflow: hidden;}
 .ui-history-cont article{padding: 220px 0 180px 0;}
@@ -700,12 +698,43 @@ footer .copyright {color:rgba(255, 255, 255, 0.6);}
 .ui-history-cont .history-cont-wrap .years-wrap .years-cont li:last-of-type{margin-bottom: 0px;}
 .ui-history-cont .history-cont-wrap .years-wrap .years-cont li span:nth-of-type(2){color: #666;}
 .ui-history-cont .history-cont-wrap .years-wrap .years-cont li > .bold{margin-right: 40px;font-weight: 500;}
-
 .ui-history-cont .box{position: absolute; top:-7%; left: initial; right: 0;}
 .ui-history-cont .circle1{width: 685px; height: 685px;}
 .ui-history-cont .circle1:after{ top: 66%; left: 95%; width: 22px; height: 22px;}
 .ui-history-cont .circle3{width: 1108px; height: 1108px;}
 .ui-history-cont .circle3:after{top: 98%; left: 60%; width: 18px; height: 18px;}
+
+/* ui-present */
+.ui-present .box{position: absolute; top:-7%; left: initial; right: 0;}
+.ui-present .circle1{width: 685px; height: 685px;}
+.ui-present .circle1:after{ top: 66%; left: 95%; width: 22px; height: 22px;}
+.ui-present .circle3{width: 1108px; height: 1108px;}
+.ui-present .circle3:after{top: 98%; left: 60%; width: 18px; height: 18px;}
+.ui-present{background-color:#fff; overflow: hidden;}
+.ui-present article{padding: 220px 0 180px 0;}
+.ui-present .title-wrap {height: 2em;}
+.ui-present .title-wrap h1{font-size: 60px;line-height: 84px;height:2em}
+.ui-present .ui-circle{display: flex;justify-content:center;align-items: end;}
+.ui-present .first-circle{background: url(../images/circle1.png) no-repeat center; width: 230px; height: 230px;margin-right:80px;margin-bottom: 40px;text-align: center;}
+.ui-present .second-circle{background: url(../images/circle2.png) no-repeat center; width: 480px; height: 480px;text-align: center;}
+.ui-present .first-circle .txt-wrap{padding: 64px 0;}
+.ui-present .second-circle .txt-wrap{padding: 160px 0;}
+.ui-present .ui-circle .first-circle .desc{font-size: 26px; color: #111;}
+.ui-present .ui-circle .first-circle .num{font-size: 48px; color: #111;}
+.ui-present .ui-circle .second-circle .desc{font-size: 32px; color: #111;}
+.ui-present .ui-circle .second-circle .num{font-size: 69px; color: #111;}
+.ui-number{background-color:#F8FAF8;}
+.ui-number article{padding: 120px 0;}
+.ui-number .number-wrap{display: flex;}
+.ui-number .number-wrap .property{margin-right: 173px;}
+.ui-number .number-wrap .customer{}
+.ui-number .number-wrap .title {font-size: 24px; font-weight: 700;color: #111111;}
+.ui-number .number-wrap .bold {font-size: 52px; margin: 26px 0 12px 0;}
+.ui-number .number-wrap .summary {font-size: 32px; color: #888;}
+.ui-graph article{padding: 120px 0;}
+.ui-graph .title{font-size: 40px; color: #111; font-weight: 700;}
+
+
 
 /* modal */
 .modal{max-width: 814px; max-height: 542px;padding:40px;border-radius: 20px;}
