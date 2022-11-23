@@ -143,14 +143,22 @@ header .nav_conts .header-nav{display: none;}
 .ui-speech .circle{top: -2%; left: -17%; width: 370px; height: 370px;}
 
 /* emblem */
-.ui-emblem{background-color:#FBFBFB;}
-.ui-emblem article{padding: 50px 24px 140px 24px;overflow: visible;}
+.ui-emblem article{padding: 84px 24px;overflow: visible;}
+.ui-emblem .title-wrap h1{font-size: 32px;line-height:45px;margin-bottom: 40px;}
+.ui-emblem .ui-infinity{width: 213px;}
+.ui-emblem .txt-cont{margin-top:40px}
+.ui-emblem .txt-cont .title-wrap{margin-bottom: 20px;}
+.ui-emblem .txt-cont .title-wrap .bold{font-size: 18px;}
 .ui-emblem .emblem-conts.flex{flex-wrap: wrap; justify-content:flex-end;}
 .ui-emblem .overlay{display: none;}
-.ui-emblem .txt-cont .title-wrap{position: absolute; top: 48px;}
 .ui-emblem .txt-cont .txt p:first-child{margin: 0 0 20px 0;}
 .base img {width: 100%;}
-.ui-emblem .txt-cont{margin-top:40px}
+.ui-emblem .box{position: absolute; top:-20px; left: initial; right: -20px;}
+.ui-emblem .circle1{width: 235px; height: 235px;z-index:100;}
+.ui-emblem .circle1:after{ top: 31%; left: 95%; width: 14px; height:14px;}
+.ui-emblem .circle3{width: 380px; height: 380px;}
+.ui-emblem .circle3:after{top: 98%; left: 58%; width: 10px; height: 10px;}
+
 
 /* ui-history-cont */
 .ui-history-cont article{padding: 100px 24px 60px 24px;}
@@ -190,6 +198,21 @@ header .nav_conts .header-nav{display: none;}
 .ui-history-cont .mo-nav ul li a.focus span:first-of-type::after{display: inline-block;content: '~';color: #017A5F;}
 .ui-history-cont .mo-nav ul li a.focus::after{display: block;content: '';width: 60px; height: 1px; background-color: #017A5F;}
 
+
+.ui-speech.subpage{}
+.ui-speech.subpage .title-wrap{height: auto;}
+.ui-speech.subpage .title-wrap h1{font-size: 32px;}
+.ui-speech.subpage .ceo{margin: 40px 0 60px 0;}
+.ui-speech .speech-conts .txt p:nth-child(2){padding: 0;}
+.ui-speech.subpage .speech-conts h4{font-size: 18px;}
+.ui-speech.subpage .speech-conts .txt p{margin-bottom: 20px;}
+.ui-speech.subpage .speech-conts .txt p:last-of-type{margin-bottom: 0px;}
+.ui-speech.subpage .speech-conts .txt{margin: 0;}
+.ui-speech.subpage .box{position: absolute; top:-20px; left: initial; right: 0;}
+.ui-speech.subpage .circle1{width: 235px; height: 235px;z-index:100;}
+.ui-speech.subpage .circle1:after{ top: 31%; left: 95%; width: 14px; height:14px;}
+.ui-speech.subpage .circle3{width: 380px; height: 380px;}
+.ui-speech.subpage .circle3:after{top: 98%; left: 58%; width: 10px; height: 10px;}
 
 /* footer */
 footer article{padding:28px 44px;}
