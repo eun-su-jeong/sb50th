@@ -130,20 +130,30 @@ var publish = function () {
 					// 	}
 					// });
 
-					var progressIndicator = '<div id="i-am-progress-indicator"></div>';
-					$('body').append(progressIndicator);
+					// var progressIndicator = '<div id="i-am-progress-indicator"></div>';
+					// $('body').append(progressIndicator);
 
-					$(window).on('scroll', function(){
-						var currentPercentage = ($(window).scrollTop() / ($(document).outerHeight() - $(window).height())) * 100;
-						var now = currentPercentage * 60;
-						console.log("now", now);
-						console.log("currentPercentage", currentPercentage);
-					$('#i-am-progress-indicator').width(currentPercentage+'%');
-						if(now){
-							alert("good");
+					// $(window).on('scroll', function(){
+					// 	var currentPercentage = ($(window).scrollTop() / ($(document).outerHeight() - $(window).height())) * 100;
+					// 	var now = currentPercentage * 60;
+					// 	console.log("now", now);
+					// 	console.log("currentPercentage", currentPercentage);
+					// $('#i-am-progress-indicator').width(currentPercentage+'%');
+					// 	if(now){
+					// 		alert("good");
+					// 		$(".history-nav").addClass('sticky');
+					// 	}
+					// });
+
+					$(window).scroll(function(){
+						var scrT = $(window).scrollTop();
+						console.log(scrT); //스크롤 값 확인용
+						if(scrT == $(document).height() - $(window).height()){
 							$(".history-nav").addClass('sticky');
+						} else {
+							$(".history-nav").removeClass('sticky');
 						}
-					});
+					  })
 				},
 				
 				
