@@ -15,6 +15,50 @@
 	<script type="text/javascript" src="../assets/lib/swiper-5.4.2.min.js"></script>
 	<script type="text/javascript" src="../assets/lib/jquery.nanoscroller-0.8.7.min.js"></script>
 	<script type="text/javascript" src="../assets/js/common.js"></script>
+
+	<style>
+		div, ul, li {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding:0;margin:0}
+		a {text-decoration:none;}
+
+		.st50-years .story-wrap{display: flex; position: relative;}
+		.history-nav {position:absolute; width:20%; top:0; left:0; flex-shrink: 0; background-color: yellowgreen;}
+		/* .quickmenu ul {position:relative ;width:100%;} */
+		.history-nav ul li { padding-bottom: 64px;}
+		.history-nav ul li a {font-size: 40px; font-weight: 700; color: #ccc;}
+		.st50-years .story-wrap .history-nav ul li a span{display: block;}
+		
+		.history-nav ul li:hover a,
+		.st50-years .story-wrap .history-nav ul li a:focus{color: #017A5F;}
+
+		.st50-years .story-wrap .history-nav ul li:hover span:first-child::after,
+		.st50-years .story-wrap .history-nav ul li a:focus span:first-child::after{display : inline-block;}
+
+		.st50-years .story-wrap .history-nav ul li:hover span:last-child::after,
+		.st50-years .story-wrap .history-nav ul li a:focus span:last-child::after{display : block;}
+
+		.st50-years .story-wrap .history-nav ul li a span:first-child::after{display: none; content: "~"; color: #017A5F; }
+		.st50-years .story-wrap .history-nav ul li a span:last-child::after{display: none; content: ""; width: 211px; height: 2px; background-color: #017A5F; }
+
+
+
+
+		/* .st50-years .story-wrap .history-nav{width: 20%; flex-shrink: 0; background-color: yellowgreen;} */
+		/* .st50-years .story-wrap .history-nav ul li{padding-bottom: 64px;} */
+		/* .st50-years .story-wrap .history-nav ul li:hover a,
+		.st50-years .story-wrap .history-nav ul li a:focus{color: #017A5F;} */
+
+		/* .st50-years .story-wrap .history-nav ul li:hover span:first-child::after,
+		.st50-years .story-wrap .history-nav ul li a:focus span:first-child::after{display : inline-block;} */
+		/* .st50-years .story-wrap .history-nav ul li:hover span:last-child::after,
+		.st50-years .story-wrap .history-nav ul li a:focus span:last-child::after{display : block;} */
+		.st50-years .story-wrap .history-nav ul li:last-child{padding-bottom: 0;}
+		/* .st50-years .story-wrap .history-nav ul li a{font-size: 40px; font-weight: 700; color: #ccc;} */
+		.st50-years .story-wrap .history-nav ul li a span:first-child::after{display: none; content: "~"; color: #017A5F; }
+		.st50-years .story-wrap .history-nav ul li a span:last-child::after{display: none; content: ""; width: 211px; height: 2px; background-color: #017A5F; }
+		/* .st50-years .story-wrap .history-nav ul li a span{display: block;} */
+
+.content {position:relative;min-height:1000px;}
+	</style>
 </head>
 
 <body>
@@ -95,9 +139,9 @@
 					<div class="circle1"></div>
 					<div class="circle3"></div>
 				</div>
-				<div class="story-wrap">
+				<div class="story-wrap" style="height: 100vh;">
 					<div class="history-nav">
-						<ul class="h-nav">
+						<ul>
 							<li>
 								<a href="#">
 									<span>1972</span>
@@ -130,7 +174,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="st50-story swiper">
+					<!-- <div class="st50-story swiper">
 						<h2>
 							상호신용금고의<br>
 							설립과 정착
@@ -187,7 +231,7 @@
 								</p>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</article>
 		</section>
@@ -218,6 +262,16 @@
 			</div>
 		</article>
 	</footer>
+
+	<script>
+		$(document).ready(function(){
+		var currentPosition = parseInt($(".quickmenu").css("top"));
+		$(window).scroll(function() {
+			var position = $(window).scrollTop(); 
+			$(".quickmenu").stop().animate({"top":position+currentPosition+"px"},1000);
+		});
+		});
+	</script>
 </body>
 
 </html>
