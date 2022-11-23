@@ -3,12 +3,17 @@
 .container{min-width:0;}
 article{width:auto;}
 
-.title-wrap{font-size: 24px;width: 261px;height: 5em;}
+.title-wrap{font-size: 24px;width: 261px;
+	/* height: 5em; */
+}
 .btn {
     height: 40px;
     width: 100%;
-    font-size: 16px;
+    font-size: 15px;
+	font-weight: 500;
+	line-height: 23px;
 }
+.btn span::after{margin-left: 8px;}
 .btn:hover{box-shadow: none;}
 .txt{font-size: 15px;}
 .mb{display: block;}
@@ -89,15 +94,14 @@ header .nav_conts .header-nav{display: none;}
 .ui-history .title-wrap{height: 5em;}
 
 /* speech */ 
-.ui-speech article{padding: 50px 24px;}
+.ui-speech article{padding: 60px 24px;}
 .ui-speech .flex{flex-wrap: wrap-reverse; justify-content: flex-end;}
-.ui-speech .speech-conts{padding:30px 0 10px 0;}
+.ui-speech .speech-conts{padding:0;}
 .ui-speech .speech-conts h4{font-size: 16px;margin-bottom:20px;}
-.ui-speech .ceo{margin: 0; z-index: 1;}
+.ui-speech .ceo{margin: 0; z-index: 1;margin: 40px 0;}
 .ui-speech .ceo img{width: 240px; height: 240px;}
 .ui-speech .speech-conts .txt p:nth-child(2){padding: 20px 0;}
 .ui-speech .circle{top: -2%; left: -17%; width: 370px; height: 370px;}
-.ui-speech .mo-cir{position: absolute; top: -15%; right: -7%;}
 
 /* emblem */
 .ui-emblem{background-color:#FBFBFB;}
@@ -109,8 +113,6 @@ header .nav_conts .header-nav{display: none;}
 .base img {width: 100%;}
 .ui-emblem .txt-cont{margin-top:40px}
 .ui-infinity .base{width: 192px; height: auto; margin-top: 110px;}
-.ui-emblem .mo-cir1{position: absolute;top: -12%; right: 0%;}
-.ui-emblem .mo-cir2{position: absolute;bottom: -11%; left: 0%;}
 
 /* ui-history-cont */
 .ui-history-cont article{padding: 100px 24px 60px 24px;}
