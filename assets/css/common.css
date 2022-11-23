@@ -561,12 +561,12 @@ main{}
 
 .st50-years{overflow: hidden;}
 .st50-years article{padding: 160px 0 100px;}
-
+              
 .st50-story{overflow: hidden;}
-.st50-years .title-wrap h1{font-size: 60px; line-height: 84px; margin-top: 60px;}
-.st50-years .story-wrap{display: flex; position: relative; margin: initial; padding: 0; width:100%; background-color: antiquewhite;} 
-.st50-years .story-wrap .history-nav{position:relative; top:0; left:0; width: 20%; flex-shrink: 0; background-color: yellowgreen;}
-.st50-years .story-wrap .history-nav ul li{padding-bottom: 64px;}
+.st50-years .title-wrap h1{font-size: 60px; line-height: 84px; margin: 60px 0 100px 0;}
+.st50-years .story-wrap{display: flex; position: relative; margin: initial; width:100%; /*background-color: antiquewhite;*/} 
+.st50-years .story-wrap .history-nav{position:relative; top:0; left:0; width: 20%; height: 720px; flex-shrink: 0; /*background-color: yellowgreen;*/}
+.st50-years .story-wrap .history-nav ul li{padding-bottom: 60px;}
 .st50-years .story-wrap .history-nav ul li:hover a,
 .st50-years .story-wrap .history-nav ul li a:focus{color: #017A5F;}
 .st50-years .story-wrap .history-nav ul li:hover span:first-child::after,
@@ -579,10 +579,11 @@ main{}
 .st50-years .story-wrap .history-nav ul li a span:last-child::after{display: none; content: ""; width: 211px; height: 2px; background-color: #017A5F; }
 .st50-years .story-wrap .history-nav ul li a span{display: block;}
 
-.st50-story h2{padding: 50px 0; font-size: 40px; line-height: 56px; color: #111;} 
-.st50-story{width: 100%; height: 100%; margin: 0 38px; background-color: yellow;}
-.st50-story .swiper-slide{width: 100%; height:100%; flex-shrink: 1; background-color: rgba(255, 42, 0, 0.138);}
-.st50-story .swiper-slide img{display: block; width: 445px; height: 300px; object-fit: cover;}
+.st50-story .tit-btn-wrap{display: flex; justify-content:space-between; align-items:center;}
+.st50-story .title-wrap p.bold{padding: 50px 0; font-size: 40px; line-height: 56px; color: #111;} 
+.st50-story{width: 100%; height: 100%; margin: 0 38px; /*background-color: yellow;*/}
+.st50-story .swiper-slide{width: 100%; height:100%; flex-shrink: 1; /*background-color: rgba(255, 42, 0, 0.138);*/}
+.st50-story .swiper-slide img{display: block; width: 445px; height: 300px;}
 
 
 .st50-years .circle3{width: 1108px; height: 1108px;}
@@ -591,7 +592,7 @@ main{}
 .swiper-button-prev,
 .swiper-button-next{top:24%; width: 32px; height: 60px; color: #ccc;}
 
-.swiper-button-prev, .swiper-container-rtl .swiper-button-prev {left: 244px; right: auto;}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-prev {left: 235px; right: auto;}
 .swiper-button-next, .swiper-container-rtl .swiper-button-prev {right: -4px; left: auto;}
 
 /* .flex{display: flex; justify-content: space-between;}
@@ -601,7 +602,7 @@ main{}
 .st50-story .storys h3{font-size: 24px; color: #111;}
 .st50-story .storys p{padding-top: 20px; font-size: 18px; line-height: 27px; color: #666;}
 
-.st50-years .box{position: absolute; top:-10%; left: initial; right: 0;}
+.st50-years .box{position: absolute; top:-5%; left: initial; right: 0;}
 .st50-years .circle1{width: 685px; height: 685px;}
 .st50-years .circle1:after{ top: 66%; left: 95%; width: 22px; height: 22px;}
 

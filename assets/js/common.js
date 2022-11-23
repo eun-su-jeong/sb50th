@@ -89,7 +89,6 @@ var publish = function () {
 				set50Story: function () {
 					var storySwiper = new Swiper(".st50-story", {
 						slidesPerView: 2,
-						slidesPerGruop: 2,
 						spaceBetween: 20,
 						// centeredSlides: true,
 						effect: "slide",
@@ -105,8 +104,9 @@ var publish = function () {
 					var currentPosition = parseInt($(".history-nav").css("top"));
 					$(window).scroll(function() {
 					  var position = $(window).scrollTop(); 
-					  $(".history-nav").stop().animate({"top":position+currentPosition+"px"},100);
+					  $(".history-nav").stop().animate({"top":position + currentPosition + "px"},200);
 					});
+
 				},
 				
 				// header: function () {
