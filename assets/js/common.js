@@ -112,9 +112,8 @@ var publish = function () {
 				// 	});
 				// },
 				toggleModal: function(){
-					$('a[href="#video-modal"]').click(function(event) {
-						event.preventDefault();
-					
+					$('.openmodal').click(function(event) {
+						event.preventDefault();					
 						$(this).modal({
 							fadeDuration: 250
 						});
