@@ -590,7 +590,7 @@ main{}
 .st50-years .circle3:after{top: 98%; left: 60%; width: 18px; height: 18px;}
 
 .swiper-button-prev,
-.swiper-button-next{top:24%; width: 32px; height: 60px; color: #ccc;}
+.swiper-button-next{top:350px; width: 32px; height: 60px; color: #ccc;}
 
 .swiper-button-prev, .swiper-container-rtl .swiper-button-prev {left: 235px; right: auto;}
 .swiper-button-next, .swiper-container-rtl .swiper-button-prev {right: -4px; left: auto;}
