@@ -564,6 +564,7 @@ main{}
 .st50-years .title-wrap h1{font-size: 60px; line-height: 84px; margin: 60px 0 100px 0;}
 .st50-years .story-wrap{display: flex; position: relative; margin: initial; width:100%; /*background-color: antiquewhite;*/} 
 .st50-years .story-wrap .history-nav{position:relative; top:0; left:0; width: 20%; height: 720px; flex-shrink: 0; /*background-color: yellowgreen;*/}
+.st50-years .story-wrap .history-nav.sticky{position: sticky; background-color: tomato;}
 .st50-years .story-wrap .history-nav ul li{padding-bottom: 60px;}
 .st50-years .story-wrap .history-nav ul li:hover a,
 .st50-years .story-wrap .history-nav ul li a:focus{color: #017A5F;}
@@ -603,6 +604,15 @@ main{}
 .st50-years .box{position: absolute; top:-7%; left: initial; right: 0;}
 .st50-years .circle1{width: 685px; height: 685px;}
 .st50-years .circle1:after{ top: 66%; left: 95%; width: 22px; height: 22px;}
+
+#i-am-progress-indicator {
+    position:fixed;
+    bottom:0;
+    left:0;
+    height:5px;
+    background:blue;
+    width:0%;
+  }
 
 /* infinity */
 .ui-infinity{position:relative;}

@@ -67,6 +67,7 @@ var publish = function () {
 					common.toggleModal();
 					common.set50Story();
 					common.historyNav();
+					common.stickyNav();
 					// common.header();
 				},
 				// 인트로 설정 (은수정)
@@ -113,8 +114,36 @@ var publish = function () {
 					var currentPosition = parseInt($(".history-nav").css("top"));// 기본 위치(top)값
 					$(window).scroll(function() {
 					  var position = $(window).scrollTop(); // 현재 스크롤 위치
-					  $(".history-nav").stop().animate({"top" : position + currentPosition + "px"},800);
-					});				
+					  $(".history-nav").stop().animate({"top" : position + currentPosition + "px"},800);			  
+					});		
+				},
+				stickyNav: function (){
+					// $(".st50-years").scroll(function(){
+					// 	var scrollTop = $(this).scrollTop();
+					// 	var innerHeight = $(this).innerHeight();
+					// 	var scrollHeight = $(this).prop('scrollHeight');
+		
+					// 	if (scrollTop + innerHeight >= scrollHeight) {
+					// 		$(".history-nav").addClass('sticky');
+					// 	} else {
+					// 		$(".history-nav").removeClass('sticky');
+					// 	}
+					// });
+
+					var progressIndicator = '<div id="i-am-progress-indicator"></div>';
+					$('body').append(progressIndicator);
+
+					$(window).on('scroll', function(){
+						var currentPercentage = ($(window).scrollTop() / ($(document).outerHeight() - $(window).height())) * 100;
+						var now = currentPercentage * 60;
+						console.log("now", now);
+						console.log("currentPercentage", currentPercentage);
+					$('#i-am-progress-indicator').width(currentPercentage+'%');
+						if(now){
+							alert("good");
+							$(".history-nav").addClass('sticky');
+						}
+					});
 				},
 				
 				
