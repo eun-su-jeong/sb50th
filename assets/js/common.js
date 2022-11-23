@@ -96,18 +96,27 @@ var publish = function () {
 						navigation: {
 							nextEl: '.swiper-button-next',
 							prevEl: '.swiper-button-prev',
-						  },
-					});
-					
+						},
+						breakpoints: {
+							320: {
+							  slidesPerView: 1,  //브라우저가 320보다 클 때
+							  spaceBetween: 12,
+							},
+							768: {
+								slidesPerView: 2,  //브라우저가 768보다 클 때
+								spaceBetween: 20,
+							  }
+						}			
+					});					
 				},
 				historyNav: function (){
-					var currentPosition = parseInt($(".history-nav").css("top"));
+					var currentPosition = parseInt($(".history-nav").css("top"));// 기본 위치(top)값
 					$(window).scroll(function() {
-					  var position = $(window).scrollTop(); 
-					  $(".history-nav").stop().animate({"top":position + currentPosition + "px"},200);
-					});
-
+					  var position = $(window).scrollTop(); // 현재 스크롤 위치
+					  $(".history-nav").stop().animate({"top" : position + currentPosition + "px"},800);
+					});				
 				},
+				
 				
 				// header: function () {
 				// 	var $header = $('header');

@@ -577,7 +577,7 @@ main{}
 .st50-years .story-wrap .history-nav ul li a{font-size: 40px; font-weight: 700; color: #ccc;}
 .st50-years .story-wrap .history-nav ul li a span:first-child::after{display: none; content: "~"; color: #017A5F; }
 .st50-years .story-wrap .history-nav ul li a span:last-child::after{display: none; content: ""; width: 211px; height: 2px; background-color: #017A5F; }
-.st50-years .story-wrap .history-nav ul li a span{display: block;}
+.st50-years .story-wrap .history-nav ul li a span{display: block; height: 1.2em;}
 
 .st50-story .tit-btn-wrap{display: flex; justify-content:space-between; align-items:center;}
 .st50-story .title-wrap p.bold{padding: 50px 0; font-size: 40px; line-height: 56px; color: #111;} 
@@ -602,7 +602,7 @@ main{}
 .st50-story .storys h3{font-size: 24px; color: #111;}
 .st50-story .storys p{padding-top: 20px; font-size: 18px; line-height: 27px; color: #666;}
 
-.st50-years .box{position: absolute; top:-5%; left: initial; right: 0;}
+.st50-years .box{position: absolute; top:-7%; left: initial; right: 0;}
 .st50-years .circle1{width: 685px; height: 685px;}
 .st50-years .circle1:after{ top: 66%; left: 95%; width: 22px; height: 22px;}
 
