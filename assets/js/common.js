@@ -101,11 +101,20 @@ var publish = function () {
 					
 				},
 				historyNav: function (){
+
 					var currentPosition = parseInt($(".history-nav").css("top"));
 					$(window).scroll(function() {
-					  var position = $(window).scrollTop(); 
-					  $(".history-nav").stop().animate({"top":position + currentPosition + "px"},200);
+						var position = $(window).scrollTop();
+						$(".history-nav").stop().animate({"top":position+currentPosition+"px"},800);
 					});
+
+
+					// var currentPosition = parseInt($(".history-nav").css("top"));
+					// $(window).scroll(function() {
+					//   var position = $(window).scrollTop(); 
+					//   $(".history-nav").stop().animate({"top":position + currentPosition + "px"},200);
+					// });
+
 
 				},
 				
