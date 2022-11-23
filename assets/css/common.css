@@ -451,7 +451,7 @@ header .header-nav .sub-nav ul li a:hover{font-weight: 700; color:#007360;}
 }
 .scroll span{text-transform: uppercase;}
 .scroll img{width: 50%;}
-
+.video-wrap .thumbnail{width: 604px; height: 340px;}
 
 
 /* history */
@@ -631,7 +631,7 @@ main{}
 .ui-video .title-wrap{margin-bottom: 100px;}
 .ui-video .video-wrap{display: flex;}
 .ui-video .video-wrap h4{margin-bottom: 20px;}
-.ui-video .video-wrap div:first-of-type{margin-right: 32px;}
+.ui-video .video-wrap > div{margin-right: 32px;}
 
 /* footer */
 footer{left: 50%; bottom: 0; transform: translateX(-50%); background: #424242;}
