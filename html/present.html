@@ -14,9 +14,12 @@
 	<script type="text/javascript" src="../assets/lib/jquery-ui-1.12.1.min.js"></script>
 	<script type="text/javascript" src="../assets/lib/swiper-5.4.2.min.js"></script>
 	<script type="text/javascript" src="../assets/lib/jquery.nanoscroller-0.8.7.min.js"></script>
+	<script type="text/javascript" src="../assets/lib/jquery.animateNumber.min.js"></script>
 	<script type="text/javascript" src="../assets/js/common.js"></script>
 </head>
+<script>
 
+</script>
 <body>
 	<header>
 		<div class="nav_conts">
@@ -102,13 +105,13 @@
 						<h1>숫자로 보는 저축은행</h1>
 					</div>
 					<section class="ui-circle">
-						<div class="first-circle">
+						<div class="first-circle upeffect">
 							<div class="txt-wrap">
 								<p class="desc">저축은행</p>
 								<p class="num"><span class="bold">79</span>개</p>
 							</div>
 						</div>
-						<div class="second-circle">
+						<div class="second-circle upeffect">
 							<div class="txt-wrap">
 								<p class="desc">지점</p>
 								<p class="num"><span class="bold">290</span>여개</p>
@@ -127,12 +130,12 @@
 				<div class="number-wrap">
 					<div class="property">
 						<p class="title">자산</p>
-						<p class="bold">118,000,000,000,000원</p>
+						<p class="bold"><span id="property-number">0</span>원</p>
 						<p class="summary">180조원</p>
 					</div>
 					<div class="customer">
-						<p class="title">이용고객</p>
-						<p class="bold">7,690,000명</p>
+						<p class="title">이용고객</p>						
+						<p class="bold"><span id="customer-number">0</span>명</p>
 						<p class="summary">769만명</p>
 					</div>
 				</div>
@@ -141,6 +144,7 @@
 		<section class="ui-graph">
 			<article>
 				<p class="title">높은 안전성과 건전성</p>
+				<div class="graph"><img src="../assets/images/graph.png" alt=""></div>
 			</article>
 		</section>
 

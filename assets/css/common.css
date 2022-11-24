@@ -537,7 +537,6 @@ main{}
 	transform: scale(1);
 }
 
-
 /* emblem */
 .ui-emblem{position:relative; background-color: #fff; overflow: hidden;}
 .ui-emblem article{padding: 160px 0;}
@@ -707,7 +706,7 @@ footer .copyright {color:rgba(255, 255, 255, 0.6);}
 .ui-history-cont .circle3:after{top: 98%; left: 60%; width: 18px; height: 18px;}
 
 /* ui-present */
-.ui-present .box{position: absolute; top:-7%; left: initial; right: 0;}
+.ui-present .box{position: absolute; top:-18%; left: initial; right: 0;}
 .ui-present .circle1{width: 685px; height: 685px;}
 .ui-present .circle1:after{ top: 66%; left: 95%; width: 22px; height: 22px;}
 .ui-present .circle3{width: 1108px; height: 1108px;}
@@ -735,6 +734,35 @@ footer .copyright {color:rgba(255, 255, 255, 0.6);}
 .ui-number .number-wrap .summary {font-size: 32px; color: #888;}
 .ui-graph article{padding: 120px 0;}
 .ui-graph .title{font-size: 40px; color: #111; font-weight: 700;}
+.ui-graph .graph{text-align: center;margin-top: 60px;}
+
+@keyframes fadeInUp {
+    0% {     
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+.first-circle {
+    position: relative;
+    opacity: 0;
+}
+.first-circle.upeffect.on {
+    opacity: 1;
+    animation: fadeInUp 0.8s ;
+}
+.second-circle {
+    position: relative;
+}
+.second-circle.upeffect.on {
+    opacity: 0;
+    animation: fadeInUp 1s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+}
 
 
 
