@@ -59,230 +59,254 @@ var _device = {};
 })(jQuery);
 
 var publish = function () {
-		var common = {
-				init: function () {
-					console.log("publish initiated.");
-					common.setHistory();
-					common.hambergerMenu();
-					common.toggleModal();
-					common.set50Story();
-					common.historyNav();
-					// common.header();
-				},
-				// 인트로 설정 (은수정)
-				hambergerMenu: function () {
-					var $body = $('body');
-					var $header = $('header');									
-					$(".hamburger").click(function () {
-						$(this).toggleClass("is-active");	
-						if($(this).hasClass("is-active")){
-							$('.overlay-menu').addClass('opend');
-							$body.addClass('body-hidden');
-							$header.addClass('none');
-						}else{
-							$('.overlay-menu').removeClass('opend');
-							$body.removeClass('body-hidden');
-							$header.removeClass('none');
-						}
-					});
-				},
-				set50Story: function () {
-					var storySwiper = new Swiper(".st50-story", {
-						slidesPerView: 2,
-						spaceBetween: 20,
-						// centeredSlides: true,
-						effect: "slide",
-
-						navigation: {
-							nextEl: '.swiper-button-next',
-							prevEl: '.swiper-button-prev',
-						},
-						breakpoints: {
-							320: {
-							  slidesPerView: 1,  //브라우저가 320보다 클 때
-							  spaceBetween: 12,
-							},
-							768: {
-								slidesPerView: 2,  //브라우저가 768보다 클 때
-								spaceBetween: 20,
-							  }
-						}			
-					});					
-				},
-				historyNav: function (){
-					var currentPosition = parseInt($(".history-nav").css("top"));// 기본 위치(top)값
-					$(window).scroll(function() {
-					  var position = $(window).scrollTop(); // 현재 스크롤 위치
-					  $(".history-nav").stop().animate({"top" : position + currentPosition + "px"},800);
-					});				
-				},
-				
-				
-				// header: function () {
-				// 	var $header = $('header');
-				// 	// var $page = $('.ui-history');
-				// 	var $window = $(window);
-				// 	// var pageOffsetTop = $page.offset().top;//색상 변할 부분의 top값 구하기
-					
-				// 	// $window.resize(function(){ //반응형을 대비하여 리사이즈시 top값을 다시 계산
-				// 	// 	pageOffsetTop = $page.offset().top;
-				// 	// });
-					
-				// 	$window.scroll(function(){ //스크롤시
-				// 	  	$header.toggleClass('bg', $window.scrollTop() > 50); //클래스 토글
-				// 		//모바일 영역
-				// 		if(_device.isMobile){
-				// 			$header.toggleClass('bg', $window.scrollTop() > 50);
-				// 		}
-				// 	});
-				// },
-				toggleModal: function(){
-					$('.openmodal').click(function(event) {
-						event.preventDefault();					
-						$(this).modal({
-							fadeDuration: 250
-						});
-					});
-				},
-				setHistory: function () {
-					let lbls = [];
-					let effect = (_device.isMobile) ? "slide" : "fade";
-					$(".ui-history .swiper-slide h5").each(function () {
-						lbls.push($(this).text());
-					});
-					var swiper = new Swiper(".mySwiper", {
-						slidesPerView: 1,
-						spaceBetween: 0,
-						effect: effect,
-						pagination: {
-							el: ".swiper-pagination",
-							clickable: true,
-							renderBullet: (index, className) => {
-								return `<span class="${className}"><span class="icn"></span><span class="lbl">${lbls[index]}</span></span>`;
-							}
-						}
-					});
-
-					const intersects = document.querySelectorAll('.intersect');
-					const active = function (entries) {
-						entries.forEach(entry => {
-							if (entry.isIntersecting) {
-								$(entry.target).addClass("on");
-							}
-						});
-					}
-					const inter1 = new IntersectionObserver(active);
-					for (let i = 0; i < intersects.length; i++) {
-						inter1.observe(intersects[i]);
-					}
-					const typings = document.querySelectorAll(".typing");
-					let letter = [], // 글자 모음 - 개행문자(\n)로 줄바꿈
-						letters = [],
-						speed = 20, // 타이핑 속도
-						inters = [],
-						title = [],
-						delay = 0;
-
-					for (let i = 0; i < typings.length; i++) {
-						letter[i] = typings[i].innerHTML;
-						delay = i * 100;
-						// 줄바꿈을 위한 <br> 치환
-						const changeLineBreak = (letter) => {
-							return letter.map(text => text === "\n" ? "<br>" : text);
-						}
-						// 타이핑 효과
-						const typing = async () => {
-							if ($(typings[i]).hasClass("done")) return false;
-							typings[i].innerHTML = "";
-							// 기존코드에서 개행치환코드 추가
-							letter[i] = changeLineBreak(letter[i].split(""));
-							if (i > 0) await wait(delay);
-							while (letter[i].length) {
-								await wait(speed);
-								typings[i].innerHTML += letter[i].shift();
-							}
-							typings[i].classList.add("done");
-						}
-						title[i] = function (entries) {
-							entries.forEach(entry => {
-								if (entry.isIntersecting) {
-									typing();
-								}
-							});
-						}
-						inters[i] = new IntersectionObserver(title[i]);
-						inters[i].observe(typings[i]);
-
-					}
-
-					function wait(ms) {
-						return new Promise(res => setTimeout(res, ms))
-					}
-				}
-			};
-			return common;
-		}();
-
-		// $(document).ready(function() {})
-		$(function () {
-
-			// plugins
-			$.fn.hasClasses = function (selectors) {
-				var self = this;
-				for (var i in selectors) {
-					if ($(self).hasClass(selectors[i])) return true;
-				}
-				return false;
-			};
-
-			$.fn.changeElementType = function (newType) {
-				var newElements = [];
-				$(this).each(function () {
-					var attrs = {};
-					$.each(this.attributes, function (idx, attr) {
-						attrs[attr.nodeName] = attr.nodeValue;
-					});
-					var newElement = $("<" + newType + "/>", attrs).append($(this).contents());
-					$(this).replaceWith(newElement);
-					newElement.push(newElement);
-				});
-				return $(newElements);
-			};
-
-			$.fn.grandparent = function (recursion) {
-				if (recursion == undefined) recursion = 2;
-				if (typeof (recursion) == "number") {
-					recursion = parseInt(recursion);
-					if (recursion > 0) {
-						grandsome = $(this);
-						for (var i = 0; i < recursion; i++) {
-							grandsome = grandsome.parent();
-						}
-						return grandsome;
-					} else {
-						return false;
-					}
+	var common = {
+		init: function () {
+			console.log("publish initiated.");
+			common.setHistory();
+			common.hambergerMenu();
+			common.toggleModal();
+			common.set50Story();
+			common.historyNav();
+			common.textEffect();
+			common.numberCounting();
+			common.header();
+		},
+		// 인트로 설정 (은수정)
+		hambergerMenu: function () {
+			var $body = $('body');
+			var $header = $('header');
+			$(".hamburger").click(function () {
+				$(this).toggleClass("is-active");
+				if ($(this).hasClass("is-active")) {
+					$('.overlay-menu').addClass('opend');
+					$body.addClass('body-hidden');
+					$header.addClass('none');
 				} else {
-					return false;
+					$('.overlay-menu').removeClass('opend');
+					$body.removeClass('body-hidden');
+					$header.removeClass('none');
 				}
-			};
+			});
+		},
+		set50Story: function () {
+			var storySwiper = new Swiper(".st50-story", {
+				slidesPerView: 2,
+				spaceBetween: 20,
+				// centeredSlides: true,
+				effect: "slide",
 
-			$.fn.accessibility = function (options) {
-				var defaults = {
-					tabIndex: -1,
-					ariaHidden: true
-				};
-				var settings = $.extend(true, defaults, options);
-				return this.each(function () {
-					$(this).attr({
-						"aria-hidden": settings.ariaHidden
-					});
-					$("a, button, input, select, textarea", $(this)).attr({
-						"tabindex": settings.tabIndex
-					});
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				breakpoints: {
+					320: {
+						slidesPerView: 1,  //브라우저가 320보다 클 때
+						spaceBetween: 12,
+					},
+					768: {
+						slidesPerView: 2,  //브라우저가 768보다 클 때
+						spaceBetween: 20,
+					}
+				}
+			});
+		},
+		historyNav: function () {
+			var currentPosition = parseInt($(".history-nav").css("top"));// 기본 위치(top)값
+			$(window).scroll(function () {
+				var position = $(window).scrollTop(); // 현재 스크롤 위치
+				$(".history-nav").stop().animate({ "top": position + currentPosition + "px" }, 800);
+			});
+		},
+
+		toggleModal: function () {
+			$('.openmodal').click(function (event) {
+				event.preventDefault();
+				$(this).modal({
+					fadeDuration: 250
+				});
+			});
+		},
+
+		textEffect: function () {
+			const upeffects = document.querySelectorAll('.upeffect');
+			const active = function (entries) {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						$(entry.target).addClass("on");
+					}
 				});
 			}
+			const upeff1 = new IntersectionObserver(active);
+			for (let i = 0; i < upeffects.length; i++) {
+				upeff1.observe(upeffects[i]);
+			}
+		},
 
-			publish.init();
+		numberCounting: function () {
+			var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
+			$('#property-number')
+			.prop('number', 110000000000000)
+			.animateNumber(
+				{
+					number: 180000000000000,
+					numberStep: comma_separator_number_step
+				},
+				{
+					duration:999
+				}
+			);
+			$('#customer-number')
+			.prop('number', 7000000)
+			.animateNumber(
+				{
+					number: 7690000,
+					numberStep: comma_separator_number_step
+				},
+				{
+					duration:999
+				}
+			);
+		},
+		setHistory: function () {
+			let lbls = [];
+			let effect = (_device.isMobile) ? "slide" : "fade";
+			$(".ui-history .swiper-slide h5").each(function () {
+				lbls.push($(this).text());
+			});
+			var swiper = new Swiper(".mySwiper", {
+				slidesPerView: 1,
+				spaceBetween: 0,
+				effect: effect,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+					renderBullet: (index, className) => {
+						return `<span class="${className}"><span class="icn"></span><span class="lbl">${lbls[index]}</span></span>`;
+					}
+				}
+			});
 
+			//fade-in
+			const intersects = document.querySelectorAll('.intersect');
+			const active = function (entries) {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						$(entry.target).addClass("on");
+					}
+				});
+			}
+			const inter1 = new IntersectionObserver(active);
+			for (let i = 0; i < intersects.length; i++) {
+				inter1.observe(intersects[i]);
+			}
+
+			// 타이핑 효과
+			const typings = document.querySelectorAll(".typing");
+			let letter = [], // 글자 모음 - 개행문자(\n)로 줄바꿈
+				letters = [],
+				speed = 20, // 타이핑 속도
+				inters = [],
+				title = [],
+				delay = 0;
+
+			for (let i = 0; i < typings.length; i++) {
+				letter[i] = typings[i].innerHTML;
+				delay = i * 100;
+				// 줄바꿈을 위한 <br> 치환
+				const changeLineBreak = (letter) => {
+					return letter.map(text => text === "\n" ? "<br>" : text);
+				}
+				const typing = async () => {
+					if ($(typings[i]).hasClass("done")) return false;
+					typings[i].innerHTML = "";
+					// 기존코드에서 개행치환코드 추가
+					letter[i] = changeLineBreak(letter[i].split(""));
+					if (i > 0) await wait(delay);
+					while (letter[i].length) {
+						await wait(speed);
+						typings[i].innerHTML += letter[i].shift();
+					}
+					typings[i].classList.add("done");
+				}
+				title[i] = function (entries) {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							typing();
+						}
+					});
+				}
+				inters[i] = new IntersectionObserver(title[i]);
+				inters[i].observe(typings[i]);
+
+			}
+			function wait(ms) {
+				return new Promise(res => setTimeout(res, ms))
+			}
+		}
+	};
+	return common;
+}();
+
+// $(document).ready(function() {})
+$(function () {
+	// plugins
+	$.fn.hasClasses = function (selectors) {
+		var self = this;
+		for (var i in selectors) {
+			if ($(self).hasClass(selectors[i])) return true;
+		}
+		return false;
+	};
+
+	$.fn.changeElementType = function (newType) {
+		var newElements = [];
+		$(this).each(function () {
+			var attrs = {};
+			$.each(this.attributes, function (idx, attr) {
+				attrs[attr.nodeName] = attr.nodeValue;
+			});
+			var newElement = $("<" + newType + "/>", attrs).append($(this).contents());
+			$(this).replaceWith(newElement);
+			newElement.push(newElement);
 		});
+		return $(newElements);
+	};
+
+	$.fn.grandparent = function (recursion) {
+		if (recursion == undefined) recursion = 2;
+		if (typeof (recursion) == "number") {
+			recursion = parseInt(recursion);
+			if (recursion > 0) {
+				grandsome = $(this);
+				for (var i = 0; i < recursion; i++) {
+					grandsome = grandsome.parent();
+				}
+				return grandsome;
+			} else {
+				return false;
+			}
+		} else {
+			return false;
+		}
+	};
+
+	$.fn.accessibility = function (options) {
+		var defaults = {
+			tabIndex: -1,
+			ariaHidden: true
+		};
+		var settings = $.extend(true, defaults, options);
+		return this.each(function () {
+			$(this).attr({
+				"aria-hidden": settings.ariaHidden
+			});
+			$("a, button, input, select, textarea", $(this)).attr({
+				"tabindex": settings.tabIndex
+			});
+		});
+	}
+
+	publish.init();
+
+});
