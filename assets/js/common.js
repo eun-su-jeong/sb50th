@@ -61,15 +61,12 @@ var _device = {};
 var publish = function () {
 	var common = {
 		init: function () {
-			console.log("publish initiated.");
 			common.setHistory();
 			common.hambergerMenu();
 			common.toggleModal();
 			common.set50Story();
-			common.historyNav();
 			common.textEffect();
 			common.numberCounting();
-			common.header();
 		},
 		// 인트로 설정 (은수정)
 		hambergerMenu: function () {
@@ -87,8 +84,7 @@ var publish = function () {
 					$header.removeClass('none');
 				}
 			});
-		},
-		set50Story: function () {
+		}, set50Story: function () {
 			var storySwiper = new Swiper(".st50-story", {
 				slidesPerView: 2,
 				spaceBetween: 20,
@@ -111,11 +107,81 @@ var publish = function () {
 				}
 			});
 		},
-		historyNav: function () {
-			var currentPosition = parseInt($(".history-nav").css("top"));// 기본 위치(top)값
-			$(window).scroll(function () {
-				var position = $(window).scrollTop(); // 현재 스크롤 위치
-				$(".history-nav").stop().animate({ "top": position + currentPosition + "px" }, 800);
+		// historyNav: function (){
+		// 	var currentPosition = parseInt($(".history-nav").css("top"));// 기본 위치(top)값
+		// 	$(window).scroll(function() {
+		// 	  var position = $(window).scrollTop(); // 현재 스크롤 위치
+		// 	  $(".history-nav").stop().animate({"top" : position + currentPosition + "px"},800);			  
+		// 	});		
+		// },
+		// stickyNav: function (){
+		// 	// $(".st50-years").scroll(function(){
+		// 	// 	var scrollTop = $(this).scrollTop();
+		// 	// 	var innerHeight = $(this).innerHeight();
+		// 	// 	var scrollHeight = $(this).prop('scrollHeight');
+
+		// 	// 	if (scrollTop + innerHeight >= scrollHeight) {
+		// 	// 		$(".history-nav").addClass('sticky');
+		// 	// 	} else {
+		// 	// 		$(".history-nav").removeClass('sticky');
+		// 	// 	}
+		// 	// });
+
+		// 	// var progressIndicator = '<div id="i-am-progress-indicator"></div>';
+		// 	// $('body').append(progressIndicator);
+
+		// 	// $(window).on('scroll', function(){
+		// 	// 	var currentPercentage = ($(window).scrollTop() / ($(document).outerHeight() - $(window).height())) * 100;
+		// 	// 	var now = currentPercentage * 60;
+		// 	// 	console.log("now", now);
+		// 	// 	console.log("currentPercentage", currentPercentage);
+		// 	// $('#i-am-progress-indicator').width(currentPercentage+'%');
+		// 	// 	if(now){
+		// 	// 		alert("good");
+		// 	// 		$(".history-nav").addClass('sticky');
+		// 	// 	}
+		// 	// });
+
+		// 	// $(window).scroll(function(){
+		// 	// 	var scrT = $(window).scrollTop();
+		// 	// 	var now = scrT == $(document).height() - $(window).height()
+		// 	// 	console.log(scrT); //스크롤 값 확인용
+		// 	// 	console.log('now', now);
+		// 	// 	if(now){
+		// 	// 		$(".history-nav").addClass('sticky');
+		// 	// 		alert("돼따!!!");
+		// 	// 	}
+		// 	// 	else {
+		// 	// 	 	$(".history-nav").removeClass('sticky');
+		// 	// 	 }
+		// 	//   })
+		// },
+
+
+		// header: function () {
+		// 	var $header = $('header');
+		// 	// var $page = $('.ui-history');
+		// 	var $window = $(window);
+		// 	// var pageOffsetTop = $page.offset().top;//색상 변할 부분의 top값 구하기
+
+		// 	// $window.resize(function(){ //반응형을 대비하여 리사이즈시 top값을 다시 계산
+		// 	// 	pageOffsetTop = $page.offset().top;
+		// 	// });
+
+		// 	$window.scroll(function(){ //스크롤시
+		// 	  	$header.toggleClass('bg', $window.scrollTop() > 50); //클래스 토글
+		// 		//모바일 영역
+		// 		if(_device.isMobile){
+		// 			$header.toggleClass('bg', $window.scrollTop() > 50);
+		// 		}
+		// 	});
+		// },
+		toggleModal: function () {
+			$('.openmodal').click(function (event) {
+				event.preventDefault();
+				$(this).modal({
+					fadeDuration: 250
+				});
 			});
 		},
 
@@ -146,27 +212,27 @@ var publish = function () {
 		numberCounting: function () {
 			var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
 			$('#property-number')
-			.prop('number', 110000000000000)
-			.animateNumber(
-				{
-					number: 180000000000000,
-					numberStep: comma_separator_number_step
-				},
-				{
-					duration:999
-				}
-			);
+				.prop('number', 110000000000000)
+				.animateNumber(
+					{
+						number: 180000000000000,
+						numberStep: comma_separator_number_step
+					},
+					{
+						duration: 999
+					}
+				);
 			$('#customer-number')
-			.prop('number', 7000000)
-			.animateNumber(
-				{
-					number: 7690000,
-					numberStep: comma_separator_number_step
-				},
-				{
-					duration:999
-				}
-			);
+				.prop('number', 7000000)
+				.animateNumber(
+					{
+						number: 7690000,
+						numberStep: comma_separator_number_step
+					},
+					{
+						duration: 999
+					}
+				);
 		},
 		setHistory: function () {
 			let lbls = [];
@@ -187,7 +253,6 @@ var publish = function () {
 				}
 			});
 
-			//fade-in
 			const intersects = document.querySelectorAll('.intersect');
 			const active = function (entries) {
 				entries.forEach(entry => {
@@ -200,8 +265,6 @@ var publish = function () {
 			for (let i = 0; i < intersects.length; i++) {
 				inter1.observe(intersects[i]);
 			}
-
-			// 타이핑 효과
 			const typings = document.querySelectorAll(".typing");
 			let letter = [], // 글자 모음 - 개행문자(\n)로 줄바꿈
 				letters = [],
@@ -217,6 +280,7 @@ var publish = function () {
 				const changeLineBreak = (letter) => {
 					return letter.map(text => text === "\n" ? "<br>" : text);
 				}
+				// 타이핑 효과
 				const typing = async () => {
 					if ($(typings[i]).hasClass("done")) return false;
 					typings[i].innerHTML = "";
@@ -238,7 +302,6 @@ var publish = function () {
 				}
 				inters[i] = new IntersectionObserver(title[i]);
 				inters[i].observe(typings[i]);
-
 			}
 			function wait(ms) {
 				return new Promise(res => setTimeout(res, ms))
