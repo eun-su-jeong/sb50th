@@ -715,15 +715,16 @@ footer .copyright {color:rgba(255, 255, 255, 0.6);}
 .ui-present article{padding: 220px 0 180px 0;}
 .ui-present .title-wrap {height: 2em;}
 .ui-present .title-wrap h1{font-size: 60px;line-height: 84px;height:2em}
-.ui-present .ui-circle{display: flex;justify-content:center;align-items: end;}
+.ui-present .circle-wrap{display: flex;justify-content:center;align-items: end;}
+.ui-present .circle-wrap{display: flex;justify-content:center;align-items: end;}
 .ui-present .first-circle{background: url(../images/circle1.png) no-repeat center; width: 230px; height: 230px;margin-right:80px;margin-bottom: 40px;text-align: center;}
 .ui-present .second-circle{background: url(../images/circle2.png) no-repeat center; width: 480px; height: 480px;text-align: center;}
 .ui-present .first-circle .txt-wrap{padding: 64px 0;}
 .ui-present .second-circle .txt-wrap{padding: 160px 0;}
-.ui-present .ui-circle .first-circle .desc{font-size: 26px; color: #111;}
-.ui-present .ui-circle .first-circle .num{font-size: 48px; color: #111;}
-.ui-present .ui-circle .second-circle .desc{font-size: 32px; color: #111;}
-.ui-present .ui-circle .second-circle .num{font-size: 69px; color: #111;}
+.ui-present .ui-circle .circle-wrap .first-circle .desc{font-size: 26px; color: #111;}
+.ui-present .ui-circle .circle-wrap .first-circle .num{font-size: 48px; color: #111;}
+.ui-present .ui-circle .circle-wrap .circle-wrap .second-circle .desc{font-size: 32px; color: #111;}
+.ui-present .ui-circle .circle-wrap .second-circle .num{font-size: 69px; color: #111;}
 .ui-number{background-color:#F8FAF8;}
 .ui-number article{padding: 120px 0;}
 .ui-number .number-wrap{display: flex;}
