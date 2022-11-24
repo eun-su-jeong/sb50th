@@ -70,7 +70,7 @@ var publish = function () {
 					// common.stickyNav();
 					// common.header();
 				},
-				// 인트로 설정 (은수정)
+				//(은수정)
 				hambergerMenu: function () {
 					var $body = $('body');
 					var $header = $('header');									
@@ -179,6 +179,8 @@ var publish = function () {
 				// 		}
 				// 	});
 				// },
+
+				//(이은영)
 				toggleModal: function(){
 					$('.openmodal').click(function(event) {
 						event.preventDefault();					
