@@ -71,17 +71,19 @@ var publish = function () {
 		// 인트로 설정 (은수정)
 		hambergerMenu: function () {
 			var $body = $('body');
-			var $header = $('header');
+			var $logo = $('header .logo');
 			$(".hamburger").click(function () {
 				$(this).toggleClass("is-active");
 				if ($(this).hasClass("is-active")) {
 					$('.overlay-menu').addClass('opend');
 					$body.addClass('body-hidden');
-					$header.addClass('none');
 				} else {
 					$('.overlay-menu').removeClass('opend');
 					$body.removeClass('body-hidden');
-					$header.removeClass('none');
+				}
+
+				if(_device.isMobile){
+					$logo.toggleClass('logo-hidden');
 				}
 			});
 		}, set50Story: function () {

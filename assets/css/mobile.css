@@ -26,6 +26,7 @@ article{width:auto;}
 header{height: auto;}
 header .nav_conts{padding: 14px 24px;}
 header .nav_conts a{display:block;}
+header .nav_conts a.logo.logo-hidden{visibility: hidden;}
 header .nav_conts .logo img{width: 96px; height: 24px;}
 header .nav_conts .menu-txt{display: none;}
 header .nav_conts .header-nav{display: none;}
@@ -45,8 +46,13 @@ header .nav_conts .header-nav{display: none;}
 	-o-transform: translateY(-6px) rotate(-45deg);
 	transform: translateY(-6px) rotate(-45deg);
 }
-.overlay-menu nav{padding-top: 52px; text-align: initial;}
-.overlay-menu nav ul li a{font-size: 20px;}
+.overlay-menu nav{padding-top:0; margin-top: 80px; text-align: initial;}
+.overlay-menu nav .nav-wrap{right: 40px; top:0; transform: initial;}
+.overlay-menu nav .nav-wrap .menu-tit{font-size: 24px; line-height: normal;}
+.overlay-menu nav .nav-wrap .menu-tit::after{margin: 8px 0 20px 0;}
+.overlay-menu nav ul li a{font-size: 18px;}
+.overlay-menu nav .nav-wrap .nav01 ul:nth-of-type(2){margin: 40px 0;}
+.overlay-menu nav .nav-wrap .nav02{padding: 30px 0;}
 
 /* intro */
 #intro{position: relative; height: 580px;}
