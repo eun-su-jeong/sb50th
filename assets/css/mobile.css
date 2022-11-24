@@ -259,6 +259,45 @@ header .nav_conts .header-nav{display: none;}
 .ui-speech.subpage .circle3{width: 380px; height: 380px;}
 .ui-speech.subpage .circle3:after{top: 98%; left: 58%; width: 10px; height: 10px;}
 
+/* ui-present */
+
+.ui-present article{padding: 100px 24px 352px 24px;}
+.ui-number article{padding: 60px 24px;}
+.ui-graph article{padding: 60px 24px;}
+.ui-present .present-wrap .title-wrap{width: 280px;}
+.ui-present .present-wrap .title-wrap h1{font-size: 32px;}
+.ui-present .ui-circle .circle-wrap{flex-wrap: wrap;margin-top:60px;}
+.ui-present .ui-circle .circle-wrap .first-circle{width: 148px; height: 148px; margin: 0; background-size: cover;}
+.ui-present .ui-circle .circle-wrap .first-circle .txt-wrap{padding: 38px 0;}
+.ui-present .ui-circle .circle-wrap .first-circle .desc{font-size: 16px;}
+.ui-present .ui-circle .circle-wrap .first-circle .num{font-size: 32px;}
+.ui-present .ui-circle .circle-wrap .second-circle .desc{font-size: 24px;}
+.ui-present .ui-circle .circle-wrap .second-circle .num{font-size: 48px;}
+.ui-present .ui-circle .circle-wrap .second-circle{width: 292px; height: 292px; margin: 0; background-size: cover;position: absolute; bottom: -180%;}
+.ui-present .ui-circle .circle-wrap .second-circle .txt-wrap{padding: 96px 0 0 0;}
+.ui-present .box{position: absolute; top:-47px; left: initial; right: -20px;}
+.ui-present .circle1{width: 235px; height: 235px;z-index:100;}
+.ui-present .circle1:after{ top: 31%; left: 95%; width: 14px; height:14px;}
+.ui-present .circle3{width: 380px; height: 380px;}
+.ui-present .circle3:after{top: 98%; left: 58%; width: 10px; height: 10px;}
+.ui-number .number-wrap{flex-wrap: wrap;}
+.ui-number .number-wrap .title{font-size:17px;}
+.ui-number .number-wrap .bold{font-size: 26px;margin:8px 0 4px 0;}
+.ui-number .number-wrap .summary{font-size:20px;}
+.ui-number .number-wrap .customer{margin-top: 40px;}
+.ui-graph .graph{margin-top: 40px;}
+.ui-graph .graph img{width: 100%;}
+.ui-graph .title{font-size: 24px;}
+
+
+
+
+
+
+
+
+
+
 /* footer */
 footer article{padding:28px 44px;}
 footer .copyright {text-align: center;}
