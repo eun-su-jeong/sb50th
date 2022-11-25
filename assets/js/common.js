@@ -66,7 +66,6 @@ var publish = function () {
 			common.toggleModal();
 			common.set50Story();
 			common.textEffect();		
-			common.scrollEvent();
 		},
 		// 인트로 설정 (은수정)
 		hambergerMenu: function () {
@@ -207,50 +206,6 @@ var publish = function () {
 				return new Promise(res => setTimeout(res, ms))
 			}
 		},
-
-		//present : 영역 감지해서 숫자 카운팅하기
-		scrollEvent: function () {
-			let isVisible = false;
-			window.addEventListener('scroll', function () {
-				if (checkVisible($('#ui-number')) && !isVisible) {
-					var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-					$('#property-number')
-						.prop('number', 110000000000000)
-						.animateNumber(
-							{
-								number: 180000000000000,
-								numberStep: comma_separator_number_step
-							},
-							{
-								duration: 999
-							}
-						);
-					$('#customer-number')
-						.prop('number', 7000000)
-						.animateNumber(
-							{
-								number: 7690000,
-								numberStep: comma_separator_number_step
-							},
-							{
-								duration: 999
-							}
-						);
-					isVisible = true;
-				}				
-			});
-			function checkVisible(elm, eval) {
-				eval = eval || "object visible";
-				var viewportHeight = $(window).height(), // Viewport Height
-					scrolltop = $(window).scrollTop(), // Scroll Top
-					y = $(elm).offset().top,
-					elementHeight = $(elm).height();
-
-				if (eval == "object visible") return ((y < (viewportHeight + scrolltop)) && (y > (scrolltop - elementHeight)));
-				if (eval == "above") return ((y < (viewportHeight + scrolltop)));
-			}
-		},
-
 	};
 	return common;
 }();
