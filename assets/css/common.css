@@ -636,7 +636,6 @@ main{}
 footer{left: 50%; bottom: 0; transform: translateX(-50%); background: #424242;}
 footer * {font-size: 15px;}
 footer article{padding: 44px 0 60px 0;}
-footer .policy {alignment-baseline:middle}
 footer .lbl{color:rgba(255, 255, 255, 0.8);}
 footer .lbl:hover{color:rgba(255, 255, 255, 1); font-weight: 700;}
 footer a::after{display: inline-block; position: relative; content: '·';padding: 0 12px; color:rgba(255, 255, 255, 0.8);}
