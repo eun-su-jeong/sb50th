@@ -206,14 +206,15 @@ header .nav_conts .header-nav{display: none;}
 .st50-years .circle3:after{top: 98%; left: 58%; width: 10px; height: 10px;}
 
 /* ui-history-cont */
-.ui-history-cont article{padding: 100px 24px 60px 24px;}
+.ui-history-cont article{padding: 100px 24px 60px 24px; overflow: hidden;}
 .ui-history-cont .title-wrap {height:auto}
-.ui-history-cont .title-wrap h1{font-size: 32px;line-height: 45px;}
+.ui-history-cont .title-wrap h1{font-size: 32px;line-height: 45px;margin-bottom: 40px;}
 .ui-history-cont .tit-btn-wrap {margin: 60px 0 36px 0;}
-.ui-history-cont .tit-btn-wrap .title-wrap{padding: 0;}
+.ui-history-cont .tit-btn-wrap .title-wrap{padding: 0; width: auto;}
 .ui-history-cont .tit-btn-wrap .btn{font-size: 13px; width: 96px;height: 30px;padding:0 10px;line-height:2;}
+.ui-history-cont .tit-btn-wrap .btn.st01{width: 144px;}
 .ui-history-cont .tit-btn-wrap .btn span::after{margin-left:8px;background: url(../images/arrow_mobile.svg) center no-repeat; width: 5px; height: 9px;}
-.ui-history-cont .history-cont-wrap{padding: 0;}
+.ui-history-cont .history-cont-wrap{justify-content: center;}
 .ui-history-cont .history-cont-wrap .years-cont::before{left: 66px; top: 17px;}
 .ui-history-cont .history-cont-wrap .years-wrap{width: auto;}
 .ui-history-cont .history-cont-wrap .years-wrap .years-cont{margin-bottom: 45px;}
@@ -225,7 +226,7 @@ header .nav_conts .header-nav{display: none;}
 .ui-history-cont .history-cont-wrap .years-wrap .years-cont .year::after{top: 11px; right: -26px;width: 5px; height: 5px;}
 .ui-history-cont .history-cont-wrap .history-cont {margin: 0;}
 .ui-history-cont .tit-btn-wrap .title-wrap p.bold{line-height: normal;}
-.ui-history-cont .box{position: absolute; top:-20px; left: initial; right: 0;}
+.ui-history-cont .box{display: flex; position: absolute; top:-20px; left: initial; right: 0;}
 .ui-history-cont .circle1{width: 235px; height: 235px;z-index:100;}
 .ui-history-cont .circle1:after{ top: 31%; left: 95%; width: 14px; height:14px;}
 .ui-history-cont .circle3{width: 380px; height: 380px;}
