@@ -60,16 +60,16 @@ header .nav_conts .header-nav{display: none;}
 .scroll{display: none;}
 .container{left: 0; top: 140px;}
 .container nav{display: none;}
-.title{position: relative; left: 50%; transform: translateX(-50%); width: 300px;}
-.title .sub_t01{position: absolute; left: 30px; font-size: 28px;top:20px;}
-.title h1{position: relative; top: 55px; text-align: center;}
-.title h1>img{width: 192px;}
-.title .sub_box01{top: 30px; left: initial; right: 35px;}
-.title .sub_box01 .sub_t02{font-size: 32px;}
-.title .sub_box02{left: 54%; transform: translateX(-50%); top: 230px; white-space: nowrap;}
-.title .sub_box02 .sub_t03{font-size: 28px;}
-.title .sub_box02 .sub_t03 > span{background: linear-gradient(to right, #4BAF4B, #006454); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
-.title .sub_box02 p{font-size:14px;padding-top: 20px;font-weight: 400;}
+#intro .title{position: relative; left: 50%; transform: translateX(-50%); width: 300px;}
+#intro .title .sub_t01{position: absolute; left: 30px; font-size: 28px;top:20px;}
+#intro .title h1{position: relative; top: 55px; text-align: center;}
+#intro .title h1>img{width: 192px;}
+#intro .title .sub_box01{top: 30px; left: initial; right: 35px;}
+#intro .title .sub_box01 .sub_t02{font-size: 32px;}
+#intro .title .sub_box02{left: 54%; transform: translateX(-50%); top: 230px; white-space: nowrap;}
+#intro .title .sub_box02 .sub_t03{font-size: 28px;}
+#intro .title .sub_box02 .sub_t03 > span{background: linear-gradient(to right, #4BAF4B, #006454); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+#intro .title .sub_box02 p{font-size:14px;padding-top: 20px;font-weight: 400;}
 
 #intro .box{transform: none; right: 0;}
 .box{top: 175px; transform: translateX(-50%);}
@@ -124,6 +124,7 @@ header .nav_conts .header-nav{display: none;}
 .ui-video .video-wrap h4{font-size: 18px;}
 .modal{
     position: absolute;
+    height: 45%;
     bottom: -10px;
     left: 0;
     right: 0;
@@ -132,7 +133,7 @@ header .nav_conts .header-nav{display: none;}
 	padding:20px 24px;
 }
 .modal iframe{width: 100%;}
-.modal iframe{height: 175px;
+.modal iframe{height: 80%;
 	width: 100%;
 	}
 .modal .modal-title{margin-bottom:18px;font-size:18px;}
@@ -284,6 +285,7 @@ header .nav_conts .header-nav{display: none;}
 .ui-present .circle3{width: 380px; height: 380px;}
 .ui-present .circle3:after{top: 98%; left: 58%; width: 10px; height: 10px;}
 .ui-number .number-wrap{flex-wrap: wrap;}
+.ui-number .number-wrap .property{margin: 0;}
 .ui-number .number-wrap .title{font-size:17px;}
 .ui-number .number-wrap .bold{font-size: 26px;margin:8px 0 4px 0;}
 .ui-number .number-wrap .summary{font-size:20px;}
