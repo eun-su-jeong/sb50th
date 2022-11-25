@@ -630,6 +630,7 @@ main{}
 .ui-video .video-wrap{display: flex;}
 .ui-video .video-wrap h4{margin-bottom: 20px;}
 .ui-video .video-wrap > div{margin-right: 32px;}
+.blocker{z-index: 100;}
 
 /* footer */
 footer{left: 50%; bottom: 0; transform: translateX(-50%); background: #424242;}
