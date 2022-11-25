@@ -133,7 +133,7 @@ header .nav_conts .header-nav{display: none;}
 }
 .modal iframe{width: 100%;}
 .modal iframe{height: 175px;
-	width: 312px;
+	width: 100%;
 	}
 .modal .modal-title{margin-bottom:18px;font-size:18px;}
 .modal a.close-modal{top: 20px; right: 20px;}
