@@ -30,7 +30,7 @@
 					.prop('number', 110000000000000)
 					.animateNumber(
 						{
-							number: 180000000000000,
+							number: 118000000000000,
 							numberStep: comma_separator_number_step
 						},
 						{
@@ -64,6 +64,7 @@
 	}
 	scrollEvent();
 </script>
+
 <body>
 	<header>
 		<div class="nav_conts">
@@ -170,6 +171,7 @@
 					<div class="circle3"></div>
 				</div>
 			</article>
+			<div class="background-img"><img src="../assets/images/background.png" alt=""></div>
 		</section>
 		<section class="ui-number" id="ui-number">
 			<article>
@@ -177,7 +179,7 @@
 					<div class="property">
 						<p class="title">자산</p>
 						<p class="bold"><span id="property-number">0</span>원</p>
-						<p class="summary">180조원</p>
+						<p class="summary">118조원</p>
 					</div>
 					<div class="customer">
 						<p class="title">이용고객</p>
@@ -190,20 +192,21 @@
 		<section class="ui-graph">
 			<article>
 				<p class="title intersect appear">높은 안전성과 건전성</p>
-				<div class="graph intersect appear pc-hide"><img src="../assets/images/graph_mob.png" alt=""></div>
-				<div class="graph intersect appear mo-hide"><img src="../assets/images/graph.png" alt=""></div>
+				<div class="graph-wrap">
+					<div class="graph-01">
+						<p class="graph-tit intersect appear">자기자본(안정성)</p>
+						<img src="../assets/images/graph01.png" alt="" class="intersect appear">
+					</div>
+					<div class="graph-02">
+						<p class="graph-tit intersect appear">대출금 연체율(건전성)</p>
+						<img src="../assets/images/graph02.png" alt="" class="intersect appear">
+					</div>
+				</div>
 			</article>
 		</section>
 		<div id="video-modal1" class="modal">
 			<p class="modal-title">기념영상</p>
 			<iframe width="734" height="413" src="https://www.youtube.com/embed/PTGcSrdbFWg"
-				title="YouTube video player" frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen></iframe>
-		</div>
-		<div id="video-modal2" class="modal">
-			<p class="modal-title">기념영상</p>
-			<iframe width="734" height="413" src="https://www.youtube.com/embed/JX893CZWZ08"
 				title="YouTube video player" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 				allowfullscreen></iframe>
