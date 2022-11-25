@@ -110,15 +110,12 @@ var publish = function () {
 				}
 			});
 		},
-		toggleModal: function () {
-			$('.openmodal').click(function (event) {
-				event.preventDefault();
-				$(this).modal({
-					fadeDuration: 250
-				});
-			});
+		openModal: function(){
+			var $modal = $('<div id="mobal-wrap">안녕?</div>'); 
+			var $section = $('#modal-wrap');
+			$modal.appendTo("main");		
+			$section.load('madal.html');
 		},
-
 		textEffect: function () {
 			const upeffects = document.querySelectorAll('.upeffect');
 			const active = function (entries) {
