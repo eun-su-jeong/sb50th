@@ -305,6 +305,31 @@ header .nav_conts .header-nav{display: none;}
 .ui-graph .graph-wrap .graph-02{width: 312px;}
 .ui-graph .graph-wrap .graph-02 img{margin-top: 0px;}
 
+/* cmmrtVideo */
+
+.ui-cmmrtVideo{overflow: hidden;}
+.ui-cmmrtVideo article{padding: 100px 24px 60px 24px; overflow: hidden;}
+.ui-cmmrtVideo .title-wrap {height:auto; position: relative; z-index: 1;}
+.ui-cmmrtVideo .title-wrap h1{font-size: 32px;line-height: 45px; margin:0; padding-bottom: 40px;}
+.ui-cmmrtVideo .cmmrtvideo-wrap{display: flex; flex-wrap: wrap; justify-content: center; align-items: center;}
+.ui-cmmrtVideo .cmmrtvideo-wrap h4{font-size: 18px; margin-bottom: 20px;}
+
+.ui-cmmrtVideo .cmmrtvideo-wrap .cmmrtv-cont .thumbnail iframe{border-radius: 8px;}
+
+.ui-cmmrtVideo .btn span::after {content: ''; width: 16px; height: 16px; margin-left: 8px; background: url(../images/ic-download.svg) center no-repeat; display: inline-block;}
+
+
+.st50-years .tit-btn-wrap .title-wrap{margin-bottom: 0px;}
+.st50-years .tit-btn-wrap .title-wrap p{font-size: 24px; line-height: normal; padding:0;}
+.st50-years .tit-btn-wrap .btn{font-size: 13px; width: 96px;height: 30px;padding:0 10px;line-height:2;}
+.st50-years .tit-btn-wrap .btn span::after{margin-left:8px;background: url(../images/arrow_mobile.svg) center no-repeat; width: 5px; height: 9px;}
+
+
+.ui-cmmrtVideo .box{display: flex; position: absolute; top:-20px; left: initial; right: 0;}
+.ui-cmmrtVideo .circle1{width: 235px; height: 235px;z-index:100;}
+.ui-cmmrtVideo .circle1:after{ top: 31%; left: 95%; width: 14px; height:14px;}
+.ui-cmmrtVideo .circle3{width: 380px; height: 380px;}
+.ui-cmmrtVideo .circle3:after{top: 98%; left: 58%; width: 10px; height: 10px;}
 
 
 

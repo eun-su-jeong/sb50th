@@ -792,6 +792,7 @@ footer .copyright {color:rgba(255, 255, 255, 0.6);}
 .ui-cmmrtVideo{position:relative; background-color: #fff; overflow: hidden;}
 .ui-cmmrtVideo article{padding: 200px 0;}
 .ui-cmmrtVideo .title-wrap h1{font-size: 60px;line-height: 84px;margin-bottom: 100px;}
+.ui-cmmrtVideo .cmmrtvideo-wrap{position: relative; z-index: 10;}
 .ui-cmmrtVideo .cmmrtvideo-wrap h4{font-size: 24px; margin-bottom: 20px;}
 .ui-cmmrtVideo .cmmrtvideo-wrap .cmmrtv-cont:first-of-type{padding-bottom: 60px;}
 .ui-cmmrtVideo .cmmrtvideo-wrap .cmmrtv-cont .thumbnail iframe{border-radius: 20px;}
@@ -801,6 +802,7 @@ footer .copyright {color:rgba(255, 255, 255, 0.6);}
 .ui-cmmrtVideo .circle1:after{ top: 66%; left: 95%; width: 22px; height: 22px;}
 .ui-cmmrtVideo .circle3{width: 1108px; height: 1108px;}
 .ui-cmmrtVideo .circle3:after{top: 98%; left: 60%; width: 18px; height: 18px;}
+
 
 
 
