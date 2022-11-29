@@ -301,7 +301,7 @@ header .nav_conts .header-nav{display: none;}
 .ui-graph .graph img{width: 100%;}
 .ui-graph .title{font-size: 24px;}
 .background-img{width: 330px; right: -10px;bottom: -150px;padding: 0 24px; box-sizing: content-box;}
-.ui-graph .graph-wrap{flex-wrap: wrap;}
+.ui-graph .graph-wrap{flex-wrap: wrap;justify-content:center;}
 .ui-graph .graph-wrap .graph-tit{margin:40px 0 60px 0; font-size: 18px;}
 .ui-graph .graph-wrap .graph-01{width: 312px;margin-bottom: 60px;}
 .ui-graph .graph-wrap .graph-02{width: 312px;}
