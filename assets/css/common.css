@@ -802,7 +802,6 @@ footer .copyright {color:rgba(255, 255, 255, 0.6);}
 .ui-cmmrtVideo .cmmrtvideo-wrap .cmmrtv-cont .thumbnail02{width: 1240px; height: 486px;}
 .ui-cmmrtVideo .cmmrtvideo-wrap .cmmrtv-cont .thumbnail02 img{width: 100%;}
 
-
 .ui-cmmrtVideo .box{position: absolute; top:-7%; left: initial; right: 0;}
 .ui-cmmrtVideo .circle1{width: 685px; height: 685px;}
 .ui-cmmrtVideo .circle1:after{ top: 66%; left: 95%; width: 22px; height: 22px;}
@@ -834,3 +833,5 @@ main{z-index:1;}
 .cir-box .circle1:after{ top: 66%; left: 95%; width: 22px; height: 22px;}
 .cir-box .circle3{width: 1108px; height: 1108px;}
 .cir-box .circle3:after{top: 98%; left: 60%; width: 18px; height: 18px;}
+
+
