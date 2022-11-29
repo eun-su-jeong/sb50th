@@ -117,40 +117,8 @@ var publish = function () {
 				});
 			});
 		},
-		textEffect: function () {
-			const upeffects = document.querySelectorAll('.upeffect');
-			const active = function (entries) {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						$(entry.target).addClass("on");
-					}
-				});
-			}
-			const upeff1 = new IntersectionObserver(active);
-			for (let i = 0; i < upeffects.length; i++) {
-				upeff1.observe(upeffects[i]);
-			}
-		},
-		
-		setHistory: function () {
-			let lbls = [];
-			let effect = (_device.isMobile) ? "slide" : "fade";
-			$(".ui-history .swiper-slide h5").each(function () {
-				lbls.push($(this).text());
-			});
-			var swiper = new Swiper(".mySwiper", {
-				slidesPerView: 1,
-				spaceBetween: 0,
-				effect: effect,
-				pagination: {
-					el: ".swiper-pagination",
-					clickable: true,
-					renderBullet: (index, className) => {
-						return `<span class="${className}"><span class="icn"></span><span class="lbl">${lbls[index]}</span></span>`;
-					}
-				}
-			});
 
+		textEffect: function () {
 			const intersects = document.querySelectorAll('.intersect');
 			const active = function (entries) {
 				entries.forEach(entry => {
@@ -163,6 +131,8 @@ var publish = function () {
 			for (let i = 0; i < intersects.length; i++) {
 				inter1.observe(intersects[i]);
 			}
+
+			// 타이핑 효과
 			const typings = document.querySelectorAll(".typing");
 			let letter = [], // 글자 모음 - 개행문자(\n)로 줄바꿈
 				letters = [],
@@ -170,15 +140,13 @@ var publish = function () {
 				inters = [],
 				title = [],
 				delay = 0;
-
 			for (let i = 0; i < typings.length; i++) {
 				letter[i] = typings[i].innerHTML;
 				delay = i * 100;
 				// 줄바꿈을 위한 <br> 치환
 				const changeLineBreak = (letter) => {
 					return letter.map(text => text === "\n" ? "<br>" : text);
-				}
-				// 타이핑 효과
+				}				
 				const typing = async () => {
 					if ($(typings[i]).hasClass("done")) return false;
 					typings[i].innerHTML = "";
@@ -204,6 +172,40 @@ var publish = function () {
 			function wait(ms) {
 				return new Promise(res => setTimeout(res, ms))
 			}
+
+			//숫자로 보는 저축은행 원 애니메이션
+			const upeffects = document.querySelectorAll('.upeffect');
+			const upactive = function (entries) {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						$(entry.target).addClass("on");
+					}
+				});
+			}
+			const upeff1 = new IntersectionObserver(upactive);
+			for (let i = 0; i < upeffects.length; i++) {
+				upeff1.observe(upeffects[i]);
+			}
+		},
+		
+		setHistory: function () {
+			let lbls = [];
+			let effect = (_device.isMobile) ? "slide" : "fade";
+			$(".ui-history .swiper-slide h5").each(function () {
+				lbls.push($(this).text());
+			});
+			var swiper = new Swiper(".mySwiper", {
+				slidesPerView: 1,
+				spaceBetween: 0,
+				effect: effect,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+					renderBullet: (index, className) => {
+						return `<span class="${className}"><span class="icn"></span><span class="lbl">${lbls[index]}</span></span>`;
+					}
+				}
+			});			
 		}
 	};
 	return common;
