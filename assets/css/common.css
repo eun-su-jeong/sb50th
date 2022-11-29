@@ -796,8 +796,9 @@ footer .copyright {color:rgba(255, 255, 255, 0.6);}
 .ui-cmmrtVideo .cmmrtvideo-wrap{position: relative; z-index: 10;}
 .ui-cmmrtVideo .cmmrtvideo-wrap h4{font-size: 24px; margin-bottom: 20px;}
 .ui-cmmrtVideo .cmmrtvideo-wrap .cmmrtv-cont:first-of-type{padding-bottom: 60px;}
-.ui-cmmrtVideo .cmmrtvideo-wrap .cmmrtv-cont .thumbnail01{width: 1240px; height: 698px;}
-.ui-cmmrtVideo .cmmrtvideo-wrap .cmmrtv-cont .thumbnail01 iframe{width: 100%; height: 100%; border-radius: 20px;}
+.ui-cmmrtVideo .cmmrtvideo-wrap .cmmrtv-cont {min-width: -webkit-fill-available;}
+.ui-cmmrtVideo .cmmrtvideo-wrap .cmmrtv-cont .thumbnail01{position: relative; max-width: 1240px; min-width: -webkit-fill-available; padding-bottom: 56.25%; }
+.ui-cmmrtVideo .cmmrtvideo-wrap .cmmrtv-cont .thumbnail01 iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 20px;}
 .ui-cmmrtVideo .cmmrtvideo-wrap .cmmrtv-cont .thumbnail02{width: 1240px; height: 486px;}
 .ui-cmmrtVideo .cmmrtvideo-wrap .cmmrtv-cont .thumbnail02 img{width: 100%;}
 
