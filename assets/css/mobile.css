@@ -113,7 +113,7 @@ header .nav_conts .header-nav{display: none;}
 
 /* ui-video */
 .ui-video article{padding: 60px 24px;}
-.ui-video .title-wrap{margin-bottom: 40px;width:167px;}
+.ui-video .title-wrap{margin-bottom: 40px;width:200px;}
 .ui-video .video-wrap{width: 100%;flex-wrap:wrap}
 .video-wrap .thumbnail{width: 100%;height:auto;}
 .video-wrap .thumbnail img{width: 100%;}
