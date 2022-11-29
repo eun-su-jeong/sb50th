@@ -145,8 +145,8 @@ header .nav_conts .header-nav{display: none;}
 .ui-speech .flex{flex-wrap: wrap-reverse; justify-content: flex-end;}
 .ui-speech .speech-conts{padding:0;}
 .ui-speech .speech-conts h4{font-size: 16px;margin-bottom:20px;}
-.ui-speech .ceo{margin: 0; z-index: 1;margin: 40px 0;}
-.ui-speech .ceo img{width: 240px; height: 240px;}
+.ui-speech .ceo{margin: 0; z-index: 1;margin: 40px 0; width: 240px}
+.ui-speech .ceo img{width: 100%;}
 .ui-speech .speech-conts .txt p:nth-child(2){padding: 20px 0;}
 .ui-speech .circle{top: -2%; left: -17%; width: 370px; height: 370px;}
 
@@ -253,7 +253,7 @@ header .nav_conts .header-nav{display: none;}
 .ui-speech.subpage{}
 .ui-speech.subpage .title-wrap{height: auto;}
 .ui-speech.subpage .title-wrap h1{font-size: 32px;}
-.ui-speech.subpage .ceo{margin: 40px 0 60px 0;}
+.ui-speech.subpage .ceo{margin: 40px 0 60px 0; width: 260px;}
 .ui-speech .speech-conts .txt p:nth-child(2){padding: 0;}
 .ui-speech.subpage .speech-conts h4{font-size: 18px;}
 .ui-speech.subpage .speech-conts .txt p{margin-bottom: 20px;}
@@ -301,7 +301,7 @@ header .nav_conts .header-nav{display: none;}
 .ui-graph .graph img{width: 100%;}
 .ui-graph .title{font-size: 24px;}
 .background-img{width: 330px; right: -10px;bottom: -150px;padding: 0 24px; box-sizing: content-box;}
-.ui-graph .graph-wrap{flex-wrap: wrap;}
+.ui-graph .graph-wrap{flex-wrap: wrap;justify-content:center;}
 .ui-graph .graph-wrap .graph-tit{margin:40px 0 60px 0; font-size: 18px;}
 .ui-graph .graph-wrap .graph-01{width: 312px;margin-bottom: 60px;}
 .ui-graph .graph-wrap .graph-02{width: 312px;}
