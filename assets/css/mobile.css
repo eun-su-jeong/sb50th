@@ -206,7 +206,6 @@ header .nav_conts .header-nav{display: none;}
 .ui-history-cont .tit-btn-wrap .btn{font-size: 13px; width: 96px;height: 30px;padding:0 10px;line-height:2;}
 .ui-history-cont .tit-btn-wrap .btn.st01{width: 144px;}
 .ui-history-cont .tit-btn-wrap .btn span::after{margin-left:8px;background: url(../images/arrow_mobile.svg) center no-repeat; width: 5px; height: 9px;}
-.ui-history-cont .history-cont-wrap{justify-content: center;}
 .ui-history-cont .history-cont-wrap .years-cont::before{left: 66px; top: 17px;}
 .ui-history-cont .history-cont-wrap .years-wrap{width: auto;}
 .ui-history-cont .history-cont-wrap .years-wrap .years-cont{margin-bottom: 45px;}

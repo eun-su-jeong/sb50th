@@ -62,7 +62,6 @@ hr.h4-hr{margin-top:60px;}
 	white-space:nowrap;
 	margin:0;
 	padding:9px 41px;
-	transition:all .2s ease;
 }
 .btn[disabled] {cursor:default;background:rgba(204, 204, 204, 1) !important;}
 
@@ -140,7 +139,6 @@ article{position:relative;width:1240px; margin:0 auto;}
     background: #000000;
     color: #fff;
     font-size: 18px;
-	transition: all 1.5s;
 }
 
 .btn span::after{content: ''; width: 8px; height: 13px;margin-left:12px; background: url(../images/arrow.svg) center no-repeat; display: inline-block;}
