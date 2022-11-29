@@ -65,7 +65,7 @@ var publish = function () {
 			common.hambergerMenu();
 			common.toggleModal();
 			common.set50Story();
-			common.textEffect();		
+			common.textEffect();
 		},
 		// 인트로 설정 (은수정)
 		hambergerMenu: function () {
@@ -81,7 +81,7 @@ var publish = function () {
 					$body.removeClass('body-hidden');
 				}
 
-				if(_device.isMobile){
+				if (_device.isMobile) {
 					$logo.toggleClass('logo-hidden');
 				}
 			});
@@ -146,7 +146,7 @@ var publish = function () {
 				// 줄바꿈을 위한 <br> 치환
 				const changeLineBreak = (letter) => {
 					return letter.map(text => text === "\n" ? "<br>" : text);
-				}				
+				}
 				const typing = async () => {
 					if ($(typings[i]).hasClass("done")) return false;
 					typings[i].innerHTML = "";
@@ -187,7 +187,7 @@ var publish = function () {
 				upeff1.observe(upeffects[i]);
 			}
 		},
-		
+
 		setHistory: function () {
 			let lbls = [];
 			let effect = (_device.isMobile) ? "slide" : "fade";
@@ -205,7 +205,7 @@ var publish = function () {
 						return `<span class="${className}"><span class="icn"></span><span class="lbl">${lbls[index]}</span></span>`;
 					}
 				}
-			});			
+			});
 		}
 	};
 	return common;
