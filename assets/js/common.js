@@ -66,8 +66,8 @@ var publish = function () {
 			common.toggleModal();
 			common.set50Story();
 			common.textEffect();
+			common.logo();
 		},
-		// 인트로 설정 (은수정)
 		hambergerMenu: function () {
 			var $body = $('body');
 			var $logo = $('header .logo');
@@ -85,6 +85,12 @@ var publish = function () {
 					$logo.toggleClass('logo-hidden');
 				}
 			});
+		},
+		logo: function(){
+			$('#logo-link').on('click', function(e){
+				e.preventDefault();
+				window.location.href = '/sb50th'
+			})
 		},
 		set50Story: function () {
 			var storySwiper = new Swiper(".st50-story", {
