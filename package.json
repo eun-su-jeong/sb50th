@@ -3,7 +3,9 @@
     "gh-pages": "^6.1.1"
   },
   "scripts": {
+    "build": "robocopy src dist /E",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-  }
+  },
+  "homepage": "https://github.com/eun-su-jeong/sb50th"
 }
