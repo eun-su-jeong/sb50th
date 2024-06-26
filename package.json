@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  },
+  "scripts": {
+    "build": "robocopy \"C:\\Users\\Example User\\OneDrive\\바탕 화면\\Project\\src\" \"C:\\Users\\Example User\\OneDrive\\바탕 화면\\Project\\dist\" /E",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "homepage": "https://github.com/eun-su-jeong/sb50th"
+}
