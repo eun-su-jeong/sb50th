@@ -47,18 +47,13 @@ var _device = {};
 		if (e.which == 13) $(e.target).trigger("enter");
 	});
 
-	//
-	// 현재 HTML 파일의 위치를 기반으로 경로 설정
-	function getPath() {
+	function getMobileCssPath() {
 		var path = window.location.pathname;
-		var directory = path.substring(0, path.lastIndexOf('/'));
-		var depth = (directory.match(/\//g) || []).length;
-		var cssPath = '';
-		for (var i = 0; i < depth; i++) {
-			cssPath += '../';
+		if (path.includes('/html/')) {
+			return '../assets/css/mobile.css'; // html 디렉토리 내의 파일
+		} else {
+			return './assets/css/mobile.css'; // 루트 디렉토리의 파일
 		}
-		cssPath += 'assets/css/mobile.css';
-		return cssPath;
 	}
 
 	// 모바일 디바이스일 경우 모바일 CSS 파일 로드
@@ -66,7 +61,7 @@ var _device = {};
 		var link = document.createElement("link");
 		link.rel = "stylesheet";
 		link.type = "text/css";
-		link.href = getPath(); // 모바일 CSS 경로 설정 함수 호출
+		link.href = getMobileCssPath(); // 모바일 CSS 경로 설정 함수 호출
 		document.head.appendChild(link);
 	}
 
