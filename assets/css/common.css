@@ -1,16 +1,5 @@
 @charset "utf-8";
 
-@media screen and (max-device-width: 480px){
-	html, body{
-		text-size-adjust:none;
-		-moz-text-size-adjust:none;
-		-ms-text-size-adjust:none;
-		-webkit-text-size-adjust:none;
-		-webkit-tap-highlight-color:transparent;
-		-webkit-user-select:none;
-	}
-}
-
 :before,
 :after{box-sizing:border-box;}
 
@@ -226,7 +215,8 @@ header .header-nav .sub-nav ul li a:hover{font-weight: 700; color:#007360;}
     color: #92C043;
     position: absolute;
     top: 16px;
-    left: -42px;}
+    left: -42px;
+}
 .title .sub_box01{position: absolute; top: 25px; left: 360px;}
 .title h1{position: relative; top: 70px;}
 .title .sub_box01 .sub_t02{font-size: 50px; font-weight: 700; color:#017562;}
@@ -243,7 +233,8 @@ header .header-nav .sub-nav ul li a:hover{font-weight: 700; color:#007360;}
 .container nav ul li:hover a{ 
 	-webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
 	-webkit-mask-size: 200%;
-	animation: shine 2s infinite;}
+	animation: shine 2s infinite;
+}
 	@-webkit-keyframes shine {
   from {
     -webkit-mask-position: 150%;
@@ -505,6 +496,7 @@ header .header-nav .sub-nav ul li a:hover{font-weight: 700; color:#007360;}
 /* emblem */
 .ui-emblem{position:relative; background-color: #fff; overflow: hidden;}
 .ui-emblem article{padding: 200px 0;}
+.ui-emblem article .emblem-wrap{position: relative; z-index: 10;}
 .ui-emblem .txt-cont{width: 710px;margin-top: 240px;}
 .ui-emblem .txt-cont .title-wrap{height: auto;}
 .ui-emblem .title-wrap h1{font-size: 60px;line-height: 84px;margin-bottom: 100px;}
