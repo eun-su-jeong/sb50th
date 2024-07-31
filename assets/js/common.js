@@ -52,7 +52,7 @@ var _device = {};
 		var link = document.createElement("link");
 		link.rel = "stylesheet";
 		link.type = "text/css";
-		link.href = "../assets/css/mobile.css";
+		link.href = "./assets/css/mobile.css";
 		document.head.appendChild(link);
 	}
 
