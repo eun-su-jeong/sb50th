@@ -47,12 +47,26 @@ var _device = {};
 		if (e.which == 13) $(e.target).trigger("enter");
 	});
 
+	//
+	// 현재 HTML 파일의 위치를 기반으로 경로 설정
+	function getPath() {
+		var path = window.location.pathname;
+		var directory = path.substring(0, path.lastIndexOf('/'));
+		var depth = (directory.match(/\//g) || []).length;
+		var cssPath = '';
+		for (var i = 0; i < depth; i++) {
+			cssPath += '../';
+		}
+		cssPath += 'assets/css/mobile.css';
+		return cssPath;
+	}
+
+	// 모바일 디바이스일 경우 모바일 CSS 파일 로드
 	if (_device.isMobile) {
-		// <link rel="stylesheet" href="../assets/css/common.css">
 		var link = document.createElement("link");
 		link.rel = "stylesheet";
 		link.type = "text/css";
-		link.href = "./assets/css/mobile.css";
+		link.href = getPath(); // 모바일 CSS 경로 설정 함수 호출
 		document.head.appendChild(link);
 	}
 
